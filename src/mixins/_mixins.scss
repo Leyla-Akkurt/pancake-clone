@@ -1,0 +1,87 @@
+// MIXINS
+
+//BREAK-POINTS
+$screen-xs: 23.125rem; // XSmall. Window width >=370px
+$screen-sm: 36rem; // Small. Window width >=576px
+$screen-md: 53.25rem; // Medium. Window width >=852px
+$screen-lg: 60.5rem; // Large. Window width >=968px
+$screen-xl: 67.5rem; // XLarge. Window width >=1080px
+
+// for Break-Points
+// XSmall devices
+@mixin xs {
+  @media (min-width: #{$screen-xs}) {
+    @content;
+  }
+}
+
+// Small devices
+@mixin sm {
+  @media (min-width: #{$screen-sm}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (min-width: #{$screen-md}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (min-width: #{$screen-lg}) {
+    @content;
+  }
+}
+
+// XLarge devices
+@mixin xl {
+  @media (min-width: #{$screen-xl}) {
+    @content;
+  }
+}
+
+// for the rest
+@mixin graphicPositioning {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@mixin heroTextSizing($textSize: 1.25rem) {
+  font-size: $textSize;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+@mixin baseButton {
+  position: relative;
+  align-items: center;
+  border-radius: 1rem;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 1rem;
+  font-weight: 600;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  opacity: 1;
+  outline: 0px;
+  height: 3rem;
+  padding: 0 1.5rem;
+  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+}
+// cant use empty href tags so remove button styling
+@mixin aAsButton {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
