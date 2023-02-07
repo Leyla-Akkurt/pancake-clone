@@ -5,7 +5,7 @@ import NavBar from '../Header/NavBar/NavBar';
 class Header extends React.Component {
   render() {
     return (
-      <div id="head-area" class="head-area">
+      <div id="head-area" className="head-area">
         <PhishingBanner />
         <NavBar />
       </div>
