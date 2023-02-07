@@ -1,5 +1,4 @@
-import BottomNav from './Assets/Components/BottomNav/BottomNav';
-import Header from './Assets/Components/Header/Header';
+import { Header, BottomNav } from './components/index';
 
 function App() {
   return (
