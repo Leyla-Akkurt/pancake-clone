@@ -1,4 +1,4 @@
-import BottomNav from './Assets/Components/BottomNav';
+import BottomNav from './Assets/Components/BottomNav/BottomNav';
 import Header from './Assets/Components/Header/Header';
 
 function App() {
