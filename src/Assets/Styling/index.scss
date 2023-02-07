@@ -100,9 +100,19 @@ body {
   padding: 0 1.5rem;
   transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
 }
+// cant use empty href tags so remove button styling
+@mixin aAsButton {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
 
 // APP
-.app {
+#App {
   .mobile-nav-items {
     display: block;
     @include md {
@@ -121,7 +131,8 @@ body {
       z-index: 20;
 
       .menu-item {
-        a {
+        button {
+          @include aAsButton;
           display: flex;
           flex-flow: column;
           text-decoration: none;
@@ -350,13 +361,7 @@ body {
             height: 100%;
 
             li > button {
-              background: none;
-              color: inherit;
-              border: none;
-              padding: 0;
-              font: inherit;
-              cursor: pointer;
-              outline: inherit;
+              @include aAsButton;
             }
 
             li:last-of-type button {
