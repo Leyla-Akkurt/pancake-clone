@@ -1,0 +1,147 @@
+.home-1-hero {
+  display: flex;
+  flex-flow: column-reverse;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  margin-top: 3.125rem;
+
+  @include sm {
+    margin-top: 0px;
+  }
+  @include md {
+    flex-flow: row;
+    align-items: center;
+  }
+
+  &-content {
+    display: flex;
+    flex: 1 1 0%;
+    flex-direction: column;
+
+    h2 {
+      @include heroTextSizing($textSize: 3rem);
+      color: $colors-dark-secondary;
+      @include lg {
+        font-size: 4rem;
+      }
+    }
+
+    h3 {
+      @include heroTextSizing;
+    }
+
+    &-buttons {
+      display: flex;
+      .connect {
+        @include baseButton;
+        border: 0px;
+        box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+        background-color: $colors-dark-primary;
+        color: $colors-dark-invertedContrast;
+        margin-right: 0.5rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .trade {
+        @include baseButton;
+        background-color: transparent;
+        border-width: 0.125rem;
+        border-style: solid;
+        border-image: initial;
+        border-color: $colors-dark-primary;
+        color: $colors-dark-primary;
+      }
+    }
+  }
+
+  &-graphics {
+    display: flex;
+    position: relative;
+    height: 12rem;
+    width: 12rem;
+    margin-bottom: 1.5rem;
+
+    @include md {
+      flex: 1 1 0%;
+      margin-bottom: 0px;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &-graphics-bunny {
+    width: 100%;
+    animation: 3.5s ease-in-out 0s infinite normal none running bouncing-bunny;
+    // will-change: transform;
+    @keyframes bouncing-bunny {
+      0% {
+        transform: translate(0px, 0px);
+      }
+      50% {
+        transform: translate(-5px, -5px);
+      }
+      100% {
+        transform: translate(0px, 0px);
+      }
+    }
+  }
+
+  &-graphics-stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    & :nth-child(2) {
+      animation: 2s ease-in-out 1s infinite normal none running stars-bouncing;
+    }
+
+    & :nth-child(3) {
+      animation: 5s ease-in-out 0.66s infinite normal none running
+        stars-bouncing;
+    }
+
+    & :nth-child(4) {
+      animation: 2.5s ease-in-out 0.33s infinite normal none running
+        stars-bouncing;
+    }
+
+    @keyframes stars-bouncing {
+      0% {
+        opacity: 0.9;
+      }
+      50% {
+        opacity: 0.1;
+      }
+      100% {
+        opacity: 0.9;
+      }
+    }
+  }
+
+  .stars-container {
+    position: relative;
+    max-height: 32rem;
+
+    .stars {
+      max-height: 32rem;
+      visibility: hidden;
+    }
+
+    .left-star {
+      @include graphicPositioning;
+    }
+
+    .right-star {
+      @include graphicPositioning;
+    }
+
+    .top-right-star {
+      @include graphicPositioning;
+    }
+  }
+}

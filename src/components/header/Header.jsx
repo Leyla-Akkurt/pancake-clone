@@ -1,5 +1,5 @@
 import React from 'react';
-import PhishingBanner from '../phishingBanner/PhishingBanner';
+import PhishingBanner from './PhishingBanner';
 import NavBar from './NavBar';
 
 class Header extends React.Component {
