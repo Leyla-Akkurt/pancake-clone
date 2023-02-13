@@ -1,0 +1,27 @@
+.home-1-scroller {
+  position: relative;
+  height: 11.188rem;
+  margin-block: 0px;
+
+  @include sm {
+    margin-block: -2rem 1.875rem;
+    height: 13.813rem;
+  }
+
+  @include lg {
+    height: 14.5rem;
+    padding-top: 0px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    background: var(--sliderBg, $colors-dark-gradientSliderBg);
+    border-radius: 2rem;
+    inset: 0px;
+
+    @include sm {
+      inset: 1.25rem;
+    }
+  }
+}

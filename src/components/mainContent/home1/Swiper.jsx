@@ -2,7 +2,7 @@ import React from 'react';
 
 class Swiper extends React.Component {
   render() {
-    return <div>Swiper</div>;
+    return <div className="home-1-scroller"></div>;
   }
 }
 

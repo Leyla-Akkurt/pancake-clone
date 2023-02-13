@@ -21,7 +21,7 @@ class Hero extends React.Component {
           <div className="home-1-hero-graphics-bunny">
             <span>
               <img
-                srcset="
+                srcSet="
                   ./images/home/lunar-bunny/astronaut-bunny.webp    1024w,
                   ./images/home/lunar-bunny/astronaut-bunny@2x.webp 2048w
                 "
@@ -32,7 +32,7 @@ class Hero extends React.Component {
           <div className="home-1-hero-graphics-stars">
             <div className="stars-container">
               <img
-                srcset="
+                srcSet="
                     ./images/home/lunar-bunny/star-l.webp       512w,
                     ./images/home/lunar-bunny/star-l@1.5x.webp  768w,
                     ./images/home/lunar-bunny/star-l@2x.webp   1024w
@@ -44,7 +44,7 @@ class Hero extends React.Component {
               />
               <div className="left-star">
                 <img
-                  srcset="
+                  srcSet="
                     ./images/home/lunar-bunny/star-l.webp       512w,
                     ./images/home/lunar-bunny/star-l@1.5x.webp  768w,
                     ./images/home/lunar-bunny/star-l@2x.webp   1024w
@@ -54,7 +54,7 @@ class Hero extends React.Component {
               </div>
               <div className="right-star">
                 <img
-                  srcset="
+                  srcSet="
                     ./images/home/lunar-bunny/star-r.webp       512w,
                     ./images/home/lunar-bunny/star-r@1.5x.webp  768w,
                     ./images/home/lunar-bunny/star-r@2x.webp   1024w
@@ -64,7 +64,7 @@ class Hero extends React.Component {
               </div>
               <div className="top-right-star">
                 <img
-                  srcset="
+                  srcSet="
                     ./images/home/lunar-bunny/star-top-r.webp       512w,
                     ./images/home/lunar-bunny/star-top-r@1.5x.webp  768w,
                     ./images/home/lunar-bunny/star-top-r@2x.webp   1024w
