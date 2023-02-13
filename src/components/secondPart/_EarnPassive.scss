@@ -1,0 +1,38 @@
+.earnPassive {
+    display: flex;
+    flex-flow: column-reverse;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  @include md {
+    .earnPassive {
+      flex-flow: row-reverse;
+      align-items: center;
+    }
+  }
+ 
+  .paragraphTwo {
+    @extend .paragraphOne;
+    margin-top: 1rem;
+    width: 100%;
+  }
+  .containerOfSecondImages {
+    @extend .containerOfCoinImages;
+    margin-top: 1rem;
+  }
+  
+  .containerOfSecondImages :nth-child(1) {
+    animation: 3s ease-in-out 1s infinite normal none running image;
+    @include animation(image, 3px, 15px);
+  }
+  
+  .containerOfSecondImages :nth-child(2) {
+    animation: 3s ease-in-out 1s infinite normal none running image;
+    @include animation(image, 5px, 10px);
+  }
+  
+  .containerOfSecondImages :nth-child(3) {
+    animation: 3s ease-in-out 1s infinite normal none running image;
+    @include animation(image, 6px, 5px);
+  }

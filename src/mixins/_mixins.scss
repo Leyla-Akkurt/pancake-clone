@@ -85,3 +85,26 @@ $screen-xl: 67.5rem; // XLarge. Window width >=1080px
   cursor: pointer;
   outline: inherit;
 }
+
+// home-4 mixins
+//mixins for text properties
+@mixin text($fontSize, $fontWeight, $lineHeight, $marginBottom) {
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+  margin-bottom: $marginBottom;
+}
+//mixin for animation properties
+@mixin animation($animationName, $parameterX, $parameterY) {
+  @keyframes #{$animationName} {
+    0% {
+      transform: translate(0px, 0px);
+    }
+    50% {
+      transform: translate($parameterX, $parameterY);
+    }
+    100% {
+      transform: translate(0px, 0px);
+    }
+  }
+}

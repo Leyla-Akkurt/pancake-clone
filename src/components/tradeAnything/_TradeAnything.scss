@@ -1,0 +1,178 @@
+@include md {
+    .paragraphOne {
+      align-self: center;
+    }
+}
+
+  .tradeAnything {
+    display: flex;
+    width: 100%;
+    max-width: 968px;
+    flex-flow: column-reverse;
+    align-items: flex-end;
+    justify-content: center;
+    padding-block: 16px 32px;
+    min-height: auto;
+    overflow: hidden;
+    margin-inline: auto;
+  }
+  @include md {
+    .tradeAnything {
+      flex-flow: row;
+      align-items: center;
+    }
+    .images {
+      left: 0;
+      right: auto;
+    }
+  }
+  @include sm {
+    .tradeAnything {
+      padding-block: 32px 64px;
+    }
+  }
+  @include xs {
+    .tradeAnything {
+      padding-inline: 24px;
+    }
+  }
+  .paragraphOne {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0%;
+    align-self: flex-start;
+
+    h2 {
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 1.1;
+    }
+
+    .subTitle {
+      color: #b8add2;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.5;
+      margin-bottom: 24px;
+    }
+  }
+
+  @include md {
+    .paragraphOne {
+      align-self: center;
+    }
+  }
+
+  @include lg {
+    .paragraphOne h2 {
+      font-size: 40px;
+    }
+  }
+
+ .tradeNow,
+  .explore {
+    display: flex;
+    align-items: center;
+  }
+  
+  span,
+  h2 {
+    @include text(32px, 600, 1.5, 24px);
+  }
+  span {
+    color: $colors-dark-secondary;
+  }
+  h2 {
+    color: $colors-dark-text;
+  }
+  .subTitle {
+    color: $colors-dark-textSubtle;
+    @include text(16px, 400, 1.5, 24px);
+  }
+  .buttonTrade,
+  .buttonExplore {
+    @include text(16px, 600, 0, 0);
+    align-items: center;
+    border: 0px;
+    border-radius: 16px;
+    box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset;
+    cursor: pointer;
+    letter-spacing: 0.03em;
+    transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+    height: 48px;
+    padding: 0px 24px;
+    background-color: $colors-dark-primary;
+    color: $colors-dark-invertedContrast;
+    margin-right: 16px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  .learnLink {
+    color: $colors-dark-primary;
+    @include text(16px, 600, 1.5, 0);
+  }
+
+  .containerOfCoinImages {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 0;
+    position: relative;
+    .containerOfCoinImages-container,
+    .containerOfSecondImages-container {
+      position: relative;
+      max-height: 512px;
+      height: 192px;
+      img {
+        height: 192px;
+      }
+    }
+  }
+
+  @include md {
+    .containerOfCoinImages {
+      flex: 1 1 0%;
+      .containerOfCoinImages-container,
+      .containerOfSecondImages-container {
+        height: 428px;
+        img {
+          height: 428px;
+        }
+      }
+    }
+  }
+
+  
+  .images {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    img {
+      max-height: 428px;
+      width: auto;
+      height: auto;
+    }
+  }
+
+  .containerOfCoinImages-container :nth-child(1) {
+    animation: 3s ease-in-out 1s infinite normal none running image;
+    @include animation(image, 3px, 15px);
+  }
+
+  .containerOfCoinImages-container :nth-child(2) {
+    animation: 3s ease-in-out 1s infinite normal none running image;
+    @include animation(image, 5px, 10px);
+  }
+
+  .containerOfCoinImages-container :nth-child(3) {
+    animation: 3s ease-in-out 1s infinite normal none running image;
+    @include animation(image, 6px, 5px);
+  }
+
+  
+
+  
+ 
