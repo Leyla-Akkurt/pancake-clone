@@ -1,0 +1,38 @@
+@import './Swiper';
+@import './Backdrop';
+@import './Hero';
+
+.home-1-container {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background: $colors-dark-gradientHero;
+  z-index: 1;
+  padding: 1rem 0rem 3rem 0rem;
+
+  @include md {
+    padding-top: 3rem;
+  }
+
+  .home-1-wrapper {
+    width: 100%;
+    max-width: 75rem;
+    min-height: auto;
+    padding: 1rem 1.5rem;
+    color: white;
+    overflow: hidden;
+
+    @include xs {
+      padding-inline: 1.5rem;
+    }
+
+    @include sm {
+      padding-block: 2rem;
+    }
+
+    @include lg {
+      padding-block: 3rem;
+    }
+  }
+}

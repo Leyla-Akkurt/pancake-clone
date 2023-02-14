@@ -1,9 +1,10 @@
-import { Header, BottomNav } from './components/index';
+import { Header, BottomNav, MainContent } from './components/index';
 
 function App() {
   return (
     <div className="content-wrapper">
       <Header />
+      <MainContent />
       <BottomNav />
     </div>
   );
