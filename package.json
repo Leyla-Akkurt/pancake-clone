@@ -21,7 +21,7 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "lint": "prettier \"**/*\" --write  --ignore-unknown"
+    "lint": "prettier '**/*' --write  --ignore-unknown"
   },
   "eslintConfig": {
     "extends": [

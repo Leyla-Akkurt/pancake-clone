@@ -2,13 +2,14 @@
 import { SecondPart } from "../secondPart/SecondPart";
 import { TradeAnything } from "../tradeAnything/TradeAnything";
 
+
 export function Home4(){
   
 return(
 
-<section id="home-4" class="home-4">
+<section id="home-4" className="home-4">
               
-              <div class="svg home-4-svg">
+<div class="svg home-4-svg">
                 <svg
                   viewBox="0 0 1660 48"
                   preserveAspectRatio="none"
@@ -22,9 +23,8 @@ return(
                   ></path>
                 </svg>
               </div>
-              
-             <TradeAnything />
-             <SecondPart/>
+              <TradeAnything />
+              <SecondPart/>
              
               
 </section>

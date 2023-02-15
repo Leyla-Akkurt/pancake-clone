@@ -4,22 +4,22 @@ export function EarnPassive(){
 
       <div class="earnPassive">
                   
-                      <div class="paragraphTwo">
+                      <div className="paragraphTwo">
                         <h2><span>Earn</span> passive income with crypto.</h2>
 
                        
-                        <div class="subTitle">
+                        <div className="subTitle">
                           PancakeSwap makes it easy to make your crypto work for
                           you.
                         </div>
 
-                        <div class="explore">
+                        <div className="explore">
                          
                           <a href="https://pancakeswap.finance/swap">
                             <input
                               type="button"
                               value="Explore"
-                              class="buttonExplore"
+                              className="buttonExplore"
                             />
                           </a>
 
@@ -27,20 +27,20 @@ export function EarnPassive(){
                           <a
                             target="_blank"
                             href="https://docs.pancakeswap.finance/"
-                            class="learnLink"
+                            className="learnLink"
                             >Learn</a>
                         </div>
                       </div>
                       
-                      <div class="containerOfSecondImages">
-                        <div class="containerOfSecondImages-container">
-                          <div class="images">
+                      <div className="containerOfSecondImages">
+                        <div className="containerOfSecondImages-container">
+                          <div className="images">
                             <img src="./images/home/earn/folder@2x.webp" />
                           </div>
-                          <div class="images">
+                          <div className="images">
                             <img src="./images/home/earn/stonks@2x.webp" />
                           </div>
-                          <div class="images">
+                          <div className="images">
                             <img src="./images/home/earn/pie@2x.webp" />
                           </div>
                         </div>

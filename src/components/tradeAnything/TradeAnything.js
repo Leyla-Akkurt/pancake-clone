@@ -4,25 +4,25 @@ export function TradeAnything() {
 //Trade Anything.... Part
 
 return(
-<div class="tradeAnything">
+<div className="tradeAnything">
                 
-                <div class="paragraphOne">
+                <div className="paragraphOne">
                   <h2>
                     <span>Trade </span>anything. No registration, no hassle.
                   </h2>
                  
-                  <div class="subTitle">
+                  <div className="subTitle">
                     Trade any token on BNB Smart Chain in seconds, just by
                     connecting your wallet.
                   </div>
                  
-                  <div class="tradeNow">
+                  <div className="tradeNow">
                    
                     <a href="https://pancakeswap.finance/swap">
                       <input
                         type="button"
                         value="Trade Now"
-                        class="buttonTrade"
+                        className="buttonTrade"
                       />
                     </a>
 
@@ -30,29 +30,30 @@ return(
                     <a
                       target="_blank"
                       href="https://docs.pancakeswap.finance/"
-                      class="learnLink"
+                      className="learnLink"
                       >Learn </a>
                   </div>
                 </div>
               
 
-                <div class="containerOfCoinImages">
-                  <div class="containerOfCoinImages-container">
-                    <div class="images">
+                <div className="containerOfCoinImages">
+                  <div className="containerOfCoinImages-container">
+                    
+                    <div className="images">
                       <img
                       src="./images/home/trade/BNB@2x.webp"
                       alt="BNB token"
                       />
                     </div>
 
-                    <div class="images">
+                    <div className="images">
                       <img
                         src="./images/home/trade/BTC@2x.webp"
                         alt="BTC token"
                       />
                     </div>
 
-                    <div class="images">
+                    <div className="images">
                       <img
                         src="./images/home/trade/CAKE@2x.webp"
                         alt="CAKE token"
