@@ -17,11 +17,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "prettier '**/*' --write  --ignore-unknown",
+    "lint": "prettier \"**/*\" --write  --ignore-unknown",
     "prepare": "husky install"
   },
   "lint-staged": {
-    "lint": "prettier '**/*' --write  --ignore-unknown"
+    "lint": "prettier \"**/*\" --write  --ignore-unknown"
   },
   "eslintConfig": {
     "extends": [

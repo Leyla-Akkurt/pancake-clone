@@ -6,7 +6,7 @@ function App() {
     <div className="content-wrapper">
       <Header />
       <BottomNav />
-      <Home4/>
+      <Home4 />
     </div>
   );
 }
