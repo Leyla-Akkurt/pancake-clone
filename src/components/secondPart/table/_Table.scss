@@ -12,10 +12,10 @@
   margin-bottom: 24px;
 }
 .table-body {
-  height: 240px;
+  height: 220px;
   overflow: hidden;
   @media screen and (min-width: 576px) {
-    height: 80px;
+    height: 70px;
   }
 }
 
@@ -56,11 +56,14 @@
 #heading-b,
 #body-b {
   opacity: 1;
-  margin-top: 26px;
 }
 @media screen and (min-width: 576px) {
   #heading-b {
     margin-top: 0px;
+  }
+  .content2 {
+    border-left: 1px solid $colors-dark-inputSecondary;
+    padding-left: 16px;
   }
 }
 
@@ -71,8 +74,6 @@
 }
 .content2 {
   @extend .content1;
-  border-left: 1px solid $colors-dark-inputSecondary;
-  padding-left: 16px;
 }
 @media screen and (min-width: 576px) {
   .content1 {
