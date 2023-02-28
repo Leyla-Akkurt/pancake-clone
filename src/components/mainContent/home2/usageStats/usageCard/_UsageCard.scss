@@ -1,0 +1,93 @@
+.usage-stats {
+  display: flex;
+  flex-flow: column;
+
+  @include md {
+    flex-flow: row;
+  }
+
+  &-box {
+    height: fit-content;
+    padding: 0.063rem 0.063rem 0.25rem;
+    background: $colors-dark-cardBorder;
+    border-radius: $radii-card;
+    color: $colors-dark-text;
+    overflow: hidden;
+    position: relative;
+    padding: 0.063rem 0.063rem 0.25rem;
+    margin-bottom: 1rem;
+
+    @include md {
+      margin-right: 1rem;
+      margin-bottom: 0rem;
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+
+    &-container {
+      width: 100%;
+      height: 100%;
+      overflow: inherit;
+      background: $colors-dark-backgroundAlt;
+      border-radius: $radii-card;
+    }
+
+    &-wrapper {
+      padding: 1.5rem;
+
+      .box-icon-wrapper {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+      }
+
+      .box-text {
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-end;
+        width: fit-content;
+        min-width: 14.5rem;
+
+        @include md {
+          min-height: 10.5rem;
+          margin-top: 4rem;
+        }
+
+        h2 {
+          font-size: 2rem;
+          font-weight: 600;
+          line-height: 1.1;
+
+          &:last-of-type {
+            color: $colors-dark-secondary;
+            margin-bottom: 1.5rem;
+          }
+
+          @include lg {
+            font-size: 2.5rem;
+          }
+        }
+
+        div {
+          color: $colors-dark-textSubtle;
+          font-weight: 400;
+          line-height: 1.5;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  &-box:nth-child(2) {
+    h2:last-of-type {
+      color: $colors-dark-primary;
+    }
+  }
+
+  &-box:last-of-type {
+    h2:last-of-type {
+      color: $colors-dark-failure;
+    }
+  }
+}
