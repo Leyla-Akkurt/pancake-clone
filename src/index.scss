@@ -22,12 +22,3 @@ body {
     border-radius: 0.625rem;
   }
 }
-
-// App component wrapper
-.content-wrapper {
-  position: relative;
-  width: 100%;
-  display: grid;
-  grid-template-rows: auto 1fr;
-  min-height: auto;
-}
