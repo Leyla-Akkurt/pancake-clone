@@ -1,0 +1,36 @@
+@import './usageStats/usageCard/UsageCard';
+@import './usageStats/CallToAction';
+
+.home-2-container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 3rem 0rem;
+  background: $colors-dark-home2Background;
+
+  .home-2-wrapper {
+    width: 100%;
+    max-width: 75rem;
+    padding: 1rem;
+    min-height: auto;
+
+    @include xs {
+      padding-inline: 1.5rem;
+    }
+
+    @include sm {
+      padding-block: 2rem;
+    }
+
+    @include lg {
+      padding-block: 3rem;
+    }
+
+    .home-2-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column;
+    }
+  }
+}
