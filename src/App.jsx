@@ -4,12 +4,15 @@ import {
   BottomNav,
   MainContent,
 } from './components/index';
+import { useState } from 'react';
 
 function App() {
+  const [showPhishingBanner, setShowPhishingBanner] = useState(true);
+
   return (
     <ContentWrapper>
-      <Header />
-      <MainContent />
+      <Header hasPhishingBannerHandler={setShowPhishingBanner} />
+      <MainContent hasPhishingBanner={showPhishingBanner} />
       <BottomNav />
     </ContentWrapper>
   );
