@@ -7,26 +7,31 @@ import contentData from './contentData';
 import contentData2 from './contentData2';
 
 export function Table() {
-  const [tableContent, setTableContent] = useState('');
-  const [tableContent2, setTableContent2] = useState('');
   const tableBodyRef = useRef();
   const { ref: tableRef, inView } = useInView();
   const [animation, setAnimation] = useState(false);
-  const [headText, setHeadText] = useState('');
+  const [, setHeadText] = useState('');
   const headTextRef = useRef(null);
-  const [startCount, setStartCount] = useState(true);
+  const [tableContent, setTableContent] = useState([]);
+  const [tableContent2, setTableContent2] = useState([]);
+  const [tableOpacity, setTableOpacity] = useState('0.1');
 
+  console.log(inView);
   useEffect(() => {
     if (inView === true) {
-      const viewInterval = setInterval(() => {
-        tableBodyRef.current.style.opacity = 0.1;
-      }, 3000);
-      clearInterval(viewInterval);
+      setTimeout(() => {
+        console.log('Leyla');
+        setTableOpacity('1');
+      }, 1500);
+      console.log('Ali');
+      tableBodyRef.current.style.opacity = tableOpacity;
+      setTableContent(
+        contentData.map((content, i) => <Content key={i} {...content} />)
+      );
+      setTableContent2(
+        contentData2.map((content, i) => <Content2 key={i} {...content} />)
+      );
     }
-
-    tableBodyRef.current.style.opacity = 1;
-    setStartCount(false);
-    console.log(startCount);
     const interval = setInterval(() => {
       setAnimation(!animation);
       setHeadText(
@@ -36,7 +41,7 @@ export function Table() {
       );
     }, 5000);
     return () => clearInterval(interval);
-  }, [animation, inView]);
+  }, [animation, inView, setHeadText, tableOpacity]);
 
   return (
     <div className="table" ref={tableRef}>
@@ -69,9 +74,7 @@ export function Table() {
           className="table-content body tableOn"
           style={{ top: !animation ? 0 : 200, opacity: !animation ? 1 : 0 }}
         >
-          {contentData.map((content, i) => (
-            <Content key={i} {...content} />
-          ))}
+          {tableContent}
         </div>
 
         <div
@@ -79,9 +82,7 @@ export function Table() {
           className="table-content body"
           style={{ top: animation ? 0 : 200, opacity: animation ? 1 : 0 }}
         >
-          {contentData2.map((content, i) => (
-            <Content2 key={i} {...content} />
-          ))}
+          {tableContent2}
         </div>
       </div>
     </div>
