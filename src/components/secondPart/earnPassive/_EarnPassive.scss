@@ -11,6 +11,10 @@
     align-items: center;
   }
 }
+.explore a {
+  color: $colors-dark-primary;
+  @include text(16px, 600, 1.5, 0);
+}
 
 .paragraphTwo {
   @extend .paragraphOne;

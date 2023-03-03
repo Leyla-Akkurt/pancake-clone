@@ -12,12 +12,12 @@ export function useButton() {
     setBtnState((btnState) => !btnState);
 
     if (btnState) {
-      bodybRef.current.style.display = 'none';
-      bodyaRef.current.style.display = 'grid';
-      setHeadText((headTextRef.current.innerText = ' Syrup Pools'));
-    } else {
       bodyaRef.current.style.display = 'none';
       bodybRef.current.style.display = 'grid';
+      setHeadText((headTextRef.current.innerText = ' Syrup Pools'));
+    } else {
+      bodybRef.current.style.display = 'none';
+      bodyaRef.current.style.display = 'grid';
       setHeadText((headTextRef.current.innerText = ' Farms'));
     }
     console.log(btnState);
@@ -28,5 +28,6 @@ export function useButton() {
     bodyaRef,
     bodybRef,
     headTextRef,
+    setHeadText,
   };
 }

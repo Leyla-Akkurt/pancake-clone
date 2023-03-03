@@ -109,11 +109,16 @@ h2 {
 a {
   text-decoration: none;
 }
-.learnLink {
+.tradeNow a {
   color: $colors-dark-primary;
   @include text(16px, 600, 1.5, 0);
 }
-
+.learnLink .learn-svg {
+  align-self: center;
+  fill: $colors-dark-primary;
+  flex-shrink: 0;
+  margin-left: 4px;
+}
 .containerOfCoinImages {
   height: 100%;
   width: 100%;
