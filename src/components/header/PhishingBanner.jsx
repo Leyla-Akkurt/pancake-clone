@@ -1,31 +1,33 @@
 import React from 'react';
 
 class PhishingBanner extends React.Component {
-  // dont render the PhishingBanner = default State
+  // phshingPopUpValue = null or true/false.
+  phishingPopUpValue = JSON.parse(
+    window.localStorage.getItem('hasPhishingPopUp')
+  );
+  // init state = null. Phishing warning component wont render.
   state = {
-    hasPhishingPopUp: false,
+    hasPhishingPopUp: this.phishingPopUpValue,
+  };
+
+  // set the state and the local storage
+  setHasPhishingPopUp = (value = this.phishingPopUpValue) => {
+    this.setState({ hasPhishingPopUp: value });
+    window.localStorage.setItem('hasPhishingPopUp', value.toString());
+    this.props.hasPhishingBannerHandler(value);
+  };
+
+  handleStorage = (e) => {
+    if (this.state.hasPhishingPopUp === null) {
+      this.setHasPhishingPopUp(true);
+    } else {
+      e !== undefined && this.setHasPhishingPopUp(false);
+    }
   };
 
   componentDidMount() {
-    const phishingPopUpValue = window.localStorage.getItem('hasPhishingPopUp');
-    // if there isn't a hasPhishingPopUp value set in the local storage then render the PhishingBanner component
-    if (phishingPopUpValue === null) {
-      this.setState({ hasPhishingPopUp: true });
-      window.localStorage.setItem('hasPhishingPopUp', 'true');
-    } else {
-      // else check the phishingPopUpValue and set the state for it accordingly
-      !Boolean(phishingPopUpValue)
-        ? this.setState({ hasPhishingPopUp: true })
-        : this.setState({ hasPhishingPopUp: false });
-    }
+    this.handleStorage();
   }
-
-  closePhisingBanner = () => {
-    this.setState({
-      hasPhishingPopUp: false,
-    });
-    window.localStorage.setItem('hasPhishingPopUp', 'false');
-  };
 
   render() {
     // dont render the component if hasPhishingPopUp is false
@@ -58,7 +60,7 @@ class PhishingBanner extends React.Component {
             type="button"
             id="phishing-banner-close"
             className="phishing-banner-close"
-            onClick={this.closePhisingBanner}
+            onClick={this.handleStorage}
           >
             <img src="./images/svg/close-button.svg" alt="close button" />
           </button>
