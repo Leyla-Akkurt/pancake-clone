@@ -20,10 +20,9 @@ export function Table() {
   useEffect(() => {
     if (inView === true) {
       setTimeout(() => {
-        console.log('Leyla');
         setTableOpacity('1');
       }, 1500);
-      console.log('Ali');
+      
       tableBodyRef.current.style.opacity = tableOpacity;
       setTableContent(
         contentData.map((content, i) => <Content key={i} {...content} />)
