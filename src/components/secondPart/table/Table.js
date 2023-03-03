@@ -5,34 +5,38 @@ import { Button } from './Button';
 import { Content } from './Content';
 import contentData from './contentData';
 import contentData2 from './contentData2';
-import { useButton } from './useButton';
 
 export function Table() {
-  const { handleClick, bodyaRef, bodybRef, headTextRef, setHeadText } =
-    useButton();
   const [tableContent, setTableContent] = useState('');
   const [tableContent2, setTableContent2] = useState('');
   const tableBodyRef = useRef();
   const { ref: tableRef, inView } = useInView();
+  const [animation, setAnimation] = useState(false);
+  const [headText, setHeadText] = useState('');
+  const headTextRef = useRef(null);
+  const [startCount, setStartCount] = useState(true);
 
   useEffect(() => {
     if (inView === true) {
-      setTimeout(() => {
-        tableBodyRef.current.style.opacity = 1;
+      const viewInterval = setInterval(() => {
+        tableBodyRef.current.style.opacity = 0.1;
       }, 3000);
-      tableBodyRef.current.style.opacity = 0.1;
-      setTableContent(
-        contentData.map((content) => {
-          return <Content {...content} />;
-        })
-      );
-      setTableContent2(
-        contentData2.map((content) => {
-          return <Content2 {...content} />;
-        })
-      );
+      clearInterval(viewInterval);
     }
-  }, [inView]);
+
+    tableBodyRef.current.style.opacity = 1;
+    setStartCount(false);
+    console.log(startCount);
+    const interval = setInterval(() => {
+      setAnimation(!animation);
+      setHeadText(
+        animation
+          ? (headTextRef.current.innerText = ' Farms')
+          : (headTextRef.current.innerText = ' Syrup Pools')
+      );
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [animation, inView]);
 
   return (
     <div className="table" ref={tableRef}>
@@ -49,7 +53,10 @@ export function Table() {
         </div>
 
         <button
-          onClick={handleClick}
+          onClick={() => {
+            setAnimation((x) => !x);
+            console.log('tiklama');
+          }}
           id="table-button"
           className="arrow-button"
         >
@@ -57,12 +64,24 @@ export function Table() {
         </button>
       </div>
       <div className="table-body" ref={tableBodyRef}>
-        <div id="body-a" ref={bodyaRef} className="table-content body tableOn">
-          {tableContent}
+        <div
+          id="body-a"
+          className="table-content body tableOn"
+          style={{ top: !animation ? 0 : 200, opacity: !animation ? 1 : 0 }}
+        >
+          {contentData.map((content, i) => (
+            <Content key={i} {...content} />
+          ))}
         </div>
 
-        <div id="body-b" ref={bodybRef} className="table-content body">
-          {tableContent2}
+        <div
+          id="body-b"
+          className="table-content body"
+          style={{ top: animation ? 0 : 200, opacity: animation ? 1 : 0 }}
+        >
+          {contentData2.map((content, i) => (
+            <Content2 key={i} {...content} />
+          ))}
         </div>
       </div>
     </div>

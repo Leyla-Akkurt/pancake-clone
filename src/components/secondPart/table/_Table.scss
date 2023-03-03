@@ -14,6 +14,16 @@
 .table-body {
   height: 220px;
   overflow: hidden;
+  position: relative;
+  .table-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+  }
   @media screen and (min-width: 576px) {
     height: 75px;
   }
@@ -37,7 +47,6 @@
   display: grid;
   grid-template-columns: repeat(2, auto);
   gap: 32px;
-  position: relative;
 }
 .table-content span {
   color: white;
@@ -57,10 +66,10 @@
   }
 }
 
-#heading-b,
-#body-b {
+#heading-b {
   opacity: 1;
 }
+
 @media screen and (min-width: 576px) {
   #heading-b {
     margin-top: 0px;
