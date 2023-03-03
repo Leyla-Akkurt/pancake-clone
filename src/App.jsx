@@ -7,7 +7,13 @@ import {
 import { useState } from 'react';
 
 function App() {
-  const [showPhishingBanner, setShowPhishingBanner] = useState(true);
+  const initPhishingBannerState = localStorage.getItem('hasPhishingPopUp')
+    ? JSON.parse(localStorage.getItem('hasPhishingPopUp'))
+    : false;
+
+  const [showPhishingBanner, setShowPhishingBanner] = useState(
+    initPhishingBannerState
+  );
 
   return (
     <ContentWrapper>

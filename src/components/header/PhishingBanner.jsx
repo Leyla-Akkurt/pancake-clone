@@ -14,7 +14,7 @@ class PhishingBanner extends React.Component {
   setHasPhishingPopUp = (value = this.phishingPopUpValue) => {
     this.setState({ hasPhishingPopUp: value });
     window.localStorage.setItem('hasPhishingPopUp', value.toString());
-    this.props.hasPhishingBannerHandler(false);
+    this.props.hasPhishingBannerHandler(value);
   };
 
   handleStorage = (e) => {
