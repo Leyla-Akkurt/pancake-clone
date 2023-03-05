@@ -1,0 +1,58 @@
+[
+  {
+    "id": "slide0",
+    "hasHeaderImg": true,
+    "headerImg": "./images/decorations/AptosXPancakeSwap.webp",
+    "headerImgAlt": "aptos x pancakeswap logo",
+    "subtext": "Hello Aptos Project Teams!",
+    "btnText": "👋 Get In Touch",
+    "btnImgSrc": "./images/svg/open-link.svg",
+    "btnImgAlt": "mini rectangular icon with an arrow pointing out",
+    "mainImgSrc": "./images/decorations/Aptos-bunny.webp",
+    "mainImgAlt": "aptos bunny",
+    "hasPlaceholder": false,
+    "hasSrcSetImgs": false
+  },
+  {
+    "id": "slide1",
+    "hasHeaderImg": false,
+    "text": "Perpetual Futures",
+    "subtext": "Up to 100× Leverage",
+    "btnText": "Trade Now",
+    "btnImgSrc": "./images/svg/arrow-right.svg",
+    "btnImgAlt": "mini arrow icon pointing right",
+    "mainImgSrc": "./images/decorations/perpetual.webp",
+    "mainImgAlt": "bunny holding a contract",
+    "hasPlaceholder": true,
+    "hasSrcSetImgs": true,
+    "srcSetImgs": [
+      {
+        "srcSet": "./images/decorations/perpetual640.webp",
+        "media": "(min-width: 968px)"
+      }
+    ]
+  },
+  {
+    "id": "slide2",
+    "hasHeaderImg": false,
+    "text": "Win $78.810 in Lottery",
+    "subtext": "countdown",
+    "btnText": "Play Now",
+    "btnImgSrc": "./images/svg/arrow-right.svg",
+    "btnImgAlt": "mini arrow icon pointing right",
+    "mainImgSrc": "./images/decorations/lotteryMobile384w.webp",
+    "mainImgAlt": "bunny holding a contract",
+    "hasPlaceholder": true,
+    "hasSrcSetImgs": true,
+    "srcSetImgs": [
+      {
+        "srcSet": "./images/decorations/lottery3840w.webp",
+        "media": "(min-width: 1400px)"
+      },
+      {
+        "srcSet": "./images/decorations/lottery1200w.webp",
+        "media": "(min-width: 576px)"
+      }
+    ]
+  }
+]
