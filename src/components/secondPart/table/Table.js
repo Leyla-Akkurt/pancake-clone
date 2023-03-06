@@ -48,9 +48,9 @@ export function Table() {
         <div className="heading-container">
           <div id="heading" className="table-heading">
             <h2>
-              Top
+              Top &nbsp;
               <span id="heading-b" ref={headTextRef}>
-              &nbsp; Farms
+                Farms
               </span>
             </h2>
           </div>
