@@ -16,7 +16,6 @@ export function Table() {
   const [tableContent2, setTableContent2] = useState([]);
   const [tableOpacity, setTableOpacity] = useState('0.1');
 
-  console.log(inView);
   useEffect(() => {
     if (inView === true) {
       setTimeout(() => {
