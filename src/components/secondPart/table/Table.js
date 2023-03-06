@@ -22,7 +22,7 @@ export function Table() {
       setTimeout(() => {
         setTableOpacity('1');
       }, 1500);
-      
+
       tableBodyRef.current.style.opacity = tableOpacity;
       setTableContent(
         contentData.map((content, i) => <Content key={i} {...content} />)
@@ -59,7 +59,11 @@ export function Table() {
         <button
           onClick={() => {
             setAnimation((x) => !x);
-            console.log('tiklama');
+            setHeadText(
+              animation
+                ? (headTextRef.current.innerText = ' Farms')
+                : (headTextRef.current.innerText = ' Syrup Pools')
+            );
           }}
           id="table-button"
           className="arrow-button"
