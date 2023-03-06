@@ -15,7 +15,12 @@ export function EarnPassive() {
             <input type="button" value="Explore" className="buttonExplore" />
           </a>
 
-          <a href="https://docs.pancakeswap.finance/" className="learnLink">
+          <a
+            target="_blank"
+            rel="noreferrer noopener"
+            href="https://docs.pancakeswap.finance/"
+            className="learnLink"
+          >
             Learn
             <svg
               viewBox="0 0 24 24"

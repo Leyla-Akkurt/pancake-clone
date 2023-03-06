@@ -105,7 +105,9 @@ h2 {
   color: $colors-dark-invertedContrast;
   margin-right: 16px;
 }
-
+.buttonTrade :hover {
+  background-color: yellow;
+}
 a {
   text-decoration: none;
 }

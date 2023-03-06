@@ -19,7 +19,12 @@ export function TradeAnything() {
             <input type="button" value="Trade Now" className="buttonTrade" />
           </a>
 
-          <a href="https://docs.pancakeswap.finance/" className="learnLink">
+          <a
+            target="_blank"
+            rel="noreferrer noopener"
+            href="https://docs.pancakeswap.finance/"
+            className="learnLink"
+          >
             Learn
             <svg
               viewBox="0 0 24 24"
