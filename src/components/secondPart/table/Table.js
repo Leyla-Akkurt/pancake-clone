@@ -35,8 +35,8 @@ export function Table() {
       setAnimation(!animation);
       setHeadText(
         animation
-          ? (headTextRef.current.innerText = ' Farms')
-          : (headTextRef.current.innerText = ' Syrup Pools')
+          ? (headTextRef.current.innerText = 'Farms')
+          : (headTextRef.current.innerText = 'Syrup Pools')
       );
     }, 5000);
     return () => clearInterval(interval);
@@ -50,7 +50,7 @@ export function Table() {
             <h2>
               Top
               <span id="heading-b" ref={headTextRef}>
-                Farms
+              &nbsp; Farms
               </span>
             </h2>
           </div>
@@ -61,8 +61,8 @@ export function Table() {
             setAnimation((x) => !x);
             setHeadText(
               animation
-                ? (headTextRef.current.innerText = ' Farms')
-                : (headTextRef.current.innerText = ' Syrup Pools')
+                ? (headTextRef.current.innerText = 'Farms')
+                : (headTextRef.current.innerText = 'Syrup Pools')
             );
           }}
           id="table-button"
