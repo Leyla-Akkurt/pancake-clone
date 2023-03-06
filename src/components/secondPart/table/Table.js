@@ -75,7 +75,10 @@ export function Table() {
         <div
           id="body-a"
           className="table-content body tableOn"
-          style={{ top: !animation ? 0 : 200, opacity: !animation ? 1 : 0 }}
+          style={{
+            marginTop: !animation ? 0 : '50%',
+            opacity: !animation ? 1 : 0,
+          }}
         >
           {tableContent}
         </div>
@@ -83,7 +86,10 @@ export function Table() {
         <div
           id="body-b"
           className="table-content body"
-          style={{ top: animation ? 0 : 200, opacity: animation ? 1 : 0 }}
+          style={{
+            marginTop: animation ? 0 : '50%',
+            opacity: animation ? 1 : 0,
+          }}
         >
           {tableContent2}
         </div>
