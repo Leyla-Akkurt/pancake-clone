@@ -1,0 +1,155 @@
+.table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.table-header,
+.table-body {
+  position: relative;
+}
+.table-header {
+  display: flex;
+  margin-bottom: 24px;
+}
+.table-body {
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+  @media screen and (min-width: 576px) {
+    height: 75px;
+  }
+}
+
+.table-heading {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 24px;
+}
+.table-heading2 {
+  @extend .table-heading;
+}
+.head,
+.number,
+.subhead {
+  visibility: visible;
+}
+.table-content {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 32px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  transition: all 0.5s ease-in-out;
+}
+.table-content span {
+  color: white;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 576px) {
+  .table-content {
+    gap: 16px;
+    grid-template-columns: repeat(5, auto);
+  }
+}
+
+@media screen and (min-width: 852px) {
+  .table-content {
+    gap: 32px;
+  }
+}
+
+#heading-b {
+  opacity: 1;
+}
+
+@media screen and (min-width: 576px) {
+  #heading-b {
+    margin-top: 0px;
+  }
+  .content2 {
+    border-left: 1px solid $colors-dark-inputSecondary;
+    padding-left: 16px;
+  }
+}
+
+.content1 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5px;
+}
+.content2 {
+  @extend .content1;
+}
+@media screen and (min-width: 576px) {
+  .content1 {
+    gap: 0.5rem;
+  }
+  .content2 {
+    @extend .content1;
+  }
+}
+
+.head {
+  color: $colors-dark-secondary;
+  font-weight: 600;
+  line-height: 1.5;
+  // margin-bottom: 8px;
+  font-size: 12px;
+}
+.number {
+  color: $colors-dark-text;
+}
+.subhead {
+  color: $colors-dark-textSubtle;
+}
+.first-table {
+  width: 853px;
+  opacity: 1;
+}
+.second-table {
+  opacity: 0;
+}
+.arrow-button {
+  display: flex;
+  background-color: transparent;
+  border: none;
+  width: 48px;
+  padding: 0px;
+  margin-inline: 15px;
+}
+
+.arrow-button2 {
+  @extend .arrow-button;
+}
+.arrow {
+  align-self: center;
+  fill: $colors-dark-textSubtle;
+}
+.arrow2 {
+  @extend .arrow;
+}
+.fade-in {
+  animation: fadeIn 1.5s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fade-out {
+  animation: fadeOut 1.5s;
+}
+@keyframes fadeOut {
+  100% {
+    opacity: 1;
+  }
+  0% {
+    opacity: 0;
+  }
+}

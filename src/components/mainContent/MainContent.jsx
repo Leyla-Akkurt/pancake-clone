@@ -1,7 +1,7 @@
 import React from 'react';
 import Home1 from './home1/Home1';
 import Home2 from './home2/Home2';
-
+import { Home4 } from '../home_4/Home4';
 function MainContent({ hasPhishingBanner }) {
   return (
     <div
@@ -11,6 +11,7 @@ function MainContent({ hasPhishingBanner }) {
       <div className="main-content-container">
         <Home1 />
         <Home2 />
+        <Home4 />
       </div>
     </div>
   );
