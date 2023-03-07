@@ -1,0 +1,11 @@
+@import './PhishingBanner';
+@import './NavBar';
+
+.head-area {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  transition: top 0.2s ease 0s;
+  width: 100%;
+  z-index: 20;
+}

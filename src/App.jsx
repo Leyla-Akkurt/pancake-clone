@@ -1,10 +1,26 @@
-import { Home4 } from './components/home_4/Home4';
+import {
+  ContentWrapper,
+  Header,
+  BottomNav,
+  MainContent,
+} from './components/index';
+import { useState } from 'react';
 
 function App() {
+  const initPhishingBannerState = localStorage.getItem('hasPhishingPopUp')
+    ? JSON.parse(localStorage.getItem('hasPhishingPopUp'))
+    : false;
+
+  const [showPhishingBanner, setShowPhishingBanner] = useState(
+    initPhishingBannerState
+  );
+
   return (
-    <div className="content-wrapper">
-      <Home4 />
-    </div>
+    <ContentWrapper>
+      <Header hasPhishingBannerHandler={setShowPhishingBanner} />
+      <MainContent hasPhishingBanner={showPhishingBanner} />
+      <BottomNav />
+    </ContentWrapper>
   );
 }
 

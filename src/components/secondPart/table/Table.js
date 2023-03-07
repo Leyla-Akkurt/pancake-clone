@@ -30,16 +30,17 @@ export function Table() {
         contentData2.map((content, i) => <Content2 key={i} {...content} />)
       );
 
-    const interval = setInterval(() => {
-      setAnimation(!animation);
-      setHeadText(
-        animation
-          ? (headTextRef.current.innerText = 'Farms')
-          : (headTextRef.current.innerText = 'Syrup Pools')
-      );
-    }, 5000);
-    return () => clearInterval(interval);
-  }}, [animation, inView, setHeadText, tableOpacity]);
+      const interval = setInterval(() => {
+        setAnimation(!animation);
+        setHeadText(
+          animation
+            ? (headTextRef.current.innerText = 'Farms')
+            : (headTextRef.current.innerText = 'Syrup Pools')
+        );
+      }, 5000);
+      return () => clearInterval(interval);
+    }
+  }, [animation, inView, setHeadText, tableOpacity]);
 
   return (
     <div className="table" ref={tableRef}>
