@@ -29,7 +29,7 @@ export function Table() {
       setTableContent2(
         contentData2.map((content, i) => <Content2 key={i} {...content} />)
       );
-    }
+
     const interval = setInterval(() => {
       setAnimation(!animation);
       setHeadText(
@@ -39,7 +39,7 @@ export function Table() {
       );
     }, 5000);
     return () => clearInterval(interval);
-  }, [animation, inView, setHeadText, tableOpacity]);
+  }}, [animation, inView, setHeadText, tableOpacity]);
 
   return (
     <div className="table" ref={tableRef}>
