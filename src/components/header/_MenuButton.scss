@@ -1,0 +1,79 @@
+// MAIN MENU BUTTON STYLING
+.menu-button-container {
+  padding: 0.25rem 0;
+
+  .btn-hover:hover {
+    background-color: $colors-dark-tertiary;
+    border-radius: 1rem;
+  }
+
+  .menu-button-wrapper {
+    height: 100%;
+
+    .main-button {
+      a {
+        position: relative;
+        display: flex;
+        height: 3rem;
+        font-size: 1rem;
+        align-items: center;
+        padding: 0 1rem;
+      }
+
+      .alt-target {
+        img {
+          width: 1.25rem;
+        }
+
+        &::after {
+          @include lg {
+            content: '';
+            background: $colors-dark-success;
+            position: relative;
+            height: 0.5rem;
+            width: 0.5rem;
+            border-radius: 100%;
+            margin-left: 0.75rem;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+//  INNER MENU STYLING
+.inner-menu {
+  position: fixed;
+  background-color: $colors-dark-backgroundAlt;
+  border: 0.063rem solid $colors-dark-cardBorder;
+  border-radius: 1rem;
+  inset: 0px auto auto 0px;
+  transform: translate(200px, 56px);
+  padding: 0.25rem 0rem;
+  width: 280px;
+  z-index: 1001;
+  pointer-events: none;
+  visibility: hidden;
+
+  &-btn {
+    a {
+      // border-top-left-radius: 0.5rem;
+      // border-top-right-radius: 0.5rem;
+      align-items: center;
+      border: 0px none;
+      background: transparent;
+      color: $colors-dark-textSubtle;
+      cursor: pointer;
+      font-weight: 400;
+      display: flex;
+      font-size: 1rem;
+      height: 3rem;
+      justify-content: space-between;
+      outline: 0px;
+      padding: 0rem 1rem;
+      width: 100%;
+      pointer-events: inherit;
+    }
+  }
+}
