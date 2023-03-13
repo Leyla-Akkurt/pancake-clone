@@ -101,14 +101,23 @@
       display: none;
       align-items: center;
       margin-right: 0.75rem;
+      height: 100%;
 
       @include lg {
-        display: inline-flex;
+        display: flex;
+        align-items: center;
       }
 
       .price-icon {
         width: 1.5rem;
         margin-right: 0.5rem;
+        transition: width 0.3s ease 0s;
+        box-sizing: border-box;
+        flex-shrink: 0;
+      }
+
+      .price-icon:hover {
+        width: 28.8px;
       }
     }
 

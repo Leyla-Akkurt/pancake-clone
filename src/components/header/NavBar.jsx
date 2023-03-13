@@ -48,7 +48,7 @@ function NavBar() {
       </div>
       {/* <!-- right - side --> */}
       <div className="nav-options">
-        <div className="nav-options-price">
+        <a href="/" className="nav-options-price">
           <img
             src="./images/svg/price-icon.svg"
             className="price-icon"
@@ -58,7 +58,7 @@ function NavBar() {
             ${coinPrice && coinPrice}
             {isLoading && <i>loading..</i>}
           </span>
-        </div>
+        </a>
         <div className="nav-options-language">
           <img src="./images/svg/language-icon.svg" alt="mini globe icon" />
         </div>
