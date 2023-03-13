@@ -1,5 +1,5 @@
-import React from 'react';
 import useCoinPrice from '../hooks/useCoinPrice';
+import MenuButton from './MenuButton';
 
 function NavBar() {
   const { coinPrice, isLoading } = useCoinPrice();
@@ -25,25 +25,27 @@ function NavBar() {
           </a>
         </div>
         <div className="nav-items-menu">
-          <ul>
-            <li className="menu-item">
-              <button>Trade</button>
-            </li>
-            <li className="menu-item">
-              <button>Earn</button>
-            </li>
-            <li className="menu-item">
-              <button>Win</button>
-            </li>
-            <li className="menu-item">
-              <button>NFT</button>
-            </li>
-            <li className="menu-item">
-              <button>
-                <img src="./images/svg/three-dots.svg" alt="3 dots icon" />
-              </button>
-            </li>
-          </ul>
+          <div className="nav-items-menu-wrapper">
+            <MenuButton
+              target={{ name: 'Trade', href: '/trade' }}
+              innerLinks={[
+                { href: '/swap', name: 'Swap' },
+                { href: '/limit', name: 'Limit' },
+                { href: '/liquidity', name: 'Liquidity' },
+                { href: '/perpetual', name: 'Perpetual' },
+                { href: '/bridge', name: 'Bridge' },
+              ]}
+            />
+            <MenuButton target={{ name: 'Earn', href: '/trade' }} />
+            <MenuButton target={{ name: 'Win', href: '/trade' }} />
+            <MenuButton target={{ name: 'NFT', href: '/trade' }} />
+            <MenuButton
+              altTarget={{
+                src: './images/svg/three-dots.svg',
+                alt: '3 dots icon',
+              }}
+            />
+          </div>
         </div>
       </div>
       {/* <!-- right - side --> */}

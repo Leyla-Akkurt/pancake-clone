@@ -1,3 +1,5 @@
+@import './MenuButton';
+
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -47,7 +49,7 @@
     }
 
     &-menu {
-      margin-left: 2.5rem;
+      margin-left: 1.5rem;
       height: 100%;
       display: none;
 
@@ -55,38 +57,12 @@
         display: block;
       }
 
-      ul {
+      &-wrapper {
         display: flex;
         align-items: center;
+        justify-content: center;
         font-size: 1rem;
-        gap: 2rem;
         height: 100%;
-
-        li > button {
-          @include aAsButton;
-        }
-
-        li:last-of-type button {
-          display: flex;
-          align-items: center;
-
-          img {
-            width: 1.25rem;
-          }
-
-          &::after {
-            @include lg {
-              content: '';
-              background: $colors-dark-success;
-              position: relative;
-              height: 0.5rem;
-              width: 0.5rem;
-              border-radius: 100%;
-              margin-left: 0.75rem;
-              display: block;
-            }
-          }
-        }
       }
     }
   }
