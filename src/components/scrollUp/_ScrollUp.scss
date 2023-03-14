@@ -1,0 +1,24 @@
+// Scroll to top
+#scrollUp {
+  display: inline-flex;
+  width: 48px;
+  height: 48px;
+  z-index: 999;
+  border-radius: 16px;
+  align-items: center;
+  justify-content: center;
+  background-color: $colors-dark-primary;
+  position: fixed;
+  bottom: 110px;
+  right: 70px;
+  cursor: pointer;
+  &:hover {
+    background-color: #41a0a7;
+  }
+}
+
+@media (max-width: 575px) {
+  #scrollUp {
+    right: 20px;
+  }
+}
