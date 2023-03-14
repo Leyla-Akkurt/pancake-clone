@@ -1,7 +1,7 @@
 # PancakeSwap
 
 A clone of [PancakeSwap's front page ](https://pancakeswap.finance/) using ReactJS.
-
+ 
 This is a pair programming exercise.
 
 ## Installation
