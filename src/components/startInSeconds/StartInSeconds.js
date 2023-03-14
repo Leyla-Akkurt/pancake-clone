@@ -77,6 +77,7 @@ function StartInSeconds() {
           </div>
           <div id="startInSecondsMain">
             <h1>Start in seconds.</h1>
+
             <p>
               Connect your crypto wallet to start using the app in seconds
               <br />
