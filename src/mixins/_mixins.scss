@@ -75,8 +75,8 @@ $screen-xl: 67.5rem; // XLarge. Window width >=1080px
   padding: 0 1.5rem;
   transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
 }
-// cant use empty href tags so remove button styling
-@mixin aAsButton {
+// removes button styling
+@mixin removeStyling {
   background: none;
   color: inherit;
   border: none;

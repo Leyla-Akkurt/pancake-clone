@@ -1,5 +1,4 @@
 @import './MenuButton';
-
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -72,6 +71,30 @@
     display: flex;
     align-items: center;
     font-weight: 600;
+    cursor: pointer;
+
+    .simple-btn {
+      width: 32px;
+      height: 32px;
+      padding: 0rem;
+      display: inline-flex;
+      line-height: 1;
+      justify-content: center;
+      align-items: center;
+      opacity: 1;
+      transition: opacity 0.2s ease 0s;
+      cursor: pointer;
+      border: 0px none;
+      margin-right: 0.5rem;
+      background-color: transparent;
+      color: $colors-dark-primary;
+      box-shadow: none;
+      border-radius: 1rem;
+      &:hover,
+      &:focus {
+        opacity: 0.6;
+      }
+    }
 
     &-price {
       display: none;
@@ -98,12 +121,12 @@
     }
 
     &-language {
-      margin: 0.15rem 0.75rem 0 0;
-      padding: 0 0.5rem;
+      display: flex;
+      padding: 0 0.2rem;
     }
 
     &-settings {
-      margin: 0.15rem 0.75rem 0 0;
+      display: flex;
     }
 
     &-chain {
@@ -174,6 +197,13 @@
       font-size: 1rem;
       font-weight: 600;
       letter-spacing: 0.03rem;
+      opacity: 1;
+      transition: opacity 0.2s ease 0s;
+
+      &:hover,
+      &:focus {
+        opacity: 0.6;
+      }
 
       .desktop-text {
         display: none;

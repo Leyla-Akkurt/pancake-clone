@@ -24,26 +24,66 @@ function NavBar() {
             />
           </a>
         </div>
+        {/* <!-- menu - buttons (left) --> */}
         <div className="nav-items-menu">
           <div className="nav-items-menu-wrapper">
             <MenuButton
               target={{ name: 'Trade', href: '/trade' }}
               innerLinks={[
-                { href: '/swap', name: 'Swap' },
-                { href: '/limit', name: 'Limit' },
-                { href: '/liquidity', name: 'Liquidity' },
-                { href: '/perpetual', name: 'Perpetual' },
-                { href: '/bridge', name: 'Bridge' },
+                { href: '/swap', name: 'Swap', type: 'null' },
+                { href: '/limit', name: 'Limit', type: 'null' },
+                { href: '/liquidity', name: 'Liquidity', type: 'null' },
+                { href: '/perpetual', name: 'Perpetual', type: 'exit' },
+                { href: '/bridge', name: 'Bridge', type: 'exit' },
               ]}
             />
-            <MenuButton target={{ name: 'Earn', href: '/trade' }} />
-            <MenuButton target={{ name: 'Win', href: '/trade' }} />
-            <MenuButton target={{ name: 'NFT', href: '/trade' }} />
+            <MenuButton
+              target={{ name: 'Earn', href: '/trade' }}
+              innerLinks={[
+                { href: '/farms', name: 'Farms', type: 'null' },
+                { href: '/pools', name: 'Pools', type: 'null' },
+              ]}
+            />
+            <MenuButton
+              target={{ name: 'Win', href: '/trade' }}
+              innerLinks={[
+                {
+                  href: '/competition',
+                  name: 'Trading Competition',
+                  type: 'null',
+                },
+                {
+                  href: '/prediction',
+                  name: 'Prediction (BETA)',
+                  type: 'null',
+                },
+                { href: '/lottery', name: 'Lottery', type: 'null' },
+                { href: '/pottery', name: 'Pottery (BETA)', type: 'null' },
+              ]}
+            />
+            <MenuButton
+              target={{ name: 'NFT', href: '/trade' }}
+              innerLinks={[
+                { href: '/overview', name: 'Overview', type: 'null' },
+                { href: '/collections', name: 'Collections', type: 'null' },
+                { href: '/activity', name: 'Activity', type: 'null' },
+              ]}
+            />
             <MenuButton
               altTarget={{
                 src: './images/svg/three-dots.svg',
                 alt: '3 dots icon',
               }}
+              innerLinks={[
+                { href: '/info', name: 'Info', type: 'null' },
+                { href: '/ifo', name: 'IFO', type: 'null' },
+                { href: '/voting', name: 'Voting', type: 'VOTE NOW' },
+                { name: 'hrCosmetic', type: 'hrCosmetic' },
+                { href: '/leaderboard', name: 'Leaderboard', type: 'null' },
+                { name: 'hrCosmetic', type: 'hrCosmetic' },
+                { href: '/blog', name: 'Blog', type: 'exit' },
+                { href: '/docs', name: 'Docs', type: 'exit' },
+              ]}
             />
           </div>
         </div>
@@ -62,10 +102,14 @@ function NavBar() {
           </span>
         </a>
         <div className="nav-options-language">
-          <img src="./images/svg/language-icon.svg" alt="mini globe icon" />
+          <button className="simple-btn">
+            <img src="./images/svg/language-icon.svg" alt="mini globe icon" />
+          </button>
         </div>
         <div className="nav-options-settings">
-          <img src="./images/svg/settings-icon.svg" alt="mini gear icon" />
+          <button className="simple-btn">
+            <img src="./images/svg/settings-icon.svg" alt="mini gear icon" />
+          </button>
         </div>
         <div className="nav-options-chain">
           <img
