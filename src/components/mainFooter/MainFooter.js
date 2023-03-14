@@ -1,6 +1,8 @@
 import React from 'react';
+import useCoinPrice from '../hooks/useCoinPrice';
 
 function MainFooter() {
+  const { coinPrice, isLoading } = useCoinPrice();
   return (
     <div id="mainFooter">
       <div id="mainFooter-smScreens">
@@ -1088,7 +1090,10 @@ function MainFooter() {
                       </linearGradient>
                     </defs>
                   </svg>
-                  <span id="cake-price">$</span>
+                  <span id="cake-price">
+                    ${coinPrice && coinPrice}
+                    {isLoading && <i>loading..</i>}
+                  </span>
                 </a>
               </div>
               <a href="#" id="buyCakeBtn">
