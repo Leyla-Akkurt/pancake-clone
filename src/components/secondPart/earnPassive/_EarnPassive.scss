@@ -4,6 +4,9 @@
   width: 100%;
   align-items: flex-end;
   justify-content: center;
+  span {
+    color: $colors-dark-secondary;
+  }
 }
 @include md {
   .earnPassive {
