@@ -86,6 +86,7 @@ function StartInSeconds() {
             <p id="learn">Learn how to start</p>
             <button className="btn-color">Connect Wallet</button>
           </div>
+
           <div className="cake-wrapper">
             <div className="cake-container">
               <div id="pancakeFlyingBottom" className="flyingCake">

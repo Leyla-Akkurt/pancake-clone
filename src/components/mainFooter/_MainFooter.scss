@@ -264,7 +264,10 @@ ul > li {
   justify-content: center;
   align-items: center;
   font-weight: 600;
-  color: #000;
+  color: $colors-dark-invertedContrast;
+  .btn-color {
+    color: $colors-dark-invertedContrast;
+  }
   svg {
     margin-top: 3px;
   }

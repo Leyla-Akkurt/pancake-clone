@@ -56,11 +56,15 @@
   margin-bottom: 400px;
 }
 #startInSecondsMain {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   width: 100%;
   text-align: center;
   line-height: 1.5;
   h1 {
-    font-size: 2.5rem;
+    font-size: 40px;
+    font-weight: 600;
   }
   h1,
   &:nth-child(2) {
@@ -74,6 +78,8 @@
     padding: 15px 30px;
     border-radius: 15px;
     cursor: pointer;
+    width: fit-content;
+    align-self: center;
     &:hover {
       background-color: #41a0a7;
     }
