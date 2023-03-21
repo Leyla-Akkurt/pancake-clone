@@ -2,9 +2,11 @@ import {
   ContentWrapper,
   Header,
   BottomNav,
+  Footer,
   MainContent,
 } from './components/index';
 import { useState } from 'react';
+import ScrollUp from './components/scrollUp/ScrollUp';
 
 function App() {
   const initPhishingBannerState = localStorage.getItem('hasPhishingPopUp')
@@ -25,6 +27,8 @@ function App() {
         hasOverlayHandler={setShowOverlay}
       />
       <MainContent hasPhishingBanner={showPhishingBanner} />
+      <Footer />
+      <ScrollUp />
       <BottomNav />
     </ContentWrapper>
   );
