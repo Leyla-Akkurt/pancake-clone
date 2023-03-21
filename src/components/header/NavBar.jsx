@@ -1,5 +1,5 @@
-import React from 'react';
 import useCoinPrice from '../hooks/useCoinPrice';
+import MenuButton from './MenuButton';
 
 function NavBar() {
   const { coinPrice, isLoading } = useCoinPrice();
@@ -24,31 +24,73 @@ function NavBar() {
             />
           </a>
         </div>
+        {/* <!-- menu - buttons (left) --> */}
         <div className="nav-items-menu">
-          <ul>
-            <li className="menu-item">
-              <button>Trade</button>
-            </li>
-            <li className="menu-item">
-              <button>Earn</button>
-            </li>
-            <li className="menu-item">
-              <button>Win</button>
-            </li>
-            <li className="menu-item">
-              <button>NFT</button>
-            </li>
-            <li className="menu-item">
-              <button>
-                <img src="./images/svg/three-dots.svg" alt="3 dots icon" />
-              </button>
-            </li>
-          </ul>
+          <div className="nav-items-menu-wrapper">
+            <MenuButton
+              target={{ name: 'Trade', href: '/trade' }}
+              innerLinks={[
+                { href: '/swap', name: 'Swap', type: 'null' },
+                { href: '/limit', name: 'Limit', type: 'null' },
+                { href: '/liquidity', name: 'Liquidity', type: 'null' },
+                { href: '/perpetual', name: 'Perpetual', type: 'exit' },
+                { href: '/bridge', name: 'Bridge', type: 'exit' },
+              ]}
+            />
+            <MenuButton
+              target={{ name: 'Earn', href: '/trade' }}
+              innerLinks={[
+                { href: '/farms', name: 'Farms', type: 'null' },
+                { href: '/pools', name: 'Pools', type: 'null' },
+              ]}
+            />
+            <MenuButton
+              target={{ name: 'Win', href: '/trade' }}
+              innerLinks={[
+                {
+                  href: '/competition',
+                  name: 'Trading Competition',
+                  type: 'null',
+                },
+                {
+                  href: '/prediction',
+                  name: 'Prediction (BETA)',
+                  type: 'null',
+                },
+                { href: '/lottery', name: 'Lottery', type: 'null' },
+                { href: '/pottery', name: 'Pottery (BETA)', type: 'null' },
+              ]}
+            />
+            <MenuButton
+              target={{ name: 'NFT', href: '/trade' }}
+              innerLinks={[
+                { href: '/overview', name: 'Overview', type: 'null' },
+                { href: '/collections', name: 'Collections', type: 'null' },
+                { href: '/activity', name: 'Activity', type: 'null' },
+              ]}
+            />
+            <MenuButton
+              altTarget={{
+                src: './images/svg/three-dots.svg',
+                alt: '3 dots icon',
+              }}
+              innerLinks={[
+                { href: '/info', name: 'Info', type: 'null' },
+                { href: '/ifo', name: 'IFO', type: 'null' },
+                { href: '/voting', name: 'Voting', type: 'VOTE NOW' },
+                { name: 'hrCosmetic', type: 'hrCosmetic' },
+                { href: '/leaderboard', name: 'Leaderboard', type: 'null' },
+                { name: 'hrCosmetic', type: 'hrCosmetic' },
+                { href: '/blog', name: 'Blog', type: 'exit' },
+                { href: '/docs', name: 'Docs', type: 'exit' },
+              ]}
+            />
+          </div>
         </div>
       </div>
       {/* <!-- right - side --> */}
       <div className="nav-options">
-        <div className="nav-options-price">
+        <a href="/" className="nav-options-price">
           <img
             src="./images/svg/price-icon.svg"
             className="price-icon"
@@ -58,12 +100,16 @@ function NavBar() {
             ${coinPrice && coinPrice}
             {isLoading && <i>loading..</i>}
           </span>
-        </div>
+        </a>
         <div className="nav-options-language">
-          <img src="./images/svg/language-icon.svg" alt="mini globe icon" />
+          <button className="simple-btn">
+            <img src="./images/svg/language-icon.svg" alt="mini globe icon" />
+          </button>
         </div>
         <div className="nav-options-settings">
-          <img src="./images/svg/settings-icon.svg" alt="mini gear icon" />
+          <button className="simple-btn">
+            <img src="./images/svg/settings-icon.svg" alt="mini gear icon" />
+          </button>
         </div>
         <div className="nav-options-chain">
           <img

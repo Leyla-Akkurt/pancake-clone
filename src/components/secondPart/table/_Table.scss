@@ -25,6 +25,9 @@
   align-items: center;
   justify-content: flex-start;
   margin-top: 24px;
+  h2 {
+    font-size: 22px;
+  }
 }
 .table-heading2 {
   @extend .table-heading;
