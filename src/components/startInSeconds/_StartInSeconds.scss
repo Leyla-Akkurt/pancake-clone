@@ -1,0 +1,145 @@
+.bgColor {
+  background-color: #fff;
+}
+#startInSeconds {
+  @include footerBg(
+    linear-gradient(rgb(118, 69, 217) 0%, rgb(81, 33, 177) 100%)
+  );
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  // justify-content: space-between;
+  svg {
+    position: relative;
+    width: 300%;
+    height: 300%;
+    display: block;
+    top: -450px;
+    left: 0;
+  }
+}
+
+#svgBg {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#startInWrapper {
+  max-width: 1200px;
+  width: 100%;
+  margin-inline: auto;
+  position: relative;
+}
+#startInContainer {
+  display: flex;
+  width: 100%;
+  flex-flow: row;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  margin: 10px 0 70px;
+}
+
+#footer img {
+  width: 240px;
+  height: 224px;
+  margin: 0;
+}
+#pancakeFlyingTop {
+  width: 100%;
+  position: relative;
+  bottom: 400px;
+  margin-bottom: 400px;
+}
+#startInSecondsMain {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  text-align: center;
+  line-height: 1.5;
+  h1 {
+    font-size: 40px;
+    font-weight: 600;
+  }
+  h1,
+  &:nth-child(2) {
+    color: $colors-dark-text;
+  }
+  button {
+    font-size: 16px;
+    font-weight: 600;
+    background-color: $colors-dark-primary;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 15px;
+    cursor: pointer;
+    width: fit-content;
+    align-self: center;
+    &:hover {
+      background-color: #41a0a7;
+    }
+  }
+}
+
+.flyingCake {
+  max-height: 100%;
+  position: relative;
+  animation-name: flyingcake;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  .cake {
+    position: absolute;
+  }
+
+  .cake-right {
+    right: 0px;
+  }
+
+  .cake-left {
+    left: 0px;
+  }
+}
+
+.btn-color-change {
+  color: #fff;
+  fill: #fff;
+}
+
+.cake-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.cake-container {
+  position: absolute;
+  width: 100%;
+}
+
+@keyframes flyingcake {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  50% {
+    left: 3;
+    top: 20px;
+  }
+  100% {
+    left: 0;
+    top: 0;
+  }
+}
+
+#learn {
+  color: $colors-dark-primary;
+  font-weight: 600;
+}
+#pancakeFlyingBottom {
+  position: relative;
+  margin-bottom: 60px;
+}
