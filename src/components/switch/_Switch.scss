@@ -1,0 +1,55 @@
+.switch {
+  align-items: center;
+  background-color: $colors-dark-input;
+  border-radius: 1.5rem;
+  box-shadow: $shadows-inset;
+  cursor: pointer;
+  display: inline-flex;
+  height: 2rem;
+  position: relative;
+  transition: background-color 200ms ease 0s;
+  width: 3.5rem;
+
+  &-checkbox {
+    cursor: pointer;
+    opacity: 0;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+
+    // handle checkbox's states
+    &:checked {
+      + .switch-checkbox-icon {
+        left: calc(100% - 30px);
+      }
+    }
+    &:focus {
+      + .switch-checkbox-icon {
+        box-shadow: $shadows-focus;
+      }
+    }
+    &:hover {
+      + .switch-checkbox-icon:not(:disabled):not(:checked) {
+        box-shadow: $shadows-focus;
+      }
+    }
+  }
+
+  &-checkbox-icon {
+    background-color: $colors-dark-backgroundAlt;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 1.625rem;
+    left: 0.188rem;
+    position: absolute;
+    top: 0.188rem;
+    transition: left 200ms ease-in 0s;
+    width: 1.625rem;
+    z-index: 1;
+  }
+}
+
+.switch-checked {
+  background-color: $colors-dark-success;
+}

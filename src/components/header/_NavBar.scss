@@ -1,4 +1,5 @@
 @import './MenuButton';
+@import './SettingsButton';
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -123,10 +124,6 @@
     &-language {
       display: flex;
       padding: 0 0.2rem;
-    }
-
-    &-settings {
-      display: flex;
     }
 
     &-chain {

@@ -1,7 +1,8 @@
 import useCoinPrice from '../hooks/useCoinPrice';
 import MenuButton from './MenuButton';
+import SettingsButton from './SettingsButton';
 
-function NavBar() {
+function NavBar({ hasOverlay, hasOverlayHandler }) {
   const { coinPrice, isLoading } = useCoinPrice();
 
   return (
@@ -106,11 +107,10 @@ function NavBar() {
             <img src="./images/svg/language-icon.svg" alt="mini globe icon" />
           </button>
         </div>
-        <div className="nav-options-settings">
-          <button className="simple-btn">
-            <img src="./images/svg/settings-icon.svg" alt="mini gear icon" />
-          </button>
-        </div>
+        <SettingsButton
+          hasOverlay={hasOverlay}
+          hasOverlayHandler={hasOverlayHandler}
+        />
         <div className="nav-options-chain">
           <img
             src="./images/chains/bnb-chain.png"
