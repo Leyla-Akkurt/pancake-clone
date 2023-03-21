@@ -3,6 +3,9 @@ import {
   Header,
   BottomNav,
   MainContent,
+  WinMillions,
+  WorldOne,
+  WorldTwo,
 } from './components/index';
 import { useState } from 'react';
 
@@ -20,6 +23,9 @@ function App() {
       <Header hasPhishingBannerHandler={setShowPhishingBanner} />
       <MainContent hasPhishingBanner={showPhishingBanner} />
       <BottomNav />
+      <WinMillions />
+      <WorldOne />
+      <WorldTwo />
     </ContentWrapper>
   );
 }

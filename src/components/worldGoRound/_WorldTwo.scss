@@ -1,0 +1,57 @@
+.container-world-down{
+    color: white;
+    display:flex;
+    flex-direction: column;
+    width: 820px;
+
+    background-color: #08060b;
+    margin: 0 auto;
+    max-width: 968px;
+    font-family: Kanit, sans-serif;
+    justify-content: space-between;
+  
+  }
+  .top-part-world{
+    display:flex;
+    flex-direction: row;
+    justify-content:  space-between;
+    margin-bottom: 24px;
+  }
+  .bot-part-world{
+    display:flex;
+    flex-direction: row;
+    justify-content:  space-between;
+    margin-bottom: 24px;
+  }
+  .tinted-text{
+    margin-right: 50px;
+    font-size: 16px;
+    font-family: Kanit, sans-serif;
+    font-weight: bolder;
+    margin-bottom: 0px;
+    color: #B8ADD2;
+  
+  }
+  .testing{
+    border-left: 1px solid #262130;
+    padding-left:16px;
+  }
+  .full-text{
+    margin-right: 50px;
+    font-size: 24px;
+    font-family: Kanit, sans-serif;
+    margin-top: 0px;
+    color: #F4EEFF;
+    
+  }
+  .stats-one{
+    width: 313.3px;
+  }
+  .stats-two{
+    width: 313.3px;
+    display: inline-block;
+    
+  }
+  .stats-three{
+    width: 313.3px;
+  }
