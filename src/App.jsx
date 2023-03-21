@@ -2,12 +2,14 @@ import {
   ContentWrapper,
   Header,
   BottomNav,
+  Footer,
   MainContent,
   WinMillions,
   WorldOne,
   WorldTwo,
 } from './components/index';
 import { useState } from 'react';
+import ScrollUp from './components/scrollUp/ScrollUp';
 
 function App() {
   const initPhishingBannerState = localStorage.getItem('hasPhishingPopUp')
@@ -22,10 +24,12 @@ function App() {
     <ContentWrapper>
       <Header hasPhishingBannerHandler={setShowPhishingBanner} />
       <MainContent hasPhishingBanner={showPhishingBanner} />
-      <BottomNav />
       <WinMillions />
       <WorldOne />
       <WorldTwo />
+      <Footer />
+      <ScrollUp />
+      <BottomNav />
     </ContentWrapper>
   );
 }

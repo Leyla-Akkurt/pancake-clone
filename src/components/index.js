@@ -5,3 +5,5 @@ export { default as BottomNav } from './bottomNav/BottomNav';
 export { default as WinMillions } from './winMillions/WinMillions';
 export { default as WorldOne } from './worldGoRound/WorldOne';
 export { default as WorldTwo } from './worldGoRound/WorldTwo';
+export { default as Footer } from './footer/Footer';
+export { default as ScrollUp } from './scrollUp/ScrollUp';
