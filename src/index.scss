@@ -9,6 +9,11 @@ html {
 
 body {
   background-color: $colors-dark-background;
+  // overflow: overlay;
+}
+
+body:has(.requires-no-scroll) {
+  overflow: hidden;
 }
 
 ::-webkit-scrollbar {
