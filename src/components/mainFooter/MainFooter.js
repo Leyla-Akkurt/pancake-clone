@@ -1,6 +1,6 @@
 import React from 'react';
 import useCoinPrice from '../hooks/useCoinPrice';
-import LightSwitch from '../switch/LightSwitch';
+import LightSwitch from '../switch/ThemeSwitch';
 
 function MainFooter() {
   const { coinPrice, isLoading } = useCoinPrice();

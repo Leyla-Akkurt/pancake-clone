@@ -7,6 +7,7 @@ import {
 } from './components/index';
 import { useState } from 'react';
 import ScrollUp from './components/scrollUp/ScrollUp';
+import ThemeProvider from './components/contexts/theme/ThemeProvider';
 
 function App() {
   const initPhishingBannerState = localStorage.getItem('hasPhishingPopUp')
@@ -20,17 +21,22 @@ function App() {
   const [showOverlay, setShowOverlay] = useState(false);
 
   return (
-    <ContentWrapper hasOverlay={showOverlay} hasOverlayHandler={setShowOverlay}>
-      <Header
-        hasPhishingBannerHandler={setShowPhishingBanner}
+    <ThemeProvider>
+      <ContentWrapper
         hasOverlay={showOverlay}
         hasOverlayHandler={setShowOverlay}
-      />
-      <MainContent hasPhishingBanner={showPhishingBanner} />
-      <Footer />
-      <ScrollUp />
-      <BottomNav />
-    </ContentWrapper>
+      >
+        <Header
+          hasPhishingBannerHandler={setShowPhishingBanner}
+          hasOverlay={showOverlay}
+          hasOverlayHandler={setShowOverlay}
+        />
+        <MainContent hasPhishingBanner={showPhishingBanner} />
+        <Footer />
+        <ScrollUp />
+        <BottomNav />
+      </ContentWrapper>
+    </ThemeProvider>
   );
 }
 
