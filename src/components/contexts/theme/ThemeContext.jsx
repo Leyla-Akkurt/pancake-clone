@@ -1,7 +1,8 @@
 import React from 'react';
-// true = dark , false = light
+//true = dark , false = light
+
 export const initialThemeState = {
-  theme: Boolean(false),
+  theme: false,
   setTheme: () => null,
 };
 
