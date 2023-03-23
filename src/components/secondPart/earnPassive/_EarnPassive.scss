@@ -6,7 +6,9 @@
   justify-content: center;
 
   span {
-    color: $colors-dark-secondary;
+    @include themed() {
+      color: c('secondary');
+    }
   }
 }
 @include md {
@@ -16,7 +18,9 @@
   }
 }
 .explore a {
-  color: $colors-dark-primary;
+  @include themed() {
+    color: c('primary');
+  }
   @include text(16px, 600, 1.5, 0);
 }
 

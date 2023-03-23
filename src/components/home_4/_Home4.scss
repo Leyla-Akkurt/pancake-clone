@@ -1,8 +1,12 @@
 .home-4-svg {
   position: relative;
   overflow: hidden;
-  svg {
+
+  &-line {
     width: 150%;
-    fill: #201335;
+    @include themed() {
+      color: c('text');
+      fill: c('home4Line');
+    }
   }
 }

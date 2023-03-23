@@ -4,7 +4,9 @@
 }
 
 h2 {
-  color: $colors-dark-white;
+  @include themed() {
+    color: c('white');
+  }
 }
 
 .home-2-content-header,
@@ -26,7 +28,9 @@ h2 {
 .home-2-content-text,
 .home-2-content-flexy-text,
 .home-2-content-subtext {
-  color: $colors-dark-textSubtle;
+  @include themed() {
+    color: c('textSubtle');
+  }
 }
 
 .home-2-content-text {

@@ -4,7 +4,9 @@
   position: relative;
 
   .btn-hover:hover {
-    background-color: $colors-dark-tertiary;
+    @include themed() {
+      background-color: c('tertiary');
+    }
     border-radius: 1rem;
   }
 
@@ -21,14 +23,19 @@
       }
 
       .alt-target {
-        img {
+        svg {
           width: 1.25rem;
+          @include themed() {
+            fill: c('textSubtle');
+          }
         }
 
         &::after {
           @include lg {
             content: '';
-            background: $colors-dark-success;
+            @include themed() {
+              background: c('success');
+            }
             position: relative;
             height: 0.5rem;
             width: 0.5rem;
@@ -48,7 +55,9 @@
         text-decoration: none;
         align-items: center;
         justify-content: center;
-        color: $colors-dark-textSubtle;
+        @include themed() {
+          color: c('text-Subtle');
+        }
         font-size: 0.625rem;
         height: 2.75rem;
         gap: 0.125rem;
@@ -65,7 +74,9 @@
       .alt-target {
         &::after {
           content: '';
-          background: $colors-dark-success;
+          @include themed() {
+            background: c('success');
+          }
           position: absolute;
           height: 0.5rem;
           width: 0.5rem;
@@ -93,8 +104,11 @@
 //  INNER MENU STYLING
 .inner-menu {
   position: absolute;
-  background-color: $colors-dark-backgroundAlt;
-  border: 0.063rem solid $colors-dark-cardBorder;
+  border: 0.063rem solid;
+  @include themed() {
+    background-color: c('backgroundAlt');
+    border-color: c('cardBorder');
+  }
   border-radius: 1rem;
   inset: 0px auto auto 0px;
   transform: translate(0px, 56px);
@@ -108,7 +122,9 @@
       align-items: center;
       border: 0px none;
       background: transparent;
-      color: $colors-dark-textSubtle;
+      @include themed() {
+        color: c('textSubtle');
+      }
       font-weight: 400;
       display: flex;
       font-size: 1rem;
@@ -120,7 +136,9 @@
     }
 
     a:hover {
-      background-color: $colors-dark-tertiary;
+      @include themed() {
+        background-color: c('tertiary');
+      }
     }
 
     .exit-link {
@@ -141,14 +159,19 @@
       margin-left: 8px;
       line-height: 1.5;
       font-size: 0.875rem;
-      color: $colors-dark-success;
-      border: 0.125rem solid $colors-dark-success;
+      border: 0.125rem solid;
       border-radius: 1rem;
+      @include themed() {
+        color: c('success');
+        border-color: c('success');
+      }
     }
 
     .hr-cosmetic {
       border-style: solid;
-      border-color: $colors-dark-cardBorder;
+      @include themed() {
+        border-color: c('cardBorder');
+      }
       border-width: 0.063rem 0 0;
       margin: 0.25rem 0rem;
     }

@@ -1,6 +1,8 @@
 .light-switch {
   align-items: center;
-  background-color: $colors-dark-textDisabled;
+  @include themed() {
+    background-color: c('textDisabled');
+  }
   border-radius: 1.5rem;
   box-shadow: $shadows-inset;
   cursor: pointer;
@@ -37,7 +39,9 @@
   }
 
   &-active {
-    background-color: $colors-dark-backgroundAlt;
+    @include themed() {
+      background-color: c('backgroundAlt');
+    }
     border-radius: 50%;
     cursor: pointer;
     height: 1.625rem;
@@ -76,15 +80,21 @@
     flex-shrink: 0;
     align-self: center;
     width: 1.25rem;
-    fill: $colors-dark-backgroundAlt;
+    @include themed() {
+      fill: c('backgroundAlt');
+    }
   }
 
   // active icons
   svg.switch-sun-icon-active {
-    fill: $colors-light-warning;
+    @include themed() {
+      fill: c('warning');
+    }
   }
 
   svg.switch-moon-icon-active {
-    fill: $colors-dark-secondary;
+    @include themed() {
+      fill: c('secondary');
+    }
   }
 }

@@ -18,11 +18,19 @@ const ThemeProvider = ({ children }) => {
   }, []);
 
   useEffect(() => {
+    const html = document.documentElement;
     window.localStorage.setItem('hasDarkMode', theme);
+
+    if (html.hasAttribute('class')) {
+      html.removeAttribute('class');
+      html.setAttribute('class', `theme--${theme === true ? 'dark' : 'light'}`);
+    } else {
+      html.setAttribute('class', `theme--${theme === true ? 'dark' : 'light'}`);
+    }
   }, [theme]);
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
-      <div className={`theme--${theme}`}>{children}</div>
+      {children}
     </ThemeContext.Provider>
   );
 };
