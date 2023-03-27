@@ -7,8 +7,8 @@ function WinMillions() {
   const predictionRef = useRef();
   const lotteryRef = useRef();
   const { ref: winMillionRef, inView } = useInView();
-  const [lotteryValue, setLotteryValue] = useState('gray');
-  const [predictionValue, setPredictionValue] = useState('gray');
+  const [lotteryValue, setLotteryValue] = useState('rgba(8, 6, 11, 0.6)');
+  const [predictionValue, setPredictionValue] = useState('rgba(8, 6, 11, 0.6)');
   const [predictionColor, setPredictionColor] = useState('transparent');
   const [lotteryColor, setLotteryColor] = useState('transparent');
 
@@ -25,7 +25,7 @@ function WinMillions() {
       lotteryRef.current.style.background = lotteryValue;
       lotteryRef.current.style.color = lotteryColor;
     }
-  }, [predictionValue, inView]);
+  }, [predictionValue, inView, lotteryColor, lotteryValue, predictionColor]);
   console.log(inView);
   console.log(predictionValue);
   return (
@@ -168,18 +168,22 @@ function WinMillions() {
         <img
           className="cards-image1"
           src=".\images\home\prediction-cards\bottom-left@2x.webp"
+          alt=""
         />
         <img
           className="cards-image2"
           src=".\images\home\prediction-cards\green@2x.webp"
+          alt=""
         />
         <img
           className="cards-image3"
           src=".\images\home\prediction-cards\red@2x.webp"
+          alt=""
         />
         <img
           className="cards-image4"
           src=".\images\home\prediction-cards\top-right@2x.webp"
+          alt=""
         />
       </div>
       <div className="container-pred">

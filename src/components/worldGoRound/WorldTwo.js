@@ -1,40 +1,30 @@
-import React from 'react';
-import CountUp from 'react-countup';
+import React, { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
+import CounterWorld from './CounterWorld';
 
 function WorldTwo() {
-  const { ref, inView } = useInView();
-
+  const { ref: WorldRef, inView } = useInView();
+  const [circleContent, setCircleContent] = useState();
+  const [totalContent, setTotalContent] = useState();
+  const [burnedContent, setBurnedContent] = useState();
+  useEffect(() => {
+    if (inView) {
+      setCircleContent(() => <CounterWorld number={166580157} />);
+      setTotalContent(() => <CounterWorld number={366858290} />);
+      setBurnedContent(() => <CounterWorld number={730148902} />);
+    }
+  }, [inView]);
+  console.log(circleContent);
   return (
-    <div className="container-world-down" ref={ref}>
+    <div className="container-world-down" ref={WorldRef}>
       <div className="top-part">
         <div className="stats one">
           <div className="tinted-text">Circulating Supply</div>
-          <div className="full-text">
-            {inView && (
-              <CountUp
-                start={0}
-                end={166580157}
-                duration={1}
-                separator=","
-                delay={1}
-              />
-            )}
-          </div>
+          <div className="full-text">{circleContent}</div>
         </div>
         <div className="stats-two two addBorder2">
           <div className="tinted-text testing">Total supply</div>
-          <div className="full-text testing">
-            {inView && (
-              <CountUp
-                start={0}
-                end={366858290}
-                duration={1}
-                separator=","
-                delay={1}
-              />
-            )}
-          </div>
+          <div className="full-text testing">{totalContent}</div>
         </div>
         <div className="stats-two three addBorder2">
           <div className="tinted-text testing">Max Supply</div>
@@ -46,17 +36,7 @@ function WorldTwo() {
         </div>
         <div className="stats-two five addedBorder">
           <div className="tinted-text testing">Burned to date</div>
-          <div className="full-text testing">
-            {inView && (
-              <CountUp
-                start={0}
-                end={730148902}
-                duration={1}
-                delay={1}
-                separator=","
-              />
-            )}
-          </div>
+          <div className="full-text testing">{burnedContent}</div>
         </div>
         <div className="stats-two six addedBorder">
           <div className="tinted-text testing">Current emissions</div>
