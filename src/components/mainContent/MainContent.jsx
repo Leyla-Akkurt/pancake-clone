@@ -2,7 +2,7 @@ import React from 'react';
 import Home1 from './home1/Home1';
 import Home2 from './home2/Home2';
 import { Home4 } from '../home_4/Home4';
-import WinMillions from '../winMillions/WinMillions';
+import Home3 from './home3/Home3';
 function MainContent({ hasPhishingBanner }) {
   return (
     <div
@@ -13,7 +13,7 @@ function MainContent({ hasPhishingBanner }) {
         <Home1 />
         <Home2 />
         <Home4 />
-        <WinMillions />
+        <Home3 />
       </div>
     </div>
   );
