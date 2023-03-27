@@ -15,7 +15,9 @@
     border: 0px none;
     margin-right: 0.5rem;
     background-color: transparent;
-    color: $colors-dark-primary;
+    @include themed() {
+      color: c('primary');
+    }
     box-shadow: none;
     border-radius: 1rem;
     &:hover,

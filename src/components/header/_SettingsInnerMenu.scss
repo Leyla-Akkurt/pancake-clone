@@ -1,5 +1,5 @@
 @import '../switch/Switch';
-@import '../switch/LightSwitch';
+@import '../switch/ThemeSwitch';
 
 .settings-inner-menu {
   border-radius: 2rem 2rem 0rem 0rem;
@@ -12,10 +12,13 @@
   max-width: none !important;
   min-height: 300px;
   overflow: hidden;
-  background: $colors-dark-backgroundAlt;
   box-shadow: rgba(14, 14, 44, 0.1) 0px 20px 36px -8px,
     rgba(0, 0, 0, 0.05) 0px 1px 1px;
   border: 1px solid rgb(39, 38, 44);
+
+  @include themed() {
+    background: c('backgroundAlt');
+  }
 
   @include md {
     max-height: 100vh;
@@ -29,11 +32,16 @@
     display: flex;
     align-items: center;
     background: transparent;
-    border-bottom: 1px solid $colors-dark-cardBorder;
+    border-bottom: 1px solid;
+    @include themed() {
+      border-bottom-color: c('cardBorder');
+    }
     padding: 12px 24px;
 
     @include md {
-      background: $colors-dark-gradientCardHeader;
+      @include themed() {
+        background: c('gradientCardHeader');
+      }
     }
 
     .header-text {
@@ -45,7 +53,9 @@
         font-size: 1.25rem;
         font-weight: 600;
         line-height: 1.1;
-        color: $colors-dark-text;
+        @include themed() {
+          color: c('text');
+        }
         margin: 0px;
         padding: 0px;
       }
@@ -58,7 +68,9 @@
       background-color: transparent;
       box-shadow: none;
       border: none;
-      color: $colors-dark-primary;
+      @include themed() {
+        color: c('primary');
+      }
 
       .close-btn {
         align-self: center;
@@ -99,7 +111,9 @@
         padding-bottom: 1.5rem;
 
         .secondary-header {
-          color: $colors-dark-secondary;
+          @include themed() {
+            color: c('secondary');
+          }
           font-weight: 600;
           line-height: 1.5;
           text-transform: uppercase;
@@ -111,7 +125,9 @@
           display: flex;
 
           &-text {
-            color: $colors-dark-text;
+            @include themed() {
+              color: c('text');
+            }
             font-weight: 400;
             line-height: 1.5;
             font-size: 1rem;
@@ -146,9 +162,11 @@
               border: 0px none;
               border-radius: 16px;
               padding: 0rem 1rem;
-              background-color: $colors-dark-tertiary;
+              @include themed() {
+                background-color: c('tertiary');
+                color: c('primary');
+              }
               box-shadow: none;
-              color: $colors-dark-primary;
               margin-top: 0.25rem;
               margin-right: 0.25rem;
 
@@ -157,8 +175,10 @@
               }
 
               &:focus {
-                background-color: $colors-dark-primary;
-                color: $colors-dark-invertedContrast;
+                @include themed() {
+                  background-color: c('primary');
+                  color: c('invertedContrast');
+                }
               }
             }
           }

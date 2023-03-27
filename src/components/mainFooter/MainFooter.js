@@ -1,11 +1,11 @@
 import React from 'react';
 import useCoinPrice from '../hooks/useCoinPrice';
-import LightSwitch from '../switch/LightSwitch';
+import LightSwitch from '../switch/ThemeSwitch';
 
 function MainFooter() {
   const { coinPrice, isLoading } = useCoinPrice();
   return (
-    <div id="mainFooter">
+    <div id="mainFooter" className="main-footer">
       <div id="mainFooter-smScreens">
         <div id="logoFooter">
           <svg

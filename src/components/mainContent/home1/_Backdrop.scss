@@ -12,8 +12,11 @@
     width: 100%;
     bottom: -0.188rem;
 
-    img {
+    svg.home-1-backdrop-svg {
       width: 100%;
+      @include themed() {
+        color: c('text');
+      }
     }
   }
 }

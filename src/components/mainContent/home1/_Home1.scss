@@ -7,7 +7,9 @@
   display: flex;
   flex-flow: column;
   align-items: center;
-  background: $colors-dark-gradientHero;
+  @include themed() {
+    background: c('gradientHero');
+  }
   z-index: 1;
   padding: 1rem 0rem 3rem 0rem;
 
@@ -20,7 +22,11 @@
     max-width: 75rem;
     min-height: auto;
     padding: 1rem 1.5rem;
-    color: white;
+    overflow: visible;
+
+    @include themed() {
+      color: c('text');
+    }
     overflow: hidden;
 
     @include xs {

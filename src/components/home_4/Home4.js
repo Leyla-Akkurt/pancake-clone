@@ -8,10 +8,9 @@ export function Home4() {
         <svg
           viewBox="0 0 1660 48"
           preserveAspectRatio="none"
-          color="text"
+          className="home-4-svg-line"
           width="20px"
           xmlns="http://www.w3.org/2000/svg"
-          className="sc-4ba21b47-0 IIbzK"
         >
           <path d="M1660 48C1139.02 46.1887 336.256 15.2453 0 0H1660V48Z"></path>
         </svg>

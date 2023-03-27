@@ -1,6 +1,8 @@
 .switch {
   align-items: center;
-  background-color: $colors-dark-input;
+  @include themed() {
+    background-color: c('input');
+  }
   border-radius: 1.5rem;
   box-shadow: $shadows-inset;
   cursor: pointer;
@@ -37,7 +39,9 @@
   }
 
   &-checkbox-icon {
-    background-color: $colors-dark-backgroundAlt;
+    @include themed() {
+      background-color: c('backgroundAlt');
+    }
     border-radius: 50%;
     cursor: pointer;
     height: 1.625rem;
@@ -51,5 +55,7 @@
 }
 
 .switch-checked {
-  background-color: $colors-dark-success;
+  @include themed() {
+    background-color: c('success');
+  }
 }

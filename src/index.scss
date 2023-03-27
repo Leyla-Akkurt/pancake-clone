@@ -8,7 +8,9 @@ html {
 }
 
 body {
-  background-color: $colors-dark-background;
+  @include themed() {
+    background-color: c('background');
+  }
   // overflow: overlay;
 }
 
@@ -19,11 +21,15 @@ body:has(.requires-no-scroll) {
 ::-webkit-scrollbar {
   width: 8px;
   &-thumb {
-    background: $colors-dark-textSubtle;
     border-radius: 0.5rem;
+    @include themed() {
+      background: c('textSubtle');
+    }
   }
   &-track {
-    box-shadow: inset 0 0 0.313rem $colors-dark-input;
     border-radius: 0.625rem;
+    @include themed() {
+      box-shadow: inset 0 0 0.313rem c('input');
+    }
   }
 }

@@ -21,7 +21,9 @@
 
     h2 {
       @include heroTextSizing($textSize: 3rem);
-      color: $colors-dark-secondary;
+      @include themed() {
+        color: c('secondary');
+      }
       @include lg {
         font-size: 4rem;
       }
@@ -37,9 +39,11 @@
         @include baseButton;
         border: 0px;
         box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
-        background-color: $colors-dark-primary;
-        color: $colors-dark-invertedContrast;
         margin-right: 0.5rem;
+        @include themed() {
+          background-color: c('primary');
+          color: c('invertedContrast');
+        }
       }
 
       a {
@@ -53,8 +57,10 @@
         border-width: 0.125rem;
         border-style: solid;
         border-image: initial;
-        border-color: $colors-dark-primary;
-        color: $colors-dark-primary;
+        @include themed() {
+          color: c('primary');
+          border-color: c('primary');
+        }
       }
     }
   }

@@ -16,10 +16,10 @@
     height: 100%;
     padding: 0.75rem;
     align-items: center;
-    background: $colors-dark-gradientPhishingDarker;
+    background: $gradientPhishingDarker--dark;
 
     @include md {
-      background: $colors-dark-gradientPhishing;
+      background: $gradientPhishing--dark;
       padding: 0;
     }
 
@@ -64,7 +64,9 @@
       height: 1.5rem;
       padding: 0rem 1.1rem;
       background-color: transparent;
-      color: $colors-dark-primary;
+      @include themed() {
+        color: c('primary');
+      }
       box-shadow: none;
 
       @include md {
@@ -74,7 +76,9 @@
       img {
         min-width: 1.25rem;
         align-self: center;
-        fill: $colors-dark-white;
+        @include themed() {
+          fill: c('white');
+        }
         flex-shrink: 0;
       }
     }
@@ -93,7 +97,7 @@
 
       .warning {
         flex-shrink: 0;
-        color: $colors-light-textDisabled;
+        color: rgb(189, 194, 196);
         font-weight: 400;
         line-height: 1.5;
         font-size: 0.875rem;
@@ -103,17 +107,20 @@
         }
 
         &-important {
-          color: $colors-light-warning;
+          @include themed() {
+            color: c('warning');
+          }
           font-weight: 600;
           line-height: 1.5;
           text-transform: uppercase;
           font-size: 0.875rem;
         }
-        &-url {
-          color: $colors-light-white;
-          font-weight: 600;
-          line-height: 1.5;
-        }
+      }
+
+      #warning-url {
+        color: #fff;
+        font-weight: 600;
+        line-height: 1.5;
       }
     }
   }

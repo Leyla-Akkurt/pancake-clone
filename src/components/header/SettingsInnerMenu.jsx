@@ -1,4 +1,4 @@
-import LightSwitch from '../switch/LightSwitch';
+import LightSwitch from '../switch/ThemeSwitch';
 import Switch from '../switch/Switch';
 
 // SettingsInnerMenu content

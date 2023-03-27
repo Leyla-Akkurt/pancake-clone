@@ -49,7 +49,7 @@ class PhishingBanner extends React.Component {
                 Phishing warning:
               </span>
               <span className="warning">please make sure you're visiting</span>
-              <span className="warning warning-url">
+              <span id="warning-url" className="warning">
                 https://pancakeswap.finance
               </span>
               <span className="warning">- check the URL carefully.</span>
