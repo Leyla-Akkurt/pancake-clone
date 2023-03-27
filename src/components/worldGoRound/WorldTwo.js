@@ -7,10 +7,10 @@ function WorldTwo() {
 
   return (
     <div className="container-world-down" ref={ref}>
-      <div className="top-part-world">
-        <div className="stats-one">
-          <p className="tinted-text">Circulating Supply</p>
-          <h1 className="full-text">
+      <div className="top-part">
+        <div className="stats one">
+          <div className="tinted-text">Circulating Supply</div>
+          <div className="full-text">
             {inView && (
               <CountUp
                 start={0}
@@ -20,11 +20,11 @@ function WorldTwo() {
                 delay={1}
               />
             )}
-          </h1>
+          </div>
         </div>
-        <div className="stats-two">
-          <p className="tinted-text testing">Total supply</p>
-          <h1 className="full-text testing">
+        <div className="stats-two two addBorder2">
+          <div className="tinted-text testing">Total supply</div>
+          <div className="full-text testing">
             {inView && (
               <CountUp
                 start={0}
@@ -34,21 +34,19 @@ function WorldTwo() {
                 delay={1}
               />
             )}
-          </h1>
+          </div>
         </div>
-        <div className="stats-three">
-          <p className="tinted-text testing">Max Supply</p>
-          <h1 className="full-text testing">750,000,000 </h1>
+        <div className="stats-two three addBorder2">
+          <div className="tinted-text testing">Max Supply</div>
+          <div className="full-text testing">750,000,000 </div>
         </div>
-      </div>
-      <div className="bot-part-world">
-        <div className="stats-one">
-          <p className="tinted-text">Market Cap</p>
-          <h1 className="full-text">$640 million</h1>
+        <div className="stats-two four addedBorder noneBorder">
+          <div className="tinted-text">Market Cadiv</div>
+          <div className="full-text testing">$640 million</div>
         </div>
-        <div className="stats-two">
-          <p className="tinted-text testing">Burned to date</p>
-          <h1 className="full-text testing">
+        <div className="stats-two five addedBorder">
+          <div className="tinted-text testing">Burned to date</div>
+          <div className="full-text testing">
             {inView && (
               <CountUp
                 start={0}
@@ -58,11 +56,11 @@ function WorldTwo() {
                 separator=","
               />
             )}
-          </h1>
+          </div>
         </div>
-        <div className="stats-three">
-          <p className="tinted-text testing">Current emissions</p>
-          <h1 className="full-text testing">9.9/block</h1>
+        <div className="stats-two six addedBorder">
+          <div className="tinted-text testing">Current emissions</div>
+          <div className="full-text testing">9.9/block</div>
         </div>
       </div>
     </div>

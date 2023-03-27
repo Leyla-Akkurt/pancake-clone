@@ -1,25 +1,16 @@
-.container-world-down {
-  color: white;
-  display: flex;
-  flex-direction: column;
-  width: 820px;
-  background-color: #08060b;
-  margin: 0 auto;
+.top-part {
+  color: $colors-dark-white;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-areas:
+    'a d'
+    'b e'
+    'c f';
+  gap: 16px 8px;
+  background-color: $colors-dark-background;
+  margin-top: 24px;
   max-width: 968px;
   font-family: Kanit, sans-serif;
-  justify-content: space-between;
-}
-.top-part-world {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 24px;
-}
-.bot-part-world {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 24px;
 }
 .tinted-text {
   margin-right: 50px;
@@ -27,26 +18,69 @@
   font-family: Kanit, sans-serif;
   font-weight: bolder;
   margin-bottom: 0px;
-  color: #b8add2;
+  color: $colors-dark-textSubtle;
 }
-.testing {
-  border-left: 1px solid #262130;
-  padding-left: 16px;
-}
+
 .full-text {
   margin-right: 50px;
   font-size: 24px;
   font-family: Kanit, sans-serif;
   margin-top: 0px;
-  color: #f4eeff;
+  color: $colors-dark-text;
 }
-.stats-one {
-  width: 313.3px;
+.stats {
+  display: flex;
+  flex-direction: column;
 }
 .stats-two {
-  width: 313.3px;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
 }
-.stats-three {
-  width: 313.3px;
+.one {
+  grid-area: a / a / a / a;
+}
+.two {
+  grid-area: b / b / b / b;
+}
+
+.three {
+  grid-area: c / c / c / c;
+}
+.four {
+  grid-area: d / d / d / d;
+}
+.five {
+  grid-area: e / e / e / e;
+}
+.six {
+  grid-area: f / f / f / f;
+}
+.addedBorder {
+  border-left: 1px solid $colors-dark-inputSecondary;
+  padding: 0px 8px;
+}
+@media screen and (min-width: 852px) {
+  .top-part {
+    grid-template-areas:
+      'a b c'
+      'd e f';
+    gap: 32px;
+    grid-template-columns: repeat(3, auto);
+  }
+  .addBorder2 {
+    border-left: 1px solid $colors-dark-inputSecondary;
+    padding: 0px 16px;
+  }
+  .addedBorder {
+    padding: 0px 16px;
+  }
+  .noneBorder {
+    border-left: 0px;
+    padding-left: 0px;
+  }
+}
+@media screen and (min-width: 576px) {
+  .top-part {
+    gap: 16px;
+  }
 }

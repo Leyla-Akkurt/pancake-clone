@@ -4,6 +4,7 @@ import {
   BottomNav,
   Footer,
   MainContent,
+  WorldGoRound,
 } from './components/index';
 import { useState } from 'react';
 import ScrollUp from './components/scrollUp/ScrollUp';
@@ -21,6 +22,7 @@ function App() {
     <ContentWrapper>
       <Header hasPhishingBannerHandler={setShowPhishingBanner} />
       <MainContent hasPhishingBanner={showPhishingBanner} />
+      <WorldGoRound />
       <Footer />
       <ScrollUp />
       <BottomNav />
