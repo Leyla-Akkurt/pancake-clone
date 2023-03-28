@@ -116,7 +116,6 @@ function MainFooter() {
           </ul>
         </div>
 
-
         <div id="hr"></div>
       </div>
 
@@ -783,6 +782,3 @@ function MainFooter() {
 }
 
 export default MainFooter;
-
-
-

@@ -9,7 +9,9 @@
     align-items: center;
     z-index: 1;
     padding: 48px 0px;
-    background: $colors-dark-background;
+    @include themed() {
+      background: c('background');
+    }
 
     .world-go-round-wrapper {
       margin: 0px;

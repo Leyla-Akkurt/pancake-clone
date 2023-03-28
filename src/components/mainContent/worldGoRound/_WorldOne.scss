@@ -43,7 +43,9 @@
     }
 
     .subheader-text {
-      color: $colors-dark-text;
+      @include themed() {
+        color: c('text');
+      }
       font-weight: 600;
       line-height: 1.1;
       margin-bottom: 1.5rem;
@@ -59,7 +61,9 @@
     }
 
     #purple-cake-two {
-      color: $colors-dark-textSubtle;
+      @include themed() {
+        color: c('textSubtle');
+      }
       font-weight: 400;
       line-height: 1.5;
       margin-bottom: 1.5rem;
@@ -67,11 +71,15 @@
     }
 
     #purple-cake {
-      color: $colors-dark-secondary;
+      @include themed() {
+        color: c('secondary');
+      }
     }
 
     #buycake {
-      background-color: $colors-dark-primary;
+      @include themed() {
+        background-color: c('primary');
+      }
       color: inherit;
       width: 7.813rem;
       height: 3rem;
@@ -106,7 +114,9 @@
     }
 
     #buycake-link {
-      color: $colors-dark-primary;
+      @include themed() {
+        color: c('primary');
+      }
       font-size: 1rem;
       font-family: sans-serif;
       font-weight: 600;
@@ -129,7 +139,9 @@
 
       .buycake-link-svg {
         align-self: center;
-        fill: $colors-dark-primary;
+        @include themed() {
+          fill: c('primary');
+        }
         flex-shrink: 0;
         width: 20px;
         margin-left: 0.25rem;

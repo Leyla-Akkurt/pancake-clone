@@ -1,11 +1,13 @@
 .win-millions-container {
   display: flex;
-  background: linear-gradient(180deg, #0b4576 0%, #091115 100%);
   position: relative;
   flex-direction: column;
   align-items: center;
   z-index: 1;
   padding: 48px 0px;
+  @include themed() {
+    background: c('winmillionPageBg');
+  }
 
   .win-millions-wrapper {
     margin: 0px;
@@ -142,9 +144,12 @@
     }
 
     .win-millions-main {
-      background: rgba(8, 6, 11, 0.6);
       padding: 1rem;
-      border: 0.063rem solid $colors-dark-cardBorder;
+      border: 0.063rem solid;
+      @include themed() {
+        background: c('winmillionCardBg');
+        border-color: c('cardBorder');
+      }
       box-sizing: border-box;
       backdrop-filter: blur(0.75rem);
       border-radius: 4.5rem;
@@ -160,7 +165,9 @@
         justify-content: center;
 
         &-header {
-          color: $colors-dark-text;
+          @include themed() {
+            color: c('text');
+          }
           font-weight: 600;
           line-height: 1.1;
           margin-bottom: 1.5rem;
@@ -171,12 +178,16 @@
             font-size: 2.5rem;
           }
           &-span {
-            color: $colors-dark-secondary;
+            @include themed() {
+              color: c('secondary');
+            }
           }
         }
 
         &-subtext {
-          color: $colors-dark-textSubtle;
+          @include themed() {
+            color: c('textSubtle');
+          }
           font-weight: 400;
           line-height: 1.5;
           font-size: 1rem;
@@ -213,7 +224,9 @@
           &-container {
             background: rgb(255, 178, 55);
             border-radius: $radii-card;
-            color: $colors-dark-text;
+            @include themed() {
+              color: c('text');
+            }
             overflow: hidden;
             position: relative;
             padding: 0.063rem 0.063rem 0.25rem;
@@ -258,14 +271,14 @@
                 margin-top: 3rem;
 
                 &-header {
-                  color: rgb(40, 13, 95);
+                  color: $text--light;
                   font-weight: 600;
                   line-height: 1.5;
                   font-size: 1rem;
                 }
 
                 &-subheader {
-                  color: rgb(40, 13, 95);
+                  color: $text--light;
                   font-weight: 600;
                   line-height: 1.1;
                   margin-top: 0.5rem;
@@ -278,14 +291,14 @@
                 }
 
                 &-subtext {
-                  color: rgb(40, 13, 95);
+                  color: $text--light;
                   font-weight: 600;
                   line-height: 1.5;
                   margin-bottom: 1.5rem;
                   font-size: 1rem;
 
                   &-last {
-                    color: rgb(40, 13, 95);
+                    color: $text--light;
                     font-weight: 400;
                     line-height: 1.5;
                     margin-bottom: 40px;
@@ -324,18 +337,24 @@
                       opacity 0.2s ease 0s;
                     height: 3rem;
                     padding: 0rem 1.5rem;
-                    background-color: $colors-dark-primary;
-                    color: $colors-dark-invertedContrast;
+                    @include themed() {
+                      background-color: c('primary');
+                      color: c('invertedContrast');
+                    }
                     width: 100%;
 
                     &-text {
-                      color: $colors-dark-invertedContrast;
                       font-weight: 600;
+                      @include themed() {
+                        color: c('invertedContrast');
+                      }
                       line-height: 1.5;
                       font-size: 1rem;
                     }
                     &-svg {
-                      fill: $colors-dark-invertedContrast;
+                      @include themed() {
+                        fill: c('invertedContrast');
+                      }
                       align-self: center;
                       flex-shrink: 0;
                       margin-left: 0.25rem;
@@ -360,7 +379,7 @@
             &-inner {
               .svg-wrapper {
                 .lottery-svg {
-                  fill: $colors-dark-white;
+                  fill: $text--dark;
                 }
               }
               .text-wrapper {
@@ -368,7 +387,7 @@
                 &-subheader,
                 &-subtext,
                 &-subtext-last {
-                  color: $colors-dark-white;
+                  color: $text--dark;
                 }
               }
             }

@@ -26,14 +26,18 @@
     flex-direction: column;
 
     .stats-tinted-text {
-      color: $colors-dark-textSubtle;
+      @include themed() {
+        color: c('textSubtle');
+      }
       font-weight: 400;
       line-height: 1.5;
       font-size: 1rem;
     }
 
     .stats-full-text {
-      color: $colors-dark-text;
+      @include themed() {
+        color: c('text');
+      }
       font-weight: 600;
       line-height: 1.1;
       font-size: 1.5rem;
@@ -45,14 +49,18 @@
     flex-direction: column;
     padding: 0px 1rem;
     border-left: 0.063rem solid;
-    border-left-color: $colors-dark-inputSecondary;
+    @include themed() {
+      border-left-color: c('inputSecondary');
+    }
   }
 
   .stats-wrapper-alt2 {
     display: flex;
     flex-direction: column;
     border-left: 0.063rem solid;
-    border-left-color: $colors-dark-inputSecondary;
+    @include themed() {
+      border-left-color: c('inputSecondary');
+    }
     padding: 0rem 0.5rem;
 
     @include sm {
@@ -64,7 +72,9 @@
     display: flex;
     flex-direction: column;
     border-left: 0.063rem solid;
-    border-left-color: $colors-dark-inputSecondary;
+    @include themed() {
+      border-left-color: c('inputSecondary');
+    }
     padding: 0rem 0.5rem;
 
     @include sm {
@@ -84,7 +94,9 @@
 
     @include md {
       border-left: 0.063rem solid;
-      border-left-color: $colors-dark-inputSecondary;
+      @include themed() {
+        border-left-color: c('inputSecondary');
+      }
       padding: 0rem 0.5rem;
     }
   }
@@ -95,7 +107,9 @@
 
     @include md {
       border-left: 0.063rem solid;
-      border-left-color: $colors-dark-inputSecondary;
+      @include themed() {
+        border-left-color: c('inputSecondary');
+      }
       padding: 0rem 0.5rem;
     }
   }
