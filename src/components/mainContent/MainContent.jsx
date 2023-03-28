@@ -3,6 +3,8 @@ import Home1 from './home1/Home1';
 import Home2 from './home2/Home2';
 import { Home4 } from '../home_4/Home4';
 import Home3 from './home3/Home3';
+import WorldGoRound from './worldGoRound/WorldGoRound';
+
 function MainContent({ hasPhishingBanner }) {
   return (
     <div
@@ -14,6 +16,7 @@ function MainContent({ hasPhishingBanner }) {
         <Home2 />
         <Home4 />
         <Home3 />
+        <WorldGoRound />
       </div>
     </div>
   );

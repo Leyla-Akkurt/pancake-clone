@@ -1,0 +1,111 @@
+.container-world-down {
+  display: grid;
+  gap: 1rem 0.5rem;
+  margin-top: 1.5rem;
+  grid-template-columns: repeat(2, auto);
+  grid-template-areas:
+    'a d'
+    'b e'
+    'c f';
+
+  @include sm {
+    gap: 1rem;
+  }
+
+  @include md {
+    grid-template-areas:
+      'a b c'
+      'd e f';
+    gap: 2rem;
+    grid-template-columns: repeat(3, auto);
+  }
+
+  .stats-wrapper {
+    grid-area: a;
+    display: flex;
+    flex-direction: column;
+
+    .stats-tinted-text {
+      color: $colors-dark-textSubtle;
+      font-weight: 400;
+      line-height: 1.5;
+      font-size: 1rem;
+    }
+
+    .stats-full-text {
+      color: $colors-dark-text;
+      font-weight: 600;
+      line-height: 1.1;
+      font-size: 1.5rem;
+    }
+  }
+
+  .stats-wrapper-alt {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 1rem;
+    border-left: 0.063rem solid;
+    border-left-color: $colors-dark-inputSecondary;
+  }
+
+  .stats-wrapper-alt2 {
+    display: flex;
+    flex-direction: column;
+    border-left: 0.063rem solid;
+    border-left-color: $colors-dark-inputSecondary;
+    padding: 0rem 0.5rem;
+
+    @include sm {
+      padding: 0rem 1rem;
+    }
+  }
+
+  .stats-wrapper-alt3 {
+    display: flex;
+    flex-direction: column;
+    border-left: 0.063rem solid;
+    border-left-color: $colors-dark-inputSecondary;
+    padding: 0rem 0.5rem;
+
+    @include sm {
+      padding: 0rem 1rem;
+    }
+
+    @include md {
+      padding: 0px;
+      border-left: medium none;
+    }
+  }
+
+  .area-b {
+    grid-area: b;
+    display: flex;
+    flex-direction: column;
+
+    @include md {
+      border-left: 0.063rem solid;
+      border-left-color: $colors-dark-inputSecondary;
+      padding: 0rem 0.5rem;
+    }
+  }
+  .area-c {
+    grid-area: c;
+    display: flex;
+    flex-direction: column;
+
+    @include md {
+      border-left: 0.063rem solid;
+      border-left-color: $colors-dark-inputSecondary;
+      padding: 0rem 0.5rem;
+    }
+  }
+  .area-d {
+    grid-area: d;
+  }
+  .area-e {
+    grid-area: e;
+  }
+  .area-f {
+    grid-area: f;
+  }
+}

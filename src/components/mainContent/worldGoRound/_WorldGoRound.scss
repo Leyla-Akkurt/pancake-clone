@@ -1,0 +1,40 @@
+@import './WorldOne';
+@import './WorldTwo';
+
+.world-go-round {
+  &-container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    padding: 48px 0px;
+    background: $colors-dark-background;
+
+    .world-go-round-wrapper {
+      margin: 0px;
+      width: 100%;
+      max-width: 968px;
+      min-height: auto;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+
+      @include xs {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+
+      @include sm {
+        padding-top: 32px;
+        padding-bottom: 32px;
+      }
+
+      @include lg {
+        padding-top: 48px;
+        padding-bottom: 48px;
+      }
+    }
+  }
+}
