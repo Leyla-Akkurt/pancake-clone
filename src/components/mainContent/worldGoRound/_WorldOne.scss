@@ -1,0 +1,209 @@
+@-webkit-keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+.container-world {
+  display: flex;
+  flex-direction: column;
+
+  .container-world-up {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    justify-content: center;
+
+    @include md {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  #world-left-part {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0%;
+    align-self: flex-start;
+
+    @include md {
+      align-self: center;
+      margin-right: 4rem;
+    }
+
+    .subheader-text {
+      @include themed() {
+        color: c('text');
+      }
+      font-weight: 600;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+
+      @include lg {
+        font-size: 2.5rem;
+      }
+    }
+
+    #button-link {
+      display: flex;
+    }
+
+    #purple-cake-two {
+      @include themed() {
+        color: c('textSubtle');
+      }
+      font-weight: 400;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+    }
+
+    #purple-cake {
+      @include themed() {
+        color: c('secondary');
+      }
+    }
+
+    #buycake {
+      @include themed() {
+        background-color: c('primary');
+      }
+      color: inherit;
+      width: 7.813rem;
+      height: 3rem;
+      font-weight: 600;
+      line-height: 1.5;
+      font-size: 1rem;
+      border-radius: 1rem;
+      box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset;
+      border: none;
+      margin-right: 1rem;
+      opacity: 1;
+      cursor: pointer;
+      letter-spacing: 0.03em;
+      transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+
+      &:hover {
+        opacity: 0.65;
+      }
+
+      a:link {
+        text-decoration: none;
+      }
+      a:visited {
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: none;
+      }
+      a:active {
+        text-decoration: none;
+      }
+    }
+
+    #buycake-link {
+      @include themed() {
+        color: c('primary');
+      }
+      font-size: 1rem;
+      font-family: sans-serif;
+      font-weight: 600;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      a:link {
+        text-decoration: none;
+      }
+      a:visited {
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: none;
+      }
+      a:active {
+        text-decoration: none;
+      }
+
+      .buycake-link-svg {
+        align-self: center;
+        @include themed() {
+          fill: c('primary');
+        }
+        flex-shrink: 0;
+        width: 20px;
+        margin-left: 0.25rem;
+      }
+    }
+  }
+
+  .world-right-part {
+    height: 192px;
+    width: 192px;
+    margin-bottom: 1.5rem;
+
+    @include md {
+      display: flex;
+      height: 100%;
+      width: 100%;
+      margin-bottom: 0px;
+      flex: 1 1 0%;
+    }
+
+    .world-right-part-container {
+      position: relative;
+      max-height: 512px;
+
+      &-img-placeholder {
+        max-height: 512px;
+        visibility: hidden;
+      }
+
+      &-img {
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+
+        .cake-image1,
+        .cake-image2,
+        .cake-image3,
+        .cake-image4 {
+          max-height: 100%;
+          width: auto;
+        }
+
+        .cake-image1 {
+          animation: mover 2s infinite alternate;
+        }
+
+        .cake-image2 {
+          -webkit-animation: mover 1.5s infinite alternate;
+          animation: mover 1.5s infinite alternate;
+        }
+
+        .cake-image3 {
+          -webkit-animation: mover 1.8s infinite alternate;
+          animation: mover 1.8s infinite alternate;
+        }
+
+        .cake-image4 {
+          -webkit-animation: mover 1.5s infinite alternate;
+          animation: mover 1.5s infinite alternate;
+        }
+      }
+    }
+  }
+}
