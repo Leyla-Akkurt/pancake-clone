@@ -25,8 +25,6 @@ Pre-commit hooks:
 
 Follow the developer's branch structure.
 
-Default theme is dark.
-
 <br>
 
 Media - Queries.
@@ -64,6 +62,40 @@ Usage example for the break-point mixins in a basic SCSS code:
     @include lg {
       background: white;
     }
+}
+```
+
+<br>
+
+Theme switching
+
+<br>
+
+> There are 2 modes inside \_colors.scss.
+> Light and Dark.
+> Add colors following the below structure:
+
+```
+$textPrimary--light: #280d5f;
+$textPrimary--dark: #f4eeff;
+
+$colors: (
+	light:(
+		textPrimary: textPrimary--light;
+	),
+	dark: (
+		textPrimary: textPrimary--dark;
+	)
+)
+```
+
+<br>
+
+Usage example for the themed() mixin in a basic SCSS code:
+
+```
+@include themed() {
+	color: c('textPrimary')
 }
 ```
 

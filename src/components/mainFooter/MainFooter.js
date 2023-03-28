@@ -1,10 +1,11 @@
 import React from 'react';
 import useCoinPrice from '../hooks/useCoinPrice';
+import LightSwitch from '../switch/ThemeSwitch';
 
 function MainFooter() {
   const { coinPrice, isLoading } = useCoinPrice();
   return (
-    <div id="mainFooter">
+    <div id="mainFooter" className="main-footer">
       <div id="mainFooter-smScreens">
         <div id="logoFooter">
           <svg
@@ -43,336 +44,78 @@ function MainFooter() {
         <div id="about">
           <ul>
             <li>
-              <a href="#" className="footerHeader">
+              <a href="/" className="footerHeader">
                 ABOUT
               </a>
             </li>
             <li>
-              <a href="#" id="contact">
+              <a href="/" id="contact">
                 Contact
               </a>
             </li>
             <li>
-              <a href="#">Brand</a>
+              <a href="/">Brand</a>
             </li>
             <li>
-              <a href="#">Blog</a>
+              <a href="/">Blog</a>
             </li>
             <li>
-              <a href="#">Community</a>
+              <a href="/">Community</a>
             </li>
             <li>
-              <a href="#">Litepaper</a>
+              <a href="/">Litepaper</a>
             </li>
             <li>
               <hr />
             </li>
             <li>
-              <a href="#">Online Store</a>
+              <a href="/">Online Store</a>
             </li>
           </ul>
         </div>
         <div id="help">
           <ul>
             <li>
-              <a href="#" className="footerHeader">
+              <a href="/" className="footerHeader">
                 HELP
               </a>
             </li>
             <li>
-              <a href="#">Customer Support</a>
+              <a href="/">Customer Support</a>
             </li>
             <li>
-              <a href="#">Troubleshooting</a>
+              <a href="/">Troubleshooting</a>
             </li>
             <li>
-              <a href="#">Guides</a>
+              <a href="/">Guides</a>
             </li>
           </ul>
         </div>
         <div id="developers">
           <ul>
             <li>
-              <a href="#" className="footerHeader">
+              <a href="/" className="footerHeader">
                 DEVELOPER
               </a>
             </li>
             <li>
-              <a href="#">Github</a>
+              <a href="/">Github</a>
             </li>
             <li>
-              <a href="#">Documentation</a>
+              <a href="/">Documentation</a>
             </li>
             <li>
-              <a href="#">Bug Bounty</a>
+              <a href="/">Bug Bounty</a>
             </li>
             <li>
-              <a href="#">Audits</a>
+              <a href="/">Audits</a>
             </li>
             <li>
-              <a href="#">Careers</a>
+              <a href="/">Careers</a>
             </li>
           </ul>
         </div>
-        <div id="mainFooterUpIcons">
-          <svg
-            viewBox="0 0 18 15"
-            width="20px"
-            color="textSubtle"
-            xmlns="http://www.w3.org/2000/svg"
-            className="sc-4ba21b47-0 ebMyYP"
-            style={{ cursor: 'pointer' }}
-          >
-            <path d="M5.659 15c6.79 0 10.507-5.766 10.507-10.763 0-.16 0-.32-.01-.49A7.578 7.578 0 0018 1.79c-.663.3-1.376.5-2.127.6a3.824 3.824 0 001.63-2.1c-.713.44-1.503.75-2.352.92A3.6 3.6 0 0012.46 0C10.419 0 8.76 1.699 8.76 3.787c0 .3.039.58.098.86-3.064-.15-5.786-1.669-7.61-3.957A3.858 3.858 0 00.75 2.598c0 1.31.654 2.469 1.64 3.148a3.638 3.638 0 01-1.669-.47v.05c0 1.83 1.278 3.368 2.956 3.708-.312.09-.634.13-.976.13-.234 0-.468-.02-.692-.07.468 1.509 1.834 2.598 3.453 2.628a7.284 7.284 0 01-4.585 1.62c-.293 0-.595-.01-.878-.05A10.206 10.206 0 005.659 15z"></path>
-          </svg>
-          <div id="telegramRegions">
-            <svg
-              viewBox="0 0 20 20"
-              width="20px"
-              color="textSubtle"
-              xmlns="http://www.w3.org/2000/svg"
-              className="sc-4ba21b47-0 bHEVmn"
-              style={{ cursor: 'pointer' }}
-            >
-              <path d="M10 0C4.478 0 0 4.478 0 9.99 0 15.511 4.478 20 10 20s10-4.488 10-10.01C20 4.477 15.522 0 10 0zm4.925 6.28c-.064.927-1.78 7.856-1.78 7.856s-.107.406-.48.416a.644.644 0 01-.49-.192c-.395-.33-1.29-.97-2.132-1.556a.953.953 0 01-.107.096c-.192.17-.48.416-.789.714a10.7 10.7 0 00-.373.352l-.01.01a2.214 2.214 0 01-.193.171c-.415.341-.458.053-.458-.096l.224-2.441v-.021l.01-.022c.011-.032.033-.043.033-.043s4.36-3.88 4.477-4.296c.01-.021-.021-.042-.074-.021-.288.096-5.31 3.273-5.864 3.625-.032.02-.128.01-.128.01l-2.441-.8s-.288-.117-.192-.383c.021-.053.053-.107.17-.181.544-.384 10-3.785 10-3.785s.267-.085.427-.032c.074.032.117.064.16.17.01.043.021.128.021.224 0 .054-.01.118-.01.224z"></path>
-            </svg>
-            <div id="telegramRegionChannel" className="sc-ee5ec6ea-0 blPylB">
-              <a
-                target="_blank"
-                rel="noreferrer noopener"
-                href="https://t.me/pancakeswap"
-                aria-label="English"
-                color="textSubtle"
-                fontSize="16px"
-                className="sc-c56ebc7d-0 sc-2d8b3c99-0 foTpRm jluAhG"
-              >
-                English
-              </a>
-              <a
-                target="_blank"
-                rel="noreferrer noopener"
-                href="https://t.me/PancakeSwapIndonesia"
-                aria-label="Bahasa Indonesia"
-                color="textSubtle"
-                fontSize="16px"
-                className="sc-c56ebc7d-0 sc-2d8b3c99-0 foTpRm jluAhG"
-              >
-                Bahasa Indonesia
-              </a>
-              <a
-                target="_blank"
-                rel="noreferrer noopener"
-                href="https://t.me/PancakeSwap_CN"
-                aria-label="中文"
-                color="textSubtle"
-                fontSize="16px"
-                className="sc-c56ebc7d-0 sc-2d8b3c99-0 foTpRm jluAhG"
-              >
-                中文
-              </a>
-              <a
-                target="_blank"
-                rel="noreferrer noopener"
-                href="https://t.me/PancakeSwapVN"
-                aria-label="Tiếng Việt"
-                color="textSubtle"
-                fontSize="16px"
-                className="sc-c56ebc7d-0 sc-2d8b3c99-0 foTpRm jluAhG"
-              >
-                Tiếng Việt
-              </a>
-              <a
-                target="_blank"
-                rel="noreferrer noopener"
-                href="https://t.me/pancakeswap_ita"
-                aria-label="Italiano"
-                color="textSubtle"
-                fontSize="16px"
-                className="sc-c56ebc7d-0 sc-2d8b3c99-0 foTpRm jluAhG"
-              >
-                Italiano
-              </a>
-              <a
-                target="_blank"
-                rel="noreferrer noopener"
-                href="https://t.me/pancakeswap_ru"
-                aria-label="русский"
-                color="textSubtle"
-                fontSize="16px"
-                className="sc-c56ebc7d-0 sc-2d8b3c99-0 foTpRm jluAhG"
-              >
-                русский
-              </a>
-              <a
-                target="_blank"
-                rel="noreferrer noopener"
-                href="https://t.me/pancakeswapturkiye"
-                aria-label="Türkiye"
-                color="textSubtle"
-                fontSize="16px"
-                className="sc-c56ebc7d-0 sc-2d8b3c99-0 foTpRm jluAhG"
-              >
-                Türkiye
-              </a>
-              <a
-                target="_blank"
-                rel="noreferrer noopener"
-                href="https://t.me/PancakeSwapPortuguese"
-                aria-label="Português"
-                color="textSubtle"
-                fontSize="16px"
-                className="sc-c56ebc7d-0 sc-2d8b3c99-0 foTpRm jluAhG"
-              >
-                Português
-              </a>
-              <a
-                target="_blank"
-                rel="noreferrer noopener"
-                href="https://t.me/PancakeswapEs"
-                aria-label="Español"
-                color="textSubtle"
-                fontSize="16px"
-                className="sc-c56ebc7d-0 sc-2d8b3c99-0 foTpRm jluAhG"
-              >
-                Español
-              </a>
-              <a
-                target="_blank"
-                rel="noreferrer noopener"
-                href="https://t.me/pancakeswapjp"
-                aria-label="日本語"
-                color="textSubtle"
-                fontSize="16px"
-                className="sc-c56ebc7d-0 sc-2d8b3c99-0 foTpRm jluAhG"
-              >
-                日本語
-              </a>
-              <a
-                target="_blank"
-                rel="noreferrer noopener"
-                href="https://t.me/pancakeswapfr"
-                aria-label="Français"
-                color="textSubtle"
-                fontSize="16px"
-                className="sc-c56ebc7d-0 sc-2d8b3c99-0 foTpRm jluAhG"
-              >
-                Français
-              </a>
-              <a
-                target="_blank"
-                rel="noreferrer noopener"
-                href="https://t.me/PancakeSwap_DE"
-                aria-label="Deutsch"
-                color="textSubtle"
-                fontSize="16px"
-                className="sc-c56ebc7d-0 sc-2d8b3c99-0 foTpRm jluAhG"
-              >
-                Deutsch
-              </a>
-              <a
-                target="_blank"
-                rel="noreferrer noopener"
-                href="https://t.me/Pancakeswap_Ph"
-                aria-label="Filipino"
-                color="textSubtle"
-                fontSize="16px"
-                className="sc-c56ebc7d-0 sc-2d8b3c99-0 foTpRm jluAhG"
-              >
-                Filipino
-              </a>
-              <a
-                target="_blank"
-                rel="noreferrer noopener"
-                href="https://t.me/PancakeSwapGeorgia"
-                aria-label="ქართული ენა"
-                color="textSubtle"
-                fontSize="16px"
-                className="sc-c56ebc7d-0 sc-2d8b3c99-0 foTpRm jluAhG"
-              >
-                ქართული ენა
-              </a>
-              <a
-                target="_blank"
-                rel="noreferrer noopener"
-                href="https://t.me/PancakeSwapINDIA"
-                aria-label="हिन्दी"
-                color="textSubtle"
-                fontSize="16px"
-                className="sc-c56ebc7d-0 sc-2d8b3c99-0 foTpRm jluAhG"
-              >
-                हिन्दी
-              </a>
-              <a
-                target="_blank"
-                rel="noreferrer noopener"
-                href="https://t.me/PancakeSwapAnn"
-                aria-label="Announcements"
-                color="textSubtle"
-                fontSize="16px"
-                className="sc-c56ebc7d-0 sc-2d8b3c99-0 foTpRm jluAhG"
-              >
-                Announcements
-              </a>
-            </div>
-          </div>
-          <svg
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-            width="20px"
-            color="textSubtle"
-            className="sc-4ba21b47-0 ebMyYP"
-            style={{ cursor: 'pointer' }}
-          >
-            <path d="M12.09 13.412c-.448.447-1.408.607-2.09.607-.682 0-1.642-.16-2.09-.607a.27.27 0 00-.383 0 .27.27 0 000 .383c.714.704 2.068.757 2.473.757.405 0 1.76-.053 2.473-.767a.27.27 0 000-.384.28.28 0 00-.383.01zM8.753 11.034c0-.576-.47-1.045-1.045-1.045-.576 0-1.045.47-1.045 1.045 0 .576.47 1.045 1.045 1.045.576 0 1.045-.47 1.045-1.045z"></path>
-            <path d="M10 0C4.478 0 0 4.478 0 10s4.478 10 10 10 10-4.467 10-10c-.01-5.522-4.478-10-10-10zm5.8 11.333c.02.138.032.287.032.437 0 2.25-2.612 4.062-5.832 4.062-3.22 0-5.832-1.813-5.832-4.062 0-.15.011-.299.032-.437A1.447 1.447 0 013.337 10 1.463 1.463 0 015.81 8.945c1.013-.736 2.41-1.194 3.966-1.237 0-.021.736-3.486.736-3.486 0-.064.042-.128.096-.16a.263.263 0 01.202-.043l2.42.523c.17-.342.523-.587.928-.587A1.04 1.04 0 0115.203 5a1.04 1.04 0 01-1.045 1.045 1.034 1.034 0 01-1.034-.992l-2.175-.469-.661 3.124c1.535.053 2.91.522 3.902 1.237a1.454 1.454 0 012.473 1.044 1.48 1.48 0 01-.863 1.344z"></path>
-            <path d="M12.292 10c-.576 0-1.045.47-1.045 1.045s.47 1.045 1.045 1.045c.576 0 1.045-.47 1.045-1.045A1.06 1.06 0 0012.292 10z"></path>
-          </svg>
-          <svg
-            viewBox="0 0 18 18"
-            xmlns="http://www.w3.org/2000/svg"
-            width="20px"
-            color="textSubtle"
-            className="sc-4ba21b47-0 ebMyYP"
-            style={{ cursor: 'pointer' }}
-          >
-            <path d="M9 1.625c2.407 0 2.685.01 3.641.052.874.04 1.358.185 1.666.308.422.165.72.36 1.04.669.318.319.514.617.668 1.039.123.318.267.792.308 1.666.042.946.052 1.234.052 3.641s-.01 2.685-.052 3.641c-.04.874-.185 1.358-.308 1.666-.165.422-.36.72-.669 1.04a2.66 2.66 0 01-1.039.668c-.318.123-.792.267-1.666.308-.946.042-1.234.052-3.641.052s-2.685-.01-3.641-.052c-.874-.04-1.358-.185-1.666-.308a2.911 2.911 0 01-1.04-.669 2.659 2.659 0 01-.668-1.039c-.123-.318-.267-.792-.308-1.666-.042-.946-.052-1.234-.052-3.641s.01-2.685.052-3.641c.04-.874.185-1.358.308-1.666.165-.422.36-.72.669-1.04a2.658 2.658 0 011.039-.668c.318-.123.792-.267 1.666-.308.956-.042 1.234-.052 3.641-.052zM9 0C6.552 0 6.254.01 5.287.051c-.957.052-1.615.196-2.18.422a4.311 4.311 0 00-1.595 1.039A4.311 4.311 0 00.473 3.106c-.226.566-.37 1.224-.422 2.18C.011 6.255 0 6.553 0 9s.01 2.746.051 3.713c.042.957.196 1.615.422 2.18.226.597.535 1.091 1.039 1.595.504.504.998.813 1.594 1.039.576.226 1.224.37 2.18.422.957.04 1.266.051 3.714.051s2.746-.01 3.713-.051c.957-.042 1.615-.196 2.18-.422a4.311 4.311 0 001.595-1.039 4.311 4.311 0 001.039-1.594c.226-.576.37-1.224.422-2.18.04-.957.051-1.266.051-3.714s-.01-2.746-.051-3.713c-.042-.957-.196-1.615-.422-2.18a4.312 4.312 0 00-1.039-1.595A4.311 4.311 0 0014.894.473c-.576-.226-1.224-.37-2.18-.422C11.745.011 11.447 0 9 0z"></path>
-            <path d="M9 4.382a4.618 4.618 0 100 9.236 4.618 4.618 0 000-9.236zm0 7.621A3.007 3.007 0 015.997 9 3.007 3.007 0 019 5.997 3.007 3.007 0 0112.003 9 3.007 3.007 0 019 12.003zM13.803 5.277a1.08 1.08 0 100-2.16 1.08 1.08 0 000 2.16z"></path>
-          </svg>
-          <svg
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-            width="20px"
-            color="textSubtle"
-            className="sc-4ba21b47-0 ebMyYP"
-            style={{ cursor: 'pointer' }}
-          >
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M9.97 0C4.464 0 0 4.465 0 9.97c0 4.403 2.875 8.134 6.789 9.48.49.06.673-.245.673-.49v-1.712c-2.753.611-3.364-1.346-3.364-1.346-.428-1.162-1.101-1.468-1.101-1.468-.917-.611.061-.611.061-.611.979.06 1.53 1.04 1.53 1.04.917 1.528 2.323 1.1 2.874.856a2.13 2.13 0 01.611-1.346c-2.201-.245-4.526-1.1-4.526-4.954 0-1.101.367-1.957 1.04-2.691-.061-.184-.428-1.223.122-2.569 0 0 .857-.245 2.753 1.04.795-.245 1.651-.306 2.507-.306.857 0 1.713.122 2.508.306 1.896-1.285 2.752-1.04 2.752-1.04.55 1.346.184 2.385.123 2.63a3.956 3.956 0 011.04 2.691c0 3.853-2.325 4.648-4.527 4.893.367.306.673.918.673 1.835v2.752c0 .245.184.55.673.49A9.98 9.98 0 0020 9.97C19.939 4.464 15.474 0 9.97 0z"
-            ></path>
-          </svg>
-          <svg
-            viewBox="0 0 24 24"
-            width="20px"
-            color="textSubtle"
-            xmlns="http://www.w3.org/2000/svg"
-            className="sc-4ba21b47-0 ebMyYP"
-            style={{ cursor: 'pointer' }}
-          >
-            <path d="M7.64 6.32c3.116 0 5.641 2.544 5.641 5.68 0 3.137-2.525 5.68-5.64 5.68C4.526 17.68 2 15.136 2 12c0-3.136 2.525-5.68 5.64-5.68zm9.008.333c1.558 0 2.82 2.394 2.82 5.347h.001c0 2.953-1.263 5.347-2.82 5.347-1.558 0-2.82-2.395-2.82-5.347 0-2.952 1.262-5.347 2.82-5.347zm4.36.557c.548 0 .992 2.145.992 4.79s-.444 4.79-.992 4.79-.992-2.145-.992-4.79.444-4.79.992-4.79z"></path>
-          </svg>
-          <svg
-            viewBox="0 0 30 30"
-            xmlns="http://www.w3.org/2000/svg"
-            width="20px"
-            color="textSubtle"
-            className="sc-4ba21b47-0 ebMyYP"
-            style={{ cursor: 'pointer' }}
-          >
-            <path d="M 15 4 C 10.814 4 5.3808594 5.0488281 5.3808594 5.0488281 L 5.3671875 5.0644531 C 3.4606632 5.3693645 2 7.0076245 2 9 L 2 15 L 2 15.001953 L 2 21 L 2 21.001953 A 4 4 0 0 0 5.3769531 24.945312 L 5.3808594 24.951172 C 5.3808594 24.951172 10.814 26.001953 15 26.001953 C 19.186 26.001953 24.619141 24.951172 24.619141 24.951172 L 24.621094 24.949219 A 4 4 0 0 0 28 21.001953 L 28 21 L 28 15.001953 L 28 15 L 28 9 A 4 4 0 0 0 24.623047 5.0546875 L 24.619141 5.0488281 C 24.619141 5.0488281 19.186 4 15 4 z M 12 10.398438 L 20 15 L 12 19.601562 L 12 10.398438 z"></path>
-          </svg>
-        </div>
+
 
         <div id="hr"></div>
       </div>
@@ -384,68 +127,68 @@ function MainFooter() {
               <div id="about">
                 <ul>
                   <li>
-                    <a href="#" className="footerHeader">
+                    <a href="/" className="footerHeader">
                       ABOUT
                     </a>
                   </li>
                   <li>
-                    <a href="#" id="contact">
+                    <a href="/" id="contact">
                       Contact
                     </a>
                   </li>
                   <li>
-                    <a href="#">Brand</a>
+                    <a href="/">Brand</a>
                   </li>
                   <li>
-                    <a href="#">Blog</a>
+                    <a href="/">Blog</a>
                   </li>
                   <li>
-                    <a href="#">Community</a>
+                    <a href="/">Community</a>
                   </li>
                   <li>
-                    <a href="#">Litepaper</a>
+                    <a href="/">Litepaper</a>
                   </li>
                 </ul>
               </div>
               <div id="help">
                 <ul>
                   <li>
-                    <a href="#" className="footerHeader">
+                    <a href="/" className="footerHeader">
                       HELP
                     </a>
                   </li>
                   <li>
-                    <a href="#">Customer Support</a>
+                    <a href="/">Customer Support</a>
                   </li>
                   <li>
-                    <a href="#">Troubleshooting</a>
+                    <a href="/">Troubleshooting</a>
                   </li>
                   <li>
-                    <a href="#">Guides</a>
+                    <a href="/">Guides</a>
                   </li>
                 </ul>
               </div>
               <div id="developers">
                 <ul>
                   <li>
-                    <a href="#" className="footerHeader">
+                    <a href="/" className="footerHeader">
                       DEVELOPER
                     </a>
                   </li>
                   <li>
-                    <a href="#">Github</a>
+                    <a href="/">Github</a>
                   </li>
                   <li>
-                    <a href="#">Documentation</a>
+                    <a href="/">Documentation</a>
                   </li>
                   <li>
-                    <a href="#">Bug Bounty</a>
+                    <a href="/">Bug Bounty</a>
                   </li>
                   <li>
-                    <a href="#">Audits</a>
+                    <a href="/">Audits</a>
                   </li>
                   <li>
-                    <a href="#">Careers</a>
+                    <a href="/">Careers</a>
                   </li>
                 </ul>
               </div>
@@ -752,67 +495,7 @@ function MainFooter() {
           </div>
           <div id="mainFooterDown">
             <div id="downFirstCol">
-              <div id="changeColor">
-                {/*onClick="changeColor() should be added"*/}
-                <input type="checkbox" scale="md" />
-                <svg
-                  viewBox="0 0 24 24"
-                  color="warning"
-                  id="warningNo"
-                  width="20px"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M5.66 4.2L6.05 4.59C6.44 4.97 6.44 5.61 6.05 5.99L6.04 6C5.65 6.39 5.03 6.39 4.64 6L4.25 5.61C3.86 5.23 3.86 4.6 4.25 4.21L4.26 4.2C4.64 3.82 5.27 3.81 5.66 4.2Z"></path>
-                  <path d="M1.99 10.95H3.01C3.56 10.95 4 11.39 4 11.95V11.96C4 12.51 3.56 12.95 3 12.94H1.99C1.44 12.94 1 12.5 1 11.95V11.94C1 11.39 1.44 10.95 1.99 10.95Z"></path>
-                  <path d="M12 1H12.01C12.56 1 13 1.44 13 1.99V2.96C13 3.51 12.56 3.95 12 3.94H11.99C11.44 3.94 11 3.5 11 2.95V1.99C11 1.44 11.44 1 12 1Z"></path>
-                  <path d="M18.34 4.2C18.73 3.82 19.36 3.82 19.75 4.21C20.14 4.6 20.14 5.22 19.75 5.61L19.36 6C18.98 6.39 18.35 6.39 17.96 6L17.95 5.99C17.56 5.61 17.56 4.98 17.95 4.59L18.34 4.2Z"></path>
-                  <path d="M18.33 19.7L17.94 19.31C17.55 18.92 17.55 18.3 17.95 17.9C18.33 17.52 18.96 17.51 19.35 17.9L19.74 18.29C20.13 18.68 20.13 19.31 19.74 19.7C19.35 20.09 18.72 20.09 18.33 19.7Z"></path>
-                  <path d="M20 11.95V11.94C20 11.39 20.44 10.95 20.99 10.95H22C22.55 10.95 22.99 11.39 22.99 11.94V11.95C22.99 12.5 22.55 12.94 22 12.94H20.99C20.44 12.94 20 12.5 20 11.95Z"></path>
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M6 11.95C6 8.64 8.69 5.95 12 5.95C15.31 5.95 18 8.64 18 11.95C18 15.26 15.31 17.95 12 17.95C8.69 17.95 6 15.26 6 11.95ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
-                  ></path>
-                  <path d="M12 22.9H11.99C11.44 22.9 11 22.46 11 21.91V20.95C11 20.4 11.44 19.96 11.99 19.96H12C12.55 19.96 12.99 20.4 12.99 20.95V21.91C12.99 22.46 12.55 22.9 12 22.9Z"></path>
-                  <path d="M5.66 19.69C5.27 20.08 4.64 20.08 4.25 19.69C3.86 19.3 3.86 18.68 4.24 18.28L4.63 17.89C5.02 17.5 5.65 17.5 6.04 17.89L6.05 17.9C6.43 18.28 6.44 18.91 6.05 19.3L5.66 19.69Z"></path>
-                </svg>
-                <svg
-                  viewBox="0 0 24 24"
-                  color="warning"
-                  id="warning"
-                  width="20px"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="sc-4ba21b47-0 joVAFt"
-                >
-                  <path d="M5.66 4.2L6.05 4.59C6.44 4.97 6.44 5.61 6.05 5.99L6.04 6C5.65 6.39 5.03 6.39 4.64 6L4.25 5.61C3.86 5.23 3.86 4.6 4.25 4.21L4.26 4.2C4.64 3.82 5.27 3.81 5.66 4.2Z"></path>
-                  <path d="M1.99 10.95H3.01C3.56 10.95 4 11.39 4 11.95V11.96C4 12.51 3.56 12.95 3 12.94H1.99C1.44 12.94 1 12.5 1 11.95V11.94C1 11.39 1.44 10.95 1.99 10.95Z"></path>
-                  <path d="M12 1H12.01C12.56 1 13 1.44 13 1.99V2.96C13 3.51 12.56 3.95 12 3.94H11.99C11.44 3.94 11 3.5 11 2.95V1.99C11 1.44 11.44 1 12 1Z"></path>
-                  <path d="M18.34 4.2C18.73 3.82 19.36 3.82 19.75 4.21C20.14 4.6 20.14 5.22 19.75 5.61L19.36 6C18.98 6.39 18.35 6.39 17.96 6L17.95 5.99C17.56 5.61 17.56 4.98 17.95 4.59L18.34 4.2Z"></path>
-                  <path d="M18.33 19.7L17.94 19.31C17.55 18.92 17.55 18.3 17.95 17.9C18.33 17.52 18.96 17.51 19.35 17.9L19.74 18.29C20.13 18.68 20.13 19.31 19.74 19.7C19.35 20.09 18.72 20.09 18.33 19.7Z"></path>
-                  <path d="M20 11.95V11.94C20 11.39 20.44 10.95 20.99 10.95H22C22.55 10.95 22.99 11.39 22.99 11.94V11.95C22.99 12.5 22.55 12.94 22 12.94H20.99C20.44 12.94 20 12.5 20 11.95Z"></path>
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M6 11.95C6 8.64 8.69 5.95 12 5.95C15.31 5.95 18 8.64 18 11.95C18 15.26 15.31 17.95 12 17.95C8.69 17.95 6 15.26 6 11.95ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
-                  ></path>
-                  <path d="M12 22.9H11.99C11.44 22.9 11 22.46 11 21.91V20.95C11 20.4 11.44 19.96 11.99 19.96H12C12.55 19.96 12.99 20.4 12.99 20.95V21.91C12.99 22.46 12.55 22.9 12 22.9Z"></path>
-                  <path d="M5.66 19.69C5.27 20.08 4.64 20.08 4.25 19.69C3.86 19.3 3.86 18.68 4.24 18.28L4.63 17.89C5.02 17.5 5.65 17.5 6.04 17.89L6.05 17.9C6.43 18.28 6.44 18.91 6.05 19.3L5.66 19.69Z"></path>
-                </svg>
-                <svg
-                  viewBox="0 0 24 24"
-                  id="likeMoon"
-                  color="backgroundAlt"
-                  width="20px"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="sc-4ba21b47-0 giSRWY"
-                >
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M4.1534 13.6089L4.15362 13.61C4.77322 16.8113 7.42207 19.3677 10.647 19.8853L10.6502 19.8858C13.0412 20.2736 15.2625 19.6103 16.9422 18.2833C11.3549 16.2878 7.9748 10.3524 9.26266 4.48816C5.69846 5.77194 3.35817 9.51245 4.1534 13.6089ZM10.0083 2.21054C4.76622 3.2533 1.09895 8.36947 2.19006 13.9901C2.97006 18.0201 6.28006 21.2101 10.3301 21.8601C13.8512 22.4311 17.0955 21.1608 19.2662 18.8587C19.2765 18.8478 19.2866 18.837 19.2968 18.8261C19.4385 18.6745 19.5757 18.5184 19.7079 18.3581C19.7105 18.355 19.713 18.3519 19.7156 18.3487C19.8853 18.1426 20.0469 17.9295 20.2001 17.7101C20.4101 17.4001 20.2401 16.9601 19.8701 16.9201C19.5114 16.8796 19.1602 16.8209 18.817 16.7452C18.7964 16.7406 18.7758 16.736 18.7552 16.7313C18.6676 16.7114 18.5804 16.6903 18.4938 16.6681C18.4919 16.6676 18.4901 16.6672 18.4882 16.6667C13.0234 15.2647 9.72516 9.48006 11.4542 4.03417C11.4549 4.03214 11.4555 4.03012 11.4562 4.0281C11.4875 3.92954 11.5205 3.83109 11.5552 3.73278C11.5565 3.72911 11.5578 3.72543 11.5591 3.72175C11.6768 3.38921 11.8136 3.05829 11.9701 2.73005C12.1301 2.39005 11.8501 2.01005 11.4701 2.03005C11.1954 2.04379 10.924 2.06848 10.6561 2.10368C10.6517 2.10427 10.6472 2.10486 10.6428 2.10545C10.4413 2.13221 10.2418 2.16492 10.0446 2.2034C10.0325 2.20576 10.0204 2.20814 10.0083 2.21054Z"
-                  ></path>
-                </svg>
-              </div>
+              <LightSwitch />
 
               <div id="lang">
                 <button id="langEn" scale="md">
@@ -1030,7 +713,7 @@ function MainFooter() {
 
             <div id="buyCake">
               <div id="cakePrice">
-                <a href="#">
+                <a href="/">
                   <svg
                     viewBox="0 0 96 96"
                     width="24px"
@@ -1077,7 +760,7 @@ function MainFooter() {
                   </span>
                 </a>
               </div>
-              <a href="#" id="buyCakeBtn">
+              <a href="/" id="buyCakeBtn">
                 <span className="btn-color">Buy CAKE</span>
                 <div>
                   <svg
@@ -1100,3 +783,6 @@ function MainFooter() {
 }
 
 export default MainFooter;
+
+
+

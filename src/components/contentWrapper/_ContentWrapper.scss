@@ -1,3 +1,4 @@
+@import '../header/SettingsInnerMenu';
 // App component wrapper
 .content-wrapper {
   position: relative;
@@ -5,4 +6,41 @@
   display: grid;
   grid-template-rows: auto 1fr;
   min-height: auto;
+}
+
+#content-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  inset: 0px;
+  z-index: 99;
+  transform: translateX(0px);
+  will-change: opacity;
+  animation: 0.3s ease-in-out 0s 1 normal forwards running anim-overlay;
+  opacity: 0;
+
+  .content-overlay-neutral-area {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    @include themed() {
+      background-color: c('text99');
+    }
+    z-index: 20;
+    will-change: opacity;
+    animation: 350ms ease 0s 1 normal forwards running anim-overlay;
+  }
+}
+
+@keyframes anim-overlay {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

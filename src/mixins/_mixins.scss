@@ -43,6 +43,30 @@ $screen-xl: 67.5rem; // XLarge. Window width >=1080px
   }
 }
 
+// for theme colors
+@mixin themed() {
+  @each $color, $map in $colors {
+    .theme--#{$color} & {
+      $color-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($colors, $color), '#{$key}');
+        $color-map: map-merge(
+          $color-map,
+          (
+            $key: $value,
+          )
+        ) !global;
+      }
+      @content;
+      $color-map: null !global;
+    }
+  }
+}
+
+@function c($key) {
+  @return map-get($color-map, $key);
+}
+
 // for the rest
 @mixin graphicPositioning {
   height: 100%;
@@ -127,10 +151,6 @@ $screen-xl: 67.5rem; // XLarge. Window width >=1080px
   #mainfooterContents {
     padding-bottom: 60px;
   }
-}
-@mixin footerBg($bgColor) {
-  width: 100%;
-  background: $bgColor;
 }
 
 @mixin sm-screen-items {

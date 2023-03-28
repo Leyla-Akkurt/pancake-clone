@@ -2,9 +2,8 @@
   background-color: #fff;
 }
 #startInSeconds {
-  @include footerBg(
-    linear-gradient(rgb(118, 69, 217) 0%, rgb(81, 33, 177) 100%)
-  );
+  width: 100%;
+  background: linear-gradient(rgb(118, 69, 217) 0%, rgb(81, 33, 177) 100%);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -44,7 +43,7 @@
   margin: 10px 0 70px;
 }
 
-#footer img {
+#footer .startInContainer img {
   width: 240px;
   height: 224px;
   margin: 0;
@@ -68,20 +67,24 @@
   }
   h1,
   &:nth-child(2) {
-    color: $colors-dark-text;
+    color: $text--dark;
   }
-  button {
+  .btn-color {
     font-size: 16px;
     font-weight: 600;
-    background-color: $colors-dark-primary;
     border: none;
     padding: 15px 30px;
-    border-radius: 15px;
+    border-radius: 1rem;
     cursor: pointer;
     width: fit-content;
     align-self: center;
+    transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+    @include themed() {
+      color: c('invertedContrast');
+      background-color: c('primary');
+    }
     &:hover {
-      background-color: #41a0a7;
+      opacity: 0.65;
     }
   }
 }
@@ -136,8 +139,10 @@
 }
 
 #learn {
-  color: $colors-dark-primary;
   font-weight: 600;
+  @include themed() {
+    color: c('primary');
+  }
 }
 #pancakeFlyingBottom {
   position: relative;

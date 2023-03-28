@@ -80,13 +80,19 @@ h2 {
   @include text(32px, 600, 1.5, 24px);
 }
 .tradeAnything span {
-  color: $colors-dark-secondary;
+  @include themed() {
+    color: c('secondary');
+  }
 }
 h2 {
-  color: $colors-dark-text;
+  @include themed() {
+    color: c('text');
+  }
 }
 .subTitle {
-  color: $colors-dark-textSubtle;
+  @include themed() {
+    color: c('textSubtle');
+  }
   @include text(16px, 400, 1.5, 24px);
 }
 .buttonTrade,
@@ -102,8 +108,10 @@ h2 {
   height: 48px;
   opacity: 1;
   padding: 0px 24px;
-  background-color: $colors-dark-primary;
-  color: $colors-dark-invertedContrast;
+  @include themed() {
+    color: c('invertedContrast');
+    background-color: c('primary');
+  }
   margin-right: 16px;
 }
 
@@ -115,12 +123,16 @@ a {
   text-decoration: none;
 }
 .tradeNow a {
-  color: $colors-dark-primary;
+  @include themed() {
+    color: c('primary');
+  }
   @include text(16px, 600, 1.5, 0);
 }
 .learnLink .learn-svg {
   align-self: center;
-  fill: $colors-dark-primary;
+  @include themed() {
+    fill: c('primary');
+  }
   flex-shrink: 0;
   margin-left: 4px;
 }

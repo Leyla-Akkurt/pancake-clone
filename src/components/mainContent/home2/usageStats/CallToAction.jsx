@@ -15,7 +15,7 @@ class CallToAction extends React.Component {
           PancakeSwap has the most users of any decentralized platform, ever.
         </div>
         <div className="home-2-content-flexy-text">
-          And those users are now entrusting the platform with over $6.1 billion
+          And those users are now entrusting the platform with over $3.2 billion
           in funds.
         </div>
         <div className="home-2-content-subtext">Will you join them?</div>

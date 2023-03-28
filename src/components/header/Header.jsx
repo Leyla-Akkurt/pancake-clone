@@ -2,7 +2,11 @@ import { useEffect, useState } from 'react';
 import PhishingBanner from './PhishingBanner';
 import NavBar from './NavBar';
 
-const Header = ({ hasPhishingBannerHandler }) => {
+const Header = ({
+  hasPhishingBannerHandler,
+  hasOverlay,
+  hasOverlayHandler,
+}) => {
   const [styleTop, setstyleTop] = useState({ top: '0' });
   const [prevScrollPos, setPrevScrollPos] = useState(0);
 
@@ -29,7 +33,7 @@ const Header = ({ hasPhishingBannerHandler }) => {
   return (
     <div id="head-area" className="head-area" style={styleTop}>
       <PhishingBanner hasPhishingBannerHandler={hasPhishingBannerHandler} />
-      <NavBar />
+      <NavBar hasOverlay={hasOverlay} hasOverlayHandler={hasOverlayHandler} />
     </div>
   );
 };

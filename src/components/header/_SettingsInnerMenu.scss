@@ -1,0 +1,193 @@
+@import '../switch/Switch';
+@import '../switch/ThemeSwitch';
+
+.settings-inner-menu {
+  border-radius: 2rem 2rem 0rem 0rem;
+  width: 100%;
+  max-height: calc(var(--vh, 1vh) * 100);
+  z-index: 100;
+  position: absolute;
+  min-width: 320px;
+  bottom: 0px;
+  max-width: none !important;
+  min-height: 300px;
+  overflow: hidden;
+  box-shadow: rgba(14, 14, 44, 0.1) 0px 20px 36px -8px,
+    rgba(0, 0, 0, 0.05) 0px 1px 1px;
+  border: 1px solid rgb(39, 38, 44);
+
+  @include themed() {
+    background: c('backgroundAlt');
+  }
+
+  @include md {
+    max-height: 100vh;
+    border-radius: 2rem;
+    bottom: auto;
+    width: auto;
+    animation: 0s ease 0s 1 normal none running none;
+  }
+
+  &-header {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border-bottom: 1px solid;
+    @include themed() {
+      border-bottom-color: c('cardBorder');
+    }
+    padding: 12px 24px;
+
+    @include md {
+      @include themed() {
+        background: c('gradientCardHeader');
+      }
+    }
+
+    .header-text {
+      display: flex;
+      align-items: center;
+      flex: 1 1 0%;
+
+      h2 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        line-height: 1.1;
+        @include themed() {
+          color: c('text');
+        }
+        margin: 0px;
+        padding: 0px;
+      }
+    }
+
+    button {
+      padding: 0px;
+      width: 48px;
+      @include baseButton;
+      background-color: transparent;
+      box-shadow: none;
+      border: none;
+      @include themed() {
+        color: c('primary');
+      }
+
+      .close-btn {
+        align-self: center;
+        flex-shrink: 0;
+        position: absolute;
+        width: 20px;
+      }
+      .close-btn:hover {
+        opacity: 0.65;
+      }
+    }
+  }
+  &-body {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden auto;
+    max-height: calc(-73px + 90vh);
+    padding: 1.5rem;
+
+    @include md {
+      display: flex;
+      max-height: 90vh;
+    }
+
+    .body-container {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      max-height: 90vh;
+
+      @include md {
+        max-height: none;
+      }
+
+      &-wrapper {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1.5rem;
+
+        .secondary-header {
+          @include themed() {
+            color: c('secondary');
+          }
+          font-weight: 600;
+          line-height: 1.5;
+          text-transform: uppercase;
+          margin-bottom: 1.5rem;
+          font-size: 1.125rem;
+        }
+
+        .body-content {
+          display: flex;
+
+          &-text {
+            @include themed() {
+              color: c('text');
+            }
+            font-weight: 400;
+            line-height: 1.5;
+            font-size: 1rem;
+          }
+        }
+        .plus-switch {
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 1.5rem;
+        }
+
+        .plus-light-switch {
+          margin-bottom: 1.5rem;
+          justify-content: space-between;
+        }
+
+        .plus-array {
+          flex-direction: column;
+          .body-content-text {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.75rem;
+          }
+
+          &-items {
+            display: flex;
+            flex-wrap: wrap;
+
+            button {
+              @include baseButton;
+              height: 2rem;
+              border: 0px none;
+              border-radius: 16px;
+              padding: 0rem 1rem;
+              @include themed() {
+                background-color: c('tertiary');
+                color: c('primary');
+              }
+              box-shadow: none;
+              margin-top: 0.25rem;
+              margin-right: 0.25rem;
+
+              &:hover {
+                opacity: 0.65;
+              }
+
+              &:focus {
+                @include themed() {
+                  background-color: c('primary');
+                  color: c('invertedContrast');
+                }
+              }
+            }
+          }
+
+          button:hover {
+            opacity: 0.65;
+          }
+        }
+      }
+    }
+  }
+}

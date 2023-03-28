@@ -18,11 +18,11 @@ $sm-screen: 576px;
   color: rosybrown;
 }
 #logoFooter > svg > path:first-child {
-  fill: $colors-dark-contrast;
+  fill: $contrast--dark;
 }
 #footer a {
   text-decoration: none;
-  color: $colors-dark-text;
+  color: $text--dark;
 }
 
 ul > li:nth-child(7) {
@@ -32,19 +32,19 @@ ul > li:nth-child(7) {
 
 ul > li {
   a {
-    color: $colors-dark-text;
+    color: $text--dark;
   }
   #contact {
-    color: $colors-dark-warning;
+    color: $warning--dark;
   }
   .footerHeader {
-    color: $colors-dark-secondary;
+    color: $secondary--dark;
     font-weight: 600;
   }
 }
 
 #mainFooterUpIcons {
-  fill: $colors-dark-textSubtle;
+  fill: $textSubtle--dark;
   @include footerGap(flex, 25px);
   margin: 30px 0;
   #telegramRegions {
@@ -93,9 +93,10 @@ ul > li {
 
 #mainFooter {
   position: relative;
+  width: 100%;
   z-index: 5;
-  @include footerBg($colors-dark-backgroundAlt);
   margin-bottom: 0;
+  background: $backgroundAlt--dark;
 }
 
 #lang {
@@ -109,7 +110,6 @@ ul > li {
   }
 
   #langEn {
-    color: $colors-dark-textSubtle;
     display: inline-flex;
     align-items: center;
     font-weight: 600;
@@ -117,8 +117,10 @@ ul > li {
     border: none;
     gap: 5px;
     cursor: pointer;
+    color: $textSubtle--dark;
+
     svg {
-      fill: $colors-dark-textSubtle;
+      fill: $textSubtle--dark;
     }
   }
 
@@ -152,8 +154,8 @@ ul > li {
 
     /* Handle */
     &::-webkit-scrollbar-thumb {
-      background-color: $colors-dark-textSubtle;
       border-radius: 10px;
+      background-color: $textSubtle--dark;
     }
 
     &::-webkit-scrollbar-button {
@@ -167,19 +169,21 @@ ul > li {
     }
     .languages {
       display: none;
-      color: $colors-dark-text;
       text-align: center;
       font-size: 16px;
       height: 200px;
       border: none;
       padding: 0 20px;
-      background-color: $colors-dark-backgroundAlt;
+
       &:hover {
         text-align: center;
         display: block;
         cursor: pointer;
-        color: $colors-dark-textSubtle;
+        color: $textSubtle--dark;
       }
+
+      color: $text--dark;
+      background-color: $backgroundAlt--dark;
     }
   }
 }
@@ -258,30 +262,36 @@ ul > li {
 }
 #buyCakeBtn {
   @include footerGap(flex, 8px);
-  background-color: $colors-dark-primary;
   border-radius: 20px;
   padding: 2px 16px 0;
   justify-content: center;
   align-items: center;
   font-weight: 600;
-  color: $colors-dark-invertedContrast;
+  background-color: $primary--dark;
+  color: $invertedContrast--dark;
+
   .btn-color {
-    color: $colors-dark-invertedContrast;
+    @include themed() {
+      color: c('invertedContrast');
+      fill: c('invertedContrast');
+    }
   }
+
   svg {
     margin-top: 3px;
   }
+
   &:hover {
     background-color: #41a0a7;
   }
 }
 #cakePrice {
   a {
-    color: $colors-dark-textSubtle;
     display: flex;
     gap: 5px;
     align-items: center;
     justify-content: center;
+    color: $textSubtle--dark;
   }
   svg {
     &:hover {
@@ -356,4 +366,25 @@ ul > li {
   list-style-type: none;
   line-height: 2;
   padding-left: 0;
+}
+
+.main-footer {
+  .light-switch {
+    background-color: $textDisabled--dark;
+    &-active {
+      background-color: $backgroundAlt--dark;
+    }
+    svg.switch-sun-icon,
+    svg.switch-moon-icon {
+      fill: $backgroundAlt--dark;
+    }
+
+    svg.switch-sun-icon-active {
+      fill: $warning--dark;
+    }
+
+    svg.switch-moon-icon-active {
+      fill: $secondary--dark;
+    }
+  }
 }

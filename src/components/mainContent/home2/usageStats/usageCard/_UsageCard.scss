@@ -9,13 +9,21 @@
   &-box {
     height: fit-content;
     padding: 0.063rem 0.063rem 0.25rem;
-    background: $colors-dark-cardBorder;
     border-radius: $radii-card;
-    color: $colors-dark-text;
     overflow: hidden;
     position: relative;
     padding: 0.063rem 0.063rem 0.25rem;
     margin-bottom: 1rem;
+    @include themed() {
+      background: c('cardBorder');
+      color: c('text');
+    }
+
+    .box-text {
+      > h2 {
+        margin-bottom: 0px;
+      }
+    }
 
     @include md {
       margin-right: 1rem;
@@ -29,8 +37,10 @@
       width: 100%;
       height: 100%;
       overflow: inherit;
-      background: $colors-dark-backgroundAlt;
       border-radius: $radii-card;
+      @include themed() {
+        background: c('backgroundAlt');
+      }
     }
 
     &-wrapper {
@@ -60,7 +70,9 @@
           line-height: 1.1;
 
           &:last-of-type {
-            color: $colors-dark-secondary;
+            @include themed() {
+              color: c('secondary');
+            }
             margin-bottom: 1.5rem;
           }
 
@@ -70,7 +82,9 @@
         }
 
         div {
-          color: $colors-dark-textSubtle;
+          @include themed() {
+            color: c('textSubtle');
+          }
           font-weight: 400;
           line-height: 1.5;
           font-size: 1rem;
@@ -81,13 +95,17 @@
 
   &-box:nth-child(2) {
     h2:last-of-type {
-      color: $colors-dark-primary;
+      @include themed() {
+        color: c('primary');
+      }
     }
   }
 
   &-box:last-of-type {
     h2:last-of-type {
-      color: $colors-dark-failure;
+      @include themed() {
+        color: c('failure');
+      }
     }
   }
 }

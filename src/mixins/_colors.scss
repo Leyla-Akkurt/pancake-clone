@@ -1,171 +1,8 @@
-$colors-light-white: #fff;
-$colors-light-failure: #ed4b9e;
-$colors-light-failure33: #ed4b9e33;
-$colors-light-primary: #1fc7d4;
-$colors-light-primary0f: #1fc7d40f;
-$colors-light-primary3D: #1fc7d43d;
-$colors-light-primaryBright: #53dee9;
-$colors-light-primaryDark: #0098a1;
-$colors-light-success: #31d0aa;
-$colors-light-success19: #31d0aa19;
-$colors-light-warning: #ffb237;
-$colors-light-warning2D: #ed4b9e2d;
-$colors-light-warning33: #ed4b9e33;
-$colors-light-binance: #f0b90b;
-$colors-light-overlay: #452a7a;
-$colors-light-gold: #ffc700;
-$colors-light-silver: #b2b2b2;
-$colors-light-bronze: #e7974d;
-$colors-light-secondary: #7645d9;
-$colors-light-secondary80: #7645d980;
-$colors-light-background: #faf9fa;
-$colors-light-backgroundDisabled: #e9eaeb;
-$colors-light-backgroundAlt: #fff;
-$colors-light-backgroundAlt2: hsla(0, 0%, 100%, 0.7);
-$colors-light-cardBorder: #e7e3eb;
-$colors-light-contrast: #191326;
-$colors-light-dropdown: #f6f6f6;
-$colors-light-dropdownDeep: #eee;
-$colors-light-invertedContrast: #fff;
-$colors-light-input: #eeeaf4;
-$colors-light-inputSecondary: #d7caec;
-$colors-light-tertiary: #eff4f5;
-$colors-light-text: #280d5f;
-$colors-light-text99: #280d5f99;
-$colors-light-textDisabled: #bdc2c4;
-$colors-light-textSubtle: #7a6eaa;
-$colors-light-disabled: #e9eaeb;
-$colors-light-gradientBubblegum: linear-gradient(139.73deg, #e5fdff, #f3efff);
-$colors-light-gradientInverseBubblegum: linear-gradient(
-  139.73deg,
-  #f3efff,
-  #e5fdff
-);
-$colors-light-gradientCardHeader: linear-gradient(111.68deg, #f2ecf2, #e8f2f6);
-$colors-light-gradientBlue: linear-gradient(180deg, #a7e8f1, #94e1f2);
-$colors-light-gradientViolet: linear-gradient(180deg, #e2c9fb, #cdb8fa);
-$colors-light-gradientVioletAlt: linear-gradient(180deg, #cbd7ef, #9a9fd0);
-$colors-light-gradientGold: linear-gradient(180deg, #ffd800, #fdab32);
-$colors-light-gradientBold: linear-gradient(#53dee9, #7645d9);
-$colors-dark-white: #fff;
-$colors-dark-failure: #ed4b9e;
-$colors-dark-failure33: #ed4b9e33;
-$colors-dark-primary: #1fc7d4;
-$colors-dark-primary0f: #1fc7d40f;
-$colors-dark-primary3D: #1fc7d43d;
-$colors-dark-primaryBright: #53dee9;
-$colors-dark-primaryDark: #0098a1;
-$colors-dark-success: #31d0aa;
-$colors-dark-success19: #31d0aa19;
-$colors-dark-warning: #ffb237;
-$colors-dark-warning2D: #ed4b9e2d;
-$colors-dark-warning33: #ed4b9e33;
-$colors-dark-binance: #f0b90b;
-$colors-dark-overlay: #452a7a;
-$colors-dark-gold: #ffc700;
-$colors-dark-silver: #b2b2b2;
-$colors-dark-bronze: #e7974d;
-$colors-dark-secondary: #9a6aff;
-$colors-dark-secondary80: #9a6aff80;
-$colors-dark-background: #08060b;
-$colors-dark-backgroundDisabled: #3c3742;
-$colors-dark-backgroundAlt: #27262c;
-$colors-dark-backgroundAlt2: rgba(39, 38, 44, 0.7);
-$colors-dark-cardBorder: #383241;
-$colors-dark-contrast: #fff;
-$colors-dark-dropdown: #1e1d20;
-$colors-dark-dropdownDeep: #100c18;
-$colors-dark-invertedContrast: #191326;
-$colors-dark-input: #372f47;
-$colors-dark-inputSecondary: #262130;
-$colors-dark-tertiary: #353547;
-$colors-dark-text: #f4eeff;
-$colors-dark-text99: #f4eeff99;
-$colors-dark-textDisabled: #666171;
-$colors-dark-textSubtle: #b8add2;
-$colors-dark-disabled: #524b63;
-$colors-dark-gradientBubblegum: linear-gradient(139.73deg, #313d5c, #3d2a54);
-$colors-dark-gradientInverseBubblegum: linear-gradient(
-  139.73deg,
-  #3d2a54,
-  #313d5c
-);
-
-$colors-dark-gradientSliderBg: linear-gradient(
-  rgb(118, 69, 217) 0%,
-  rgb(69, 42, 122)
-);
-
-$colors-dark-gradientCardHeader: linear-gradient(166.77deg, #3b4155, #3a3045);
-$colors-dark-gradientBlue: linear-gradient(180deg, #00707f, #19778c);
-$colors-dark-gradientViolet: linear-gradient(180deg, #6c4999, #6d4db2);
-$colors-dark-gradientVioletAlt: linear-gradient(180deg, #434575, #66578d);
-$colors-dark-gradientGold: linear-gradient(180deg, #ffd800, #fdab32);
-$colors-dark-gradientBold: linear-gradient(#53dee9, #9a6aff);
-
-$colors-dark-gradientPhishing: linear-gradient(
-  rgb(128, 81, 214) 0%,
-  rgb(73, 34, 134) 100%
-);
-$colors-dark-gradientPhishingDarker: linear-gradient(
-    0deg,
-    rgba(39, 38, 44, 0.4),
-    rgba(39, 38, 44, 0.4)
-  ),
-  linear-gradient(rgb(128, 81, 214) 0%, rgb(73, 34, 134) 100%);
-$colors-dark-gradientHero: radial-gradient(
-  103.12%50%at 50%50%,
-  #21193a 0%,
-  #191326 100%
-);
-$colors-dark-home2Background: linear-gradient(
-  180deg,
-  #09070c 22%,
-  #201335 100%
-);
-
 $fonts-normal: 'Kanit', sans-serif;
 $fonts-mono: SFMono, ui-monospace, monospace;
-$space-0: 0px;
-$space-1: 4px;
-$space-2: 8px;
-$space-3: 16px;
-$space-4: 24px;
-$space-5: 32px;
-$space-6: 48px;
-$space-7: 64px;
-$space-0px: 0px;
-$space-1rem: 1rem;
-$space-1px: 1px;
-$space-2px: 2px;
-$space-4px: 4px;
-$space-8px: 8px;
-$space-12px: 12px;
-$space-14px: 14px;
-$space-16px: 16px;
-$space-20px: 20px;
-$space-24px: 24px;
-$space-32px: 32px;
-$space-48px: 48px;
-$space-56px: 56px;
-$space-64px: 64px;
-$borderWidths-0: 0px;
-$borderWidths-1: 1px;
-$borderWidths-2: 2px;
-$radii-0: 0px;
-$radii-8px: 8px;
-$radii-12px: 12px;
-$radii-20px: 20px;
-$radii-small: 4px;
-$radii-default: 16px;
+
 $radii-card: 24px;
-$radii-circle: 50%;
-$fontSizes-10px: 10px;
-$fontSizes-12px: 12px;
-$fontSizes-16px: 16px;
-$fontSizes-14px: 14px;
-$fontSizes-20px: 20px;
-$fontSizes-40px: 40px;
+
 $shadows-level1: 0px 2px 12px -8px rgba(25, 19, 38, 0.1),
   0px 1px 1px rgba(25, 19, 38, 0.05);
 $shadows-active: 0px 0px 0px 1px #0098a1,
@@ -178,3 +15,229 @@ $shadows-focus: 0px 0px 0px 1px #7645d9, 0px 0px 0px 4px rgba(118, 69, 217, 0.6)
 $shadows-inset: inset 0px 2px 2px -1px rgba(74, 74, 104, 0.1);
 $shadows-tooltip: 0px 0px 2px rgba(0, 0, 0, 0.2),
   0px 4px 12px -8px rgba(14, 14, 44, 0.1);
+
+/* ==============================================
+    ---------------- LIGHT THEME ---------------
+   ============================================== */
+$white--light: #fff;
+$failure--light: #ed4b9e;
+$failure33--light: #ed4b9e33;
+$primary--light: #1fc7d4;
+$primary0f--light: #1fc7d40f;
+$primary3D--light: #1fc7d43d;
+$primaryBright--light: #53dee9;
+$primaryDark--light: #0098a1;
+$success--light: #31d0aa;
+$success19--light: #31d0aa19;
+$warning--light: #ffb237;
+$warning2D--light: #ed4b9e2d;
+$warning33--light: #ed4b9e33;
+$binance--light: #f0b90b;
+$overlay--light: #452a7a;
+$gold--light: #ffc700;
+$silver--light: #b2b2b2;
+$bronze--light: #e7974d;
+$secondary--light: #7645d9;
+$secondary80--light: #7645d980;
+$background--light: #faf9fa;
+$backgroundDisabled--light: #e9eaeb;
+$backgroundAlt--light: #fff;
+$backgroundAlt2--light: hsla(0, 0%, 100%, 0.7);
+$cardBorder--light: #e7e3eb;
+$contrast--light: #191326;
+$dropdown--light: #f6f6f6;
+$dropdownDeep--light: #eee;
+$invertedContrast--light: #fff;
+$input--light: #eeeaf4;
+$inputSecondary--light: #d7caec;
+$tertiary--light: #eff4f5;
+$text--light: #280d5f;
+$text99--light: #280d5f99;
+$textDisabled--light: #bdc2c4;
+$textSubtle--light: #7a6eaa;
+$disabled--light: #e9eaeb;
+$home4Line--light: #d8cbed;
+// LIGHT GRADIENTS
+$gradientCardHeader--light: linear-gradient(111.68deg, #f2ecf2, #e8f2f6);
+$gradientBlue--light: linear-gradient(180deg, #a7e8f1, #94e1f2);
+$gradientViolet--light: linear-gradient(180deg, #e2c9fb, #cdb8fa);
+$gradientVioletAlt--light: linear-gradient(180deg, #cbd7ef, #9a9fd0);
+$gradientGold--light: linear-gradient(180deg, #ffd800, #fdab32);
+$gradientBold--light: linear-gradient(#53dee9, #7645d9);
+$gradientHero--light: linear-gradient(139.73deg, #e6fdff 0%, #f3efff 100%);
+$home2Background--light: linear-gradient(180deg, #fff 22%, #d7caec 100%);
+
+/* ==============================================
+    ---------------- DARK THEME ----------------
+   ============================================== */
+
+$white--dark: #fff;
+$failure--dark: #ed4b9e;
+$failure33--dark: #ed4b9e33;
+$primary--dark: #1fc7d4;
+$primary0f--dark: #1fc7d40f;
+$primary3D--dark: #1fc7d43d;
+$primaryBright--dark: #53dee9;
+$primaryDark--dark: #0098a1;
+$success--dark: #31d0aa;
+$success19--dark: #31d0aa19;
+$warning--dark: #ffb237;
+$warning2D--dark: #ed4b9e2d;
+$warning33--dark: #ed4b9e33;
+$binance--dark: #f0b90b;
+$overlay--dark: #452a7a;
+$gold--dark: #ffc700;
+$silver--dark: #b2b2b2;
+$bronze--dark: #e7974d;
+$secondary--dark: #9a6aff;
+$secondary80--dark: #9a6aff80;
+$background--dark: #08060b;
+$backgroundDisabled--dark: #3c3742;
+$backgroundAlt--dark: #27262c;
+$backgroundAlt2--dark: rgba(39, 38, 44, 0.7);
+$cardBorder--dark: #383241;
+$contrast--dark: #fff;
+$dropdown--dark: #1e1d20;
+$dropdownDeep--dark: #100c18;
+$invertedContrast--dark: #191326;
+$input--dark: #372f47;
+$inputSecondary--dark: #262130;
+$tertiary--dark: #353547;
+$text--dark: #f4eeff;
+$text99--dark: #f4eeff99;
+$textDisabled--dark: #666171;
+$textSubtle--dark: #b8add2;
+$disabled--dark: #524b63;
+$home4Line--dark: #201335;
+// DARK GRADIENTS
+$gradientSliderBg--dark: linear-gradient(
+  rgb(118, 69, 217) 0%,
+  rgb(69, 42, 122)
+);
+$gradientCardHeader--dark: linear-gradient(166.77deg, #3b4155, #3a3045);
+$gradientBlue--dark: linear-gradient(180deg, #00707f, #19778c);
+$gradientViolet--dark: linear-gradient(180deg, #6c4999, #6d4db2);
+$gradientVioletAlt--dark: linear-gradient(180deg, #434575, #66578d);
+$gradientGold--dark: linear-gradient(180deg, #ffd800, #fdab32);
+$gradientBold--dark: linear-gradient(#53dee9, #9a6aff);
+$gradientPhishing--dark: linear-gradient(
+  rgb(128, 81, 214) 0%,
+  rgb(73, 34, 134) 100%
+);
+$gradientPhishingDarker--dark: linear-gradient(
+    0deg,
+    rgba(39, 38, 44, 0.4),
+    rgba(39, 38, 44, 0.4)
+  ),
+  linear-gradient(rgb(128, 81, 214) 0%, rgb(73, 34, 134) 100%);
+$gradientHero--dark: radial-gradient(
+  103.12%50%at 50%50%,
+  #21193a 0%,
+  #191326 100%
+);
+$home2Background--dark: linear-gradient(180deg, #09070c 22%, #201335 100%);
+
+/* ==============================================
+    --------------- THEME COLORS ---------------
+   ============================================== */
+$colors: (
+  light: (
+    white: $white--light,
+    failure: $failure--light,
+    failure33: $failure33--light,
+    primary: $primary--light,
+    primary0f: $primary0f--light,
+    primary3D: $primary3D--light,
+    primaryBright: $primaryBright--light,
+    primaryDark: $primaryDark--light,
+    success: $success--light,
+    success19: $success19--light,
+    warning: $warning--light,
+    warning2D: $warning2D--light,
+    warning33: $warning33--light,
+    binance: $binance--light,
+    overlay: $overlay--light,
+    gold: $gold--light,
+    silver: $silver--light,
+    bronze: $bronze--light,
+    secondary: $secondary--light,
+    secondary80: $secondary80--light,
+    background: $background--light,
+    backgroundDisabled: $backgroundDisabled--light,
+    backgroundAlt: $backgroundAlt--light,
+    backgroundAlt2: $backgroundAlt2--light,
+    cardBorder: $cardBorder--light,
+    contrast: $contrast--light,
+    dropdown: $dropdown--light,
+    dropdownDeep: $dropdownDeep--light,
+    invertedContrast: $invertedContrast--light,
+    input: $input--light,
+    inputSecondary: $inputSecondary--light,
+    tertiary: $tertiary--light,
+    text: $text--light,
+    text99: $text99--light,
+    textDisabled: $textDisabled--light,
+    textSubtle: $textSubtle--light,
+    disabled: $disabled--light,
+    home4Line: $home4Line--light,
+    gradientCardHeader: $gradientCardHeader--light,
+    gradientBlue: $gradientBlue--light,
+    gradientViolet: $gradientViolet--light,
+    gradientVioletAlt: $gradientVioletAlt--light,
+    gradientGold: $gradientGold--light,
+    gradientBold: $gradientBold--light,
+    gradientHero: $gradientHero--light,
+    home2Background: $home2Background--light,
+  ),
+  dark: (
+    white: $white--dark,
+    failure: $failure--dark,
+    failure33: $failure33--dark,
+    primary: $primary--dark,
+    primary0f: $primary0f--dark,
+    primary3D: $primary3D--dark,
+    primaryBright: $primaryBright--dark,
+    primaryDark: $primaryDark--dark,
+    success: $success--dark,
+    success19: $success19--dark,
+    warning: $warning--dark,
+    warning2D: $warning2D--dark,
+    warning33: $warning33--dark,
+    binance: $binance--dark,
+    overlay: $overlay--dark,
+    gold: $gold--dark,
+    silver: $silver--dark,
+    bronze: $bronze--dark,
+    secondary: $secondary--dark,
+    secondary80: $secondary80--dark,
+    background: $background--dark,
+    backgroundDisabled: $backgroundDisabled--dark,
+    backgroundAlt: $backgroundAlt--dark,
+    backgroundAlt2: $backgroundAlt2--dark,
+    cardBorder: $cardBorder--dark,
+    contrast: $contrast--dark,
+    dropdown: $dropdown--dark,
+    dropdownDeep: $dropdownDeep--dark,
+    invertedContrast: $invertedContrast--dark,
+    input: $input--dark,
+    inputSecondary: $inputSecondary--dark,
+    tertiary: $tertiary--dark,
+    text: $text--dark,
+    text99: $text99--dark,
+    textDisabled: $textDisabled--dark,
+    textSubtle: $textSubtle--dark,
+    disabled: $disabled--dark,
+    home4Line: $home4Line--dark,
+    gradientSliderBg: $gradientSliderBg--dark,
+    gradientCardHeader: $gradientCardHeader--dark,
+    gradientBlue: $gradientBlue--dark,
+    gradientViolet: $gradientViolet--dark,
+    gradientVioletAlt: $gradientVioletAlt--dark,
+    gradientGold: $gradientGold--dark,
+    gradientBold: $gradientBold--dark,
+    gradientPhishing: $gradientPhishing--dark,
+    gradientPhishingDarker: $gradientPhishingDarker--dark,
+    gradientHero: $gradientHero--dark,
+    home2Background: $home2Background--dark,
+  ),
+);
