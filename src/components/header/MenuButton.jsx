@@ -53,12 +53,12 @@ const MenuButton = ({ target, altTarget, innerLinks, mobile }) => {
         {mobile ? (
           <div className="mobile-menu-item">
             {target ? (
-              <button>
+              <button type="button">
                 <img src={mobile.src} alt={mobile.alt} />
                 {target.name}
               </button>
             ) : (
-              <button className="alt-target">
+              <button type="button" className="alt-target">
                 {altTarget.svgName === 'three-dots' && (
                   <svg
                     viewBox="0 0 24 24"
