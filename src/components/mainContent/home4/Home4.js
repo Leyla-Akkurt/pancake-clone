@@ -1,7 +1,7 @@
-import { SecondPart } from '../secondPart/SecondPart';
-import { TradeAnything } from '../tradeAnything/TradeAnything';
+import { SecondPart } from './secondPart/SecondPart';
+import { TradeAnything } from './tradeAnything/TradeAnything';
 
-export function Home4() {
+const Home4 = () => {
   return (
     <section id="home-4" className="home-4">
       <div className="svg home-4-svg">
@@ -19,4 +19,6 @@ export function Home4() {
       <SecondPart />
     </section>
   );
-}
+};
+
+export default Home4;

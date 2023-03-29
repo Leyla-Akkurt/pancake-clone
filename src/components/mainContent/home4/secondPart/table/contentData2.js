@@ -1,4 +1,4 @@
-export default [
+const contentData2 = [
   {
     contentName: 'content1',
     head: 'Stake CAKE',
@@ -30,3 +30,5 @@ export default [
     subhead: 'APR',
   },
 ];
+
+export default contentData2;

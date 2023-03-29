@@ -1,4 +1,4 @@
-export default [
+const contentData = [
   {
     contentName: 'content1 ',
     head: 'WMX-BUSD LP',
@@ -35,3 +35,5 @@ export default [
     subhead: 'APR',
   },
 ];
+
+export default contentData;

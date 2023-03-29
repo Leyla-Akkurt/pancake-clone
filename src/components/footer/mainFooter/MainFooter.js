@@ -42,7 +42,7 @@ function MainFooter() {
           </svg>
         </div>
 
-        <div id="mainFooterDown" className='main-footer-down-sm sm'>
+        <div id="mainFooterDown" className="main-footer-down-sm sm">
           <div id="downFirstCol">
             <LightSwitch />
 
@@ -198,7 +198,7 @@ function MainFooter() {
           </ul>
         </div>
         <FooterIcons />
-        <div id="hr" className='sm'></div>
+        <div id="hr" className="sm"></div>
       </div>
 
       <div id="mainfooterContents">
