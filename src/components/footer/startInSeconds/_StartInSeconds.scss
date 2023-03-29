@@ -7,8 +7,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  // align-items: center;
-  // justify-content: space-between;
+
   svg {
     position: relative;
     width: 300%;
@@ -40,7 +39,8 @@
   align-items: center;
   text-align: center;
   justify-content: space-around;
-  margin: 10px 0 70px;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
 }
 
 #footer .startInContainer img {
@@ -53,6 +53,7 @@
   position: relative;
   bottom: 400px;
   margin-bottom: 400px;
+  max-width: 260px;
 }
 #startInSecondsMain {
   display: flex;
@@ -73,11 +74,13 @@
     font-size: 16px;
     font-weight: 600;
     border: none;
-    padding: 15px 30px;
+    padding: 0rem 1.5rem;
     border-radius: 1rem;
     cursor: pointer;
     width: fit-content;
     align-self: center;
+    height: 3rem;
+    margin-top: 0.5rem;
     transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
     @include themed() {
       color: c('invertedContrast');
@@ -97,6 +100,7 @@
   animation-iteration-count: infinite;
   .cake {
     position: absolute;
+    max-height: 256px;
   }
 
   .cake-right {
@@ -116,11 +120,14 @@
 .cake-wrapper {
   position: relative;
   width: 100%;
+  max-width: 260px;
 }
 
 .cake-container {
   position: absolute;
   width: 100%;
+  right: 0;
+  bottom: 60px;
 }
 
 @keyframes flyingcake {
@@ -143,8 +150,16 @@
   @include themed() {
     color: c('primary');
   }
+  svg {
+    width: 20px;
+  }
 }
 #pancakeFlyingBottom {
   position: relative;
-  margin-bottom: 60px;
+  max-height: 256px;
+}
+
+.emph {
+  font-weight: 600;
+  margin-bottom: 1.5rem;
 }

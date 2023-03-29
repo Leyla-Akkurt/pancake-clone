@@ -1,0 +1,26 @@
+#mainFooterUpIcons {
+  fill: $textSubtle--dark;
+  @include footerGap(flex, 25px);
+  margin: 30px 0;
+  #telegramRegions {
+    position: relative;
+    #telegramRegionChannel {
+      display: none;
+    }
+    #telegramRegionChannel {
+      position: relative;
+      bottom: 30px;
+      a {
+        color: #b8add2;
+      }
+    }
+    &:hover #telegramRegionChannel {
+      display: inline-flex;
+      flex-direction: column;
+      text-align: left;
+      position: relative;
+      line-height: 1.5;
+      color: #b8add2;
+    }
+  }
+}

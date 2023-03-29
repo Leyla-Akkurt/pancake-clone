@@ -1,3 +1,5 @@
+@import './footerIcons/FooterIcons';
+
 $lg-screen: 968px;
 $md-screen: 852px;
 $sm-screen: 576px;
@@ -20,7 +22,7 @@ $sm-screen: 576px;
 #logoFooter > svg > path:first-child {
   fill: $contrast--dark;
 }
-#footer a {
+.main-footer a {
   text-decoration: none;
   color: $text--dark;
 }
@@ -43,37 +45,17 @@ ul > li {
   }
 }
 
-#mainFooterUpIcons {
-  fill: $textSubtle--dark;
-  @include footerGap(flex, 25px);
-  margin: 30px 0;
-  #telegramRegions {
-    position: relative;
-    #telegramRegionChannel {
-      display: none;
-    }
-    #telegramRegionChannel {
-      position: relative;
-      bottom: 30px;
-      a {
-        color: #b8add2;
-      }
-    }
-    &:hover #telegramRegionChannel {
-      display: inline-flex;
-      flex-direction: column;
-      text-align: left;
-      position: relative;
-      line-height: 1.5;
-      color: #b8add2;
-    }
-  }
-}
-
 #mainfooterContents {
-  padding: 30px;
+  // padding: 30px;
   display: flex;
   flex-direction: column;
+  padding: 40px 16px;
+  margin-bottom: 44px;
+
+  @include sm {
+    padding: 56px 40px 32px;
+    margin-bottom: 0px;
+  }
   #mainfooterContentsIn {
     max-width: 1200px;
     width: 100%;
@@ -262,11 +244,15 @@ ul > li {
 }
 #buyCakeBtn {
   @include footerGap(flex, 8px);
-  border-radius: 20px;
-  padding: 2px 16px 0;
+  border-radius: 1rem;
+  padding: 0rem 1rem;
+  height: 2rem;
   justify-content: center;
   align-items: center;
   font-weight: 600;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  font-size: 1rem;
   background-color: $primary--dark;
   color: $invertedContrast--dark;
 
@@ -346,7 +332,10 @@ ul > li {
     }
     #mainFooterUpIcons {
       order: 4;
-      padding-left: 25px;
+      padding-left: 1rem;
+      @include sm {
+        padding-left: 25px;
+      }
     }
     #hr {
       order: 5;
@@ -386,5 +375,37 @@ ul > li {
     svg.switch-moon-icon-active {
       fill: $secondary--dark;
     }
+  }
+}
+
+.about-sm,
+.help-sm,
+.developers-sm {
+  margin-bottom: 40px;
+}
+
+#mainFooter-smScreens {
+  #mainFooterUpIcons {
+    gap: 1rem;
+  }
+
+  #mainFooterDown {
+    padding: 1.5rem 0rem;
+    margin-bottom: 1.5rem;
+
+    #downFirstCol {
+      margin-top: 1.5rem;
+    }
+
+    #buyCake,
+    #downFirstCol {
+      width: 100%;
+    }
+  }
+}
+
+#mainFooter-smScreens {
+  .sm {
+    margin-left: 1rem !important;
   }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
-import MainFooter from '../mainFooter/MainFooter';
-import StartInSeconds from '../startInSeconds/StartInSeconds';
+import MainFooter from './mainFooter/MainFooter';
+import StartInSeconds from './startInSeconds/StartInSeconds';
 
 function Footer() {
   return (
