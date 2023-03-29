@@ -10,13 +10,19 @@
     position: fixed;
     bottom: 0px;
     width: 100%;
-    padding: 0rem 0.5rem 0rem 0.5rem;
+    padding: 0.313rem 0.5rem 0rem 0.5rem;
     border-top: 0.063rem solid;
     z-index: 20;
     @include themed() {
       background: c('backgroundAlt');
       color: c('textSubtle');
       border-top-color: c('cardBorder');
+    }
+
+    .three-dots-svg {
+      @include themed() {
+        fill: c('textSubtle');
+      }
     }
   }
 }

@@ -66,8 +66,7 @@ class BottomNav extends React.Component {
           />
           <MenuButton
             altTarget={{
-              src: './images/svg/three-dots.svg',
-              alt: '3 dots icon',
+              svgName: 'three-dots',
             }}
             innerLinks={[
               { href: '/info', name: 'Info', type: 'null' },
