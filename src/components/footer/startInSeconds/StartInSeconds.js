@@ -81,7 +81,7 @@ function StartInSeconds() {
             <p>
               Connect your crypto wallet to start using the app in seconds
               <br />
-              <b>No registration needed</b>
+              <span className='emph'>No registration needed</span>
             </p>
             <p id="learn">Learn how to start</p>
             <button className="btn-color">Connect Wallet</button>

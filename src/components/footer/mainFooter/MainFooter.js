@@ -1,16 +1,17 @@
 import React from 'react';
-import useCoinPrice from '../hooks/useCoinPrice';
-import LightSwitch from '../switch/ThemeSwitch';
+import useCoinPrice from '../../hooks/useCoinPrice';
+import LightSwitch from '../../switch/ThemeSwitch';
+import FooterIcons from './footerIcons/FooterIcons';
 
 function MainFooter() {
   const { coinPrice, isLoading } = useCoinPrice();
   return (
     <div id="mainFooter" className="main-footer">
       <div id="mainFooter-smScreens">
-        <div id="logoFooter">
+        <div id="logoFooter" className="sm">
           <svg
             viewBox="0 0 1281 199"
-            width="160px"
+            width="130px"
             color="text"
             xmlns="http://www.w3.org/2000/svg"
             className="sc-4ba21b47-0 IIbzK"
@@ -41,8 +42,94 @@ function MainFooter() {
           </svg>
         </div>
 
-        <div id="about">
-          <ul>
+        <div id="mainFooterDown" className='main-footer-down-sm sm'>
+          <div id="downFirstCol">
+            <LightSwitch />
+
+            <div id="lang">
+              <button id="langEn" scale="md">
+                <svg
+                  viewBox="0 0 24 24"
+                  color="textSubtle"
+                  width="24px"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="sc-4ba21b47-0 cmVGwA"
+                >
+                  <path d="M11.99 2C6.47 2 2 6.48 2 12C2 17.52 6.47 22 11.99 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 11.99 2ZM18.92 8H15.97C15.65 6.75 15.19 5.55 14.59 4.44C16.43 5.07 17.96 6.35 18.92 8ZM12 4.04C12.83 5.24 13.48 6.57 13.91 8H10.09C10.52 6.57 11.17 5.24 12 4.04ZM4.26 14C4.1 13.36 4 12.69 4 12C4 11.31 4.1 10.64 4.26 10H7.64C7.56 10.66 7.5 11.32 7.5 12C7.5 12.68 7.56 13.34 7.64 14H4.26ZM5.08 16H8.03C8.35 17.25 8.81 18.45 9.41 19.56C7.57 18.93 6.04 17.66 5.08 16ZM8.03 8H5.08C6.04 6.34 7.57 5.07 9.41 4.44C8.81 5.55 8.35 6.75 8.03 8ZM12 19.96C11.17 18.76 10.52 17.43 10.09 16H13.91C13.48 17.43 12.83 18.76 12 19.96ZM14.34 14H9.66C9.57 13.34 9.5 12.68 9.5 12C9.5 11.32 9.57 10.65 9.66 10H14.34C14.43 10.65 14.5 11.32 14.5 12C14.5 12.68 14.43 13.34 14.34 14ZM14.59 19.56C15.19 18.45 15.65 17.25 15.97 16H18.92C17.96 17.65 16.43 18.93 14.59 19.56ZM16.36 14C16.44 13.34 16.5 12.68 16.5 12C16.5 11.32 16.44 10.66 16.36 10H19.74C19.9 10.64 20 11.31 20 12C20 12.69 19.9 13.36 19.74 14H16.36Z"></path>
+                </svg>
+                <div id="en">EN</div>
+              </button>
+            </div>
+          </div>
+
+          <div id="buyCake">
+            <div id="cakePrice">
+              <a href="/">
+                <svg
+                  viewBox="0 0 96 96"
+                  width="24px"
+                  color="text"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="sc-4ba21b47-0 hFKfwc"
+                >
+                  <circle cx="48" cy="48" r="48" fill="#1FC7D4"></circle>
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M47.858 79.875c-9.342-.007-16.866-2.249-22.124-6.275-5.321-4.075-8.144-9.857-8.144-16.4 0-6.304 2.817-10.85 6.004-13.923 2.497-2.408 5.253-3.95 7.172-4.838a99.818 99.818 0 01-1.46-4.876c-.648-2.41-1.284-5.237-1.284-7.309 0-2.452.535-4.915 1.977-6.829 1.523-2.021 3.816-3.104 6.574-3.104 2.156 0 3.986.8 5.42 2.179 1.369 1.318 2.28 3.07 2.91 4.895 1.106 3.208 1.537 7.238 1.657 11.26h2.643c.12-4.022.551-8.052 1.657-11.26.63-1.825 1.541-3.577 2.91-4.895 1.434-1.38 3.264-2.18 5.42-2.18 2.758 0 5.051 1.084 6.574 3.105 1.442 1.914 1.977 4.377 1.977 6.83 0 2.071-.636 4.898-1.284 7.308a99.707 99.707 0 01-1.46 4.876c1.919.888 4.675 2.43 7.172 4.838 3.187 3.073 6.004 7.619 6.004 13.923 0 6.543-2.823 12.325-8.144 16.4-5.257 4.026-12.782 6.268-22.124 6.275h-.047z"
+                    fill="#633001"
+                  ></path>
+                  <path
+                    d="M36.573 18.653c-4.04 0-5.9 3.045-5.9 7.256 0 3.347 2.16 10.05 3.048 12.66.199.587-.114 1.23-.686 1.458-3.238 1.29-12.794 6.012-12.794 16.828 0 11.393 9.711 19.983 27.619 19.997h.043c17.908-.014 27.619-8.604 27.619-19.997 0-10.816-9.556-15.539-12.794-16.828a1.176 1.176 0 01-.686-1.458c.887-2.61 3.048-9.313 3.048-12.66 0-4.211-1.86-7.256-5.9-7.256-5.816 0-7.266 8.322-7.37 17.254a1.084 1.084 0 01-1.074 1.08h-5.73c-.59 0-1.067-.484-1.074-1.08-.103-8.932-1.553-17.254-7.369-17.254z"
+                    fill="#D1884F"
+                  ></path>
+                  <path
+                    d="M47.903 73.202c-13.158 0-27.64-7.115-27.662-16.326v.043c0 11.403 9.727 19.997 27.662 19.997s27.661-8.594 27.661-19.997v-.043c-.022 9.21-14.503 16.326-27.661 16.326z"
+                    fill="#FEDC90"
+                  ></path>
+                  <path
+                    d="M40.592 54.047c0 3.11-1.455 4.73-3.25 4.73-1.794 0-3.249-1.62-3.249-4.73 0-3.11 1.455-4.73 3.25-4.73 1.794 0 3.249 1.62 3.249 4.73zM61.712 54.047c0 3.11-1.455 4.73-3.25 4.73-1.794 0-3.248-1.62-3.248-4.73 0-3.11 1.454-4.73 3.249-4.73 1.794 0 3.25 1.62 3.25 4.73z"
+                    fill="#633001"
+                  ></path>
+                  <defs>
+                    <linearGradient
+                      id="paint0_linear_10493"
+                      x1="48"
+                      y1="0"
+                      x2="48"
+                      y2="96"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stopColor="#53DEE9"></stop>
+                      <stop offset="1" stopColor="#1FC7D4"></stop>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <span id="cake-price">
+                  ${coinPrice && coinPrice}
+                  {isLoading && <i>loading..</i>}
+                </span>
+              </a>
+            </div>
+            <a href="/" id="buyCakeBtn">
+              <span className="btn-color">Buy CAKE</span>
+              <div>
+                <svg
+                  viewBox="0 0 24 24"
+                  className="btn-color sc-4ba21b47-0 jxNZzw"
+                  color="backgroundAlt"
+                  width="20px"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M5 13H16.17L11.29 17.88C10.9 18.27 10.9 18.91 11.29 19.3C11.68 19.69 12.31 19.69 12.7 19.3L19.29 12.71C19.68 12.32 19.68 11.69 19.29 11.3L12.71 4.7C12.32 4.31 11.69 4.31 11.3 4.7C10.91 5.09 10.91 5.72 11.3 6.11L16.17 11H5C4.45 11 4 11.45 4 12C4 12.55 4.45 13 5 13Z"></path>
+                </svg>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div id="about" className="sm">
+          <ul className="about-sm">
             <li>
               <a href="/" className="footerHeader">
                 ABOUT
@@ -65,16 +152,11 @@ function MainFooter() {
             <li>
               <a href="/">Litepaper</a>
             </li>
-            <li>
-              <hr />
-            </li>
-            <li>
-              <a href="/">Online Store</a>
-            </li>
+            <li></li>
           </ul>
         </div>
-        <div id="help">
-          <ul>
+        <div id="help" className="sm">
+          <ul className="help-sm">
             <li>
               <a href="/" className="footerHeader">
                 HELP
@@ -91,11 +173,11 @@ function MainFooter() {
             </li>
           </ul>
         </div>
-        <div id="developers">
-          <ul>
+        <div id="developers" className="sm">
+          <ul className="developers-sm">
             <li>
               <a href="/" className="footerHeader">
-                DEVELOPER
+                DEVELOPERS
               </a>
             </li>
             <li>
@@ -115,8 +197,8 @@ function MainFooter() {
             </li>
           </ul>
         </div>
-
-        <div id="hr"></div>
+        <FooterIcons />
+        <div id="hr" className='sm'></div>
       </div>
 
       <div id="mainfooterContents">
@@ -226,269 +308,7 @@ function MainFooter() {
               </div>
             </div>
 
-            <div id="mainFooterUpIcons">
-              <svg
-                viewBox="0 0 18 15"
-                width="20px"
-                color="textSubtle"
-                xmlns="http://www.w3.org/2000/svg"
-                className="sc-4ba21b47-0 ebMyYP"
-                style={{ cursor: 'pointer' }}
-              >
-                <path d="M5.659 15c6.79 0 10.507-5.766 10.507-10.763 0-.16 0-.32-.01-.49A7.578 7.578 0 0018 1.79c-.663.3-1.376.5-2.127.6a3.824 3.824 0 001.63-2.1c-.713.44-1.503.75-2.352.92A3.6 3.6 0 0012.46 0C10.419 0 8.76 1.699 8.76 3.787c0 .3.039.58.098.86-3.064-.15-5.786-1.669-7.61-3.957A3.858 3.858 0 00.75 2.598c0 1.31.654 2.469 1.64 3.148a3.638 3.638 0 01-1.669-.47v.05c0 1.83 1.278 3.368 2.956 3.708-.312.09-.634.13-.976.13-.234 0-.468-.02-.692-.07.468 1.509 1.834 2.598 3.453 2.628a7.284 7.284 0 01-4.585 1.62c-.293 0-.595-.01-.878-.05A10.206 10.206 0 005.659 15z"></path>
-              </svg>
-              <div id="telegramRegions">
-                <svg
-                  viewBox="0 0 20 20"
-                  width="20px"
-                  color="textSubtle"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="sc-4ba21b47-0 bHEVmn"
-                  style={{ cursor: 'pointer' }}
-                >
-                  <path d="M10 0C4.478 0 0 4.478 0 9.99 0 15.511 4.478 20 10 20s10-4.488 10-10.01C20 4.477 15.522 0 10 0zm4.925 6.28c-.064.927-1.78 7.856-1.78 7.856s-.107.406-.48.416a.644.644 0 01-.49-.192c-.395-.33-1.29-.97-2.132-1.556a.953.953 0 01-.107.096c-.192.17-.48.416-.789.714a10.7 10.7 0 00-.373.352l-.01.01a2.214 2.214 0 01-.193.171c-.415.341-.458.053-.458-.096l.224-2.441v-.021l.01-.022c.011-.032.033-.043.033-.043s4.36-3.88 4.477-4.296c.01-.021-.021-.042-.074-.021-.288.096-5.31 3.273-5.864 3.625-.032.02-.128.01-.128.01l-2.441-.8s-.288-.117-.192-.383c.021-.053.053-.107.17-.181.544-.384 10-3.785 10-3.785s.267-.085.427-.032c.074.032.117.064.16.17.01.043.021.128.021.224 0 .054-.01.118-.01.224z"></path>
-                </svg>
-                <div
-                  id="telegramRegionChannel"
-                  className="sc-ee5ec6ea-0 blPylB"
-                >
-                  <a
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    href="https://t.me/pancakeswap"
-                    aria-label="English"
-                    color="textSubtle"
-                    fontSize="16px"
-                    className="sc-c56ebc7d-0 sc-2d8b3c99-0 foTpRm jluAhG"
-                  >
-                    English
-                  </a>
-                  <a
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    href="https://t.me/PancakeSwapIndonesia"
-                    aria-label="Bahasa Indonesia"
-                    color="textSubtle"
-                    fontSize="16px"
-                    className="sc-c56ebc7d-0 sc-2d8b3c99-0 foTpRm jluAhG"
-                  >
-                    Bahasa Indonesia
-                  </a>
-                  <a
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    href="https://t.me/PancakeSwap_CN"
-                    aria-label="中文"
-                    color="textSubtle"
-                    fontSize="16px"
-                    className="sc-c56ebc7d-0 sc-2d8b3c99-0 foTpRm jluAhG"
-                  >
-                    中文
-                  </a>
-                  <a
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    href="https://t.me/PancakeSwapVN"
-                    aria-label="Tiếng Việt"
-                    color="textSubtle"
-                    fontSize="16px"
-                    className="sc-c56ebc7d-0 sc-2d8b3c99-0 foTpRm jluAhG"
-                  >
-                    Tiếng Việt
-                  </a>
-                  <a
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    href="https://t.me/pancakeswap_ita"
-                    aria-label="Italiano"
-                    color="textSubtle"
-                    fontSize="16px"
-                    className="sc-c56ebc7d-0 sc-2d8b3c99-0 foTpRm jluAhG"
-                  >
-                    Italiano
-                  </a>
-                  <a
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    href="https://t.me/pancakeswap_ru"
-                    aria-label="русский"
-                    color="textSubtle"
-                    fontSize="16px"
-                    className="sc-c56ebc7d-0 sc-2d8b3c99-0 foTpRm jluAhG"
-                  >
-                    русский
-                  </a>
-                  <a
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    href="https://t.me/pancakeswapturkiye"
-                    aria-label="Türkiye"
-                    color="textSubtle"
-                    fontSize="16px"
-                    className="sc-c56ebc7d-0 sc-2d8b3c99-0 foTpRm jluAhG"
-                  >
-                    Türkiye
-                  </a>
-                  <a
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    href="https://t.me/PancakeSwapPortuguese"
-                    aria-label="Português"
-                    color="textSubtle"
-                    fontSize="16px"
-                    className="sc-c56ebc7d-0 sc-2d8b3c99-0 foTpRm jluAhG"
-                  >
-                    Português
-                  </a>
-                  <a
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    href="https://t.me/PancakeswapEs"
-                    aria-label="Español"
-                    color="textSubtle"
-                    fontSize="16px"
-                    className="sc-c56ebc7d-0 sc-2d8b3c99-0 foTpRm jluAhG"
-                  >
-                    Español
-                  </a>
-                  <a
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    href="https://t.me/pancakeswapjp"
-                    aria-label="日本語"
-                    color="textSubtle"
-                    fontSize="16px"
-                    className="sc-c56ebc7d-0 sc-2d8b3c99-0 foTpRm jluAhG"
-                  >
-                    日本語
-                  </a>
-                  <a
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    href="https://t.me/pancakeswapfr"
-                    aria-label="Français"
-                    color="textSubtle"
-                    fontSize="16px"
-                    className="sc-c56ebc7d-0 sc-2d8b3c99-0 foTpRm jluAhG"
-                  >
-                    Français
-                  </a>
-                  <a
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    href="https://t.me/PancakeSwap_DE"
-                    aria-label="Deutsch"
-                    color="textSubtle"
-                    fontSize="16px"
-                    className="sc-c56ebc7d-0 sc-2d8b3c99-0 foTpRm jluAhG"
-                  >
-                    Deutsch
-                  </a>
-                  <a
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    href="https://t.me/Pancakeswap_Ph"
-                    aria-label="Filipino"
-                    color="textSubtle"
-                    fontSize="16px"
-                    className="sc-c56ebc7d-0 sc-2d8b3c99-0 foTpRm jluAhG"
-                  >
-                    Filipino
-                  </a>
-                  <a
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    href="https://t.me/PancakeSwapGeorgia"
-                    aria-label="ქართული ენა"
-                    color="textSubtle"
-                    fontSize="16px"
-                    className="sc-c56ebc7d-0 sc-2d8b3c99-0 foTpRm jluAhG"
-                  >
-                    ქართული ენა
-                  </a>
-                  <a
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    href="https://t.me/PancakeSwapINDIA"
-                    aria-label="हिन्दी"
-                    color="textSubtle"
-                    fontSize="16px"
-                    className="sc-c56ebc7d-0 sc-2d8b3c99-0 foTpRm jluAhG"
-                  >
-                    हिन्दी
-                  </a>
-                  <a
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    href="https://t.me/PancakeSwapAnn"
-                    aria-label="Announcements"
-                    color="textSubtle"
-                    fontSize="16px"
-                    className="sc-c56ebc7d-0 sc-2d8b3c99-0 foTpRm jluAhG"
-                  >
-                    Announcements
-                  </a>
-                </div>
-              </div>
-              <svg
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-                width="20px"
-                color="textSubtle"
-                className="sc-4ba21b47-0 ebMyYP"
-                style={{ cursor: 'pointer' }}
-              >
-                <path d="M12.09 13.412c-.448.447-1.408.607-2.09.607-.682 0-1.642-.16-2.09-.607a.27.27 0 00-.383 0 .27.27 0 000 .383c.714.704 2.068.757 2.473.757.405 0 1.76-.053 2.473-.767a.27.27 0 000-.384.28.28 0 00-.383.01zM8.753 11.034c0-.576-.47-1.045-1.045-1.045-.576 0-1.045.47-1.045 1.045 0 .576.47 1.045 1.045 1.045.576 0 1.045-.47 1.045-1.045z"></path>
-                <path d="M10 0C4.478 0 0 4.478 0 10s4.478 10 10 10 10-4.467 10-10c-.01-5.522-4.478-10-10-10zm5.8 11.333c.02.138.032.287.032.437 0 2.25-2.612 4.062-5.832 4.062-3.22 0-5.832-1.813-5.832-4.062 0-.15.011-.299.032-.437A1.447 1.447 0 013.337 10 1.463 1.463 0 015.81 8.945c1.013-.736 2.41-1.194 3.966-1.237 0-.021.736-3.486.736-3.486 0-.064.042-.128.096-.16a.263.263 0 01.202-.043l2.42.523c.17-.342.523-.587.928-.587A1.04 1.04 0 0115.203 5a1.04 1.04 0 01-1.045 1.045 1.034 1.034 0 01-1.034-.992l-2.175-.469-.661 3.124c1.535.053 2.91.522 3.902 1.237a1.454 1.454 0 012.473 1.044 1.48 1.48 0 01-.863 1.344z"></path>
-                <path d="M12.292 10c-.576 0-1.045.47-1.045 1.045s.47 1.045 1.045 1.045c.576 0 1.045-.47 1.045-1.045A1.06 1.06 0 0012.292 10z"></path>
-              </svg>
-              <svg
-                viewBox="0 0 18 18"
-                xmlns="http://www.w3.org/2000/svg"
-                width="20px"
-                color="textSubtle"
-                className="sc-4ba21b47-0 ebMyYP"
-                style={{ cursor: 'pointer' }}
-              >
-                <path d="M9 1.625c2.407 0 2.685.01 3.641.052.874.04 1.358.185 1.666.308.422.165.72.36 1.04.669.318.319.514.617.668 1.039.123.318.267.792.308 1.666.042.946.052 1.234.052 3.641s-.01 2.685-.052 3.641c-.04.874-.185 1.358-.308 1.666-.165.422-.36.72-.669 1.04a2.66 2.66 0 01-1.039.668c-.318.123-.792.267-1.666.308-.946.042-1.234.052-3.641.052s-2.685-.01-3.641-.052c-.874-.04-1.358-.185-1.666-.308a2.911 2.911 0 01-1.04-.669 2.659 2.659 0 01-.668-1.039c-.123-.318-.267-.792-.308-1.666-.042-.946-.052-1.234-.052-3.641s.01-2.685.052-3.641c.04-.874.185-1.358.308-1.666.165-.422.36-.72.669-1.04a2.658 2.658 0 011.039-.668c.318-.123.792-.267 1.666-.308.956-.042 1.234-.052 3.641-.052zM9 0C6.552 0 6.254.01 5.287.051c-.957.052-1.615.196-2.18.422a4.311 4.311 0 00-1.595 1.039A4.311 4.311 0 00.473 3.106c-.226.566-.37 1.224-.422 2.18C.011 6.255 0 6.553 0 9s.01 2.746.051 3.713c.042.957.196 1.615.422 2.18.226.597.535 1.091 1.039 1.595.504.504.998.813 1.594 1.039.576.226 1.224.37 2.18.422.957.04 1.266.051 3.714.051s2.746-.01 3.713-.051c.957-.042 1.615-.196 2.18-.422a4.311 4.311 0 001.595-1.039 4.311 4.311 0 001.039-1.594c.226-.576.37-1.224.422-2.18.04-.957.051-1.266.051-3.714s-.01-2.746-.051-3.713c-.042-.957-.196-1.615-.422-2.18a4.312 4.312 0 00-1.039-1.595A4.311 4.311 0 0014.894.473c-.576-.226-1.224-.37-2.18-.422C11.745.011 11.447 0 9 0z"></path>
-                <path d="M9 4.382a4.618 4.618 0 100 9.236 4.618 4.618 0 000-9.236zm0 7.621A3.007 3.007 0 015.997 9 3.007 3.007 0 019 5.997 3.007 3.007 0 0112.003 9 3.007 3.007 0 019 12.003zM13.803 5.277a1.08 1.08 0 100-2.16 1.08 1.08 0 000 2.16z"></path>
-              </svg>
-              <svg
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-                width="20px"
-                color="textSubtle"
-                className="sc-4ba21b47-0 ebMyYP"
-                style={{ cursor: 'pointer' }}
-              >
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M9.97 0C4.464 0 0 4.465 0 9.97c0 4.403 2.875 8.134 6.789 9.48.49.06.673-.245.673-.49v-1.712c-2.753.611-3.364-1.346-3.364-1.346-.428-1.162-1.101-1.468-1.101-1.468-.917-.611.061-.611.061-.611.979.06 1.53 1.04 1.53 1.04.917 1.528 2.323 1.1 2.874.856a2.13 2.13 0 01.611-1.346c-2.201-.245-4.526-1.1-4.526-4.954 0-1.101.367-1.957 1.04-2.691-.061-.184-.428-1.223.122-2.569 0 0 .857-.245 2.753 1.04.795-.245 1.651-.306 2.507-.306.857 0 1.713.122 2.508.306 1.896-1.285 2.752-1.04 2.752-1.04.55 1.346.184 2.385.123 2.63a3.956 3.956 0 011.04 2.691c0 3.853-2.325 4.648-4.527 4.893.367.306.673.918.673 1.835v2.752c0 .245.184.55.673.49A9.98 9.98 0 0020 9.97C19.939 4.464 15.474 0 9.97 0z"
-                ></path>
-              </svg>
-              <svg
-                viewBox="0 0 20 16"
-                width="20px"
-                color="textSubtle"
-                xmlns="http://www.w3.org/2000/svg"
-                className="sc-4ba21b47-0 ebMyYP"
-                style={{ cursor: 'pointer' }}
-              >
-                <path d="M16.93 1.644A16.491 16.491 0 0012.86.38a.062.062 0 00-.066.031c-.175.313-.37.72-.506 1.041a15.226 15.226 0 00-4.573 0A10.54 10.54 0 007.2.412a.064.064 0 00-.065-.031 16.447 16.447 0 00-4.07 1.263.058.058 0 00-.028.023C.444 5.54-.266 9.319.083 13.05a.069.069 0 00.026.047 16.584 16.584 0 004.994 2.525.064.064 0 00.07-.023c.385-.526.728-1.08 1.022-1.662a.063.063 0 00-.035-.088 10.917 10.917 0 01-1.56-.744.064.064 0 01-.007-.106c.105-.079.21-.16.31-.243a.062.062 0 01.065-.009c3.273 1.495 6.817 1.495 10.051 0a.062.062 0 01.066.008c.1.083.204.165.31.244a.064.064 0 01-.005.106c-.499.291-1.017.537-1.561.743a.064.064 0 00-.034.089c.3.582.643 1.135 1.02 1.66a.063.063 0 00.07.025 16.53 16.53 0 005.003-2.525.064.064 0 00.026-.046c.417-4.314-.699-8.061-2.957-11.384a.05.05 0 00-.026-.023zM6.684 10.778c-.985 0-1.797-.905-1.797-2.016 0-1.11.796-2.015 1.797-2.015 1.01 0 1.814.912 1.798 2.015 0 1.111-.796 2.016-1.798 2.016zm6.646 0c-.986 0-1.797-.905-1.797-2.016 0-1.11.796-2.015 1.797-2.015 1.009 0 1.813.912 1.797 2.015 0 1.111-.788 2.016-1.797 2.016z"></path>
-              </svg>
-
-              <svg
-                viewBox="0 0 30 30"
-                xmlns="http://www.w3.org/2000/svg"
-                width="20px"
-                color="textSubtle"
-                className="sc-4ba21b47-0 ebMyYP"
-                style={{ cursor: 'pointer' }}
-              >
-                <path d="M 15 4 C 10.814 4 5.3808594 5.0488281 5.3808594 5.0488281 L 5.3671875 5.0644531 C 3.4606632 5.3693645 2 7.0076245 2 9 L 2 15 L 2 15.001953 L 2 21 L 2 21.001953 A 4 4 0 0 0 5.3769531 24.945312 L 5.3808594 24.951172 C 5.3808594 24.951172 10.814 26.001953 15 26.001953 C 19.186 26.001953 24.619141 24.951172 24.619141 24.951172 L 24.621094 24.949219 A 4 4 0 0 0 28 21.001953 L 28 21 L 28 15.001953 L 28 15 L 28 9 A 4 4 0 0 0 24.623047 5.0546875 L 24.619141 5.0488281 C 24.619141 5.0488281 19.186 4 15 4 z M 12 10.398438 L 20 15 L 12 19.601562 L 12 10.398438 z"></path>
-              </svg>
-            </div>
+            <FooterIcons />
 
             <div id="hr"></div>
           </div>
@@ -509,204 +329,6 @@ function MainFooter() {
                   </svg>
                   <div id="en">EN</div>
                 </button>
-                <div id="langBtn">
-                  <button
-                    className="languages"
-                    scale="md"
-                    style={{ minHeight: '32px', height: 'auto' }}
-                  >
-                    العربية
-                  </button>
-                  <button
-                    className="languages"
-                    scale="md"
-                    style={{ minHeight: '32px', height: 'auto' }}
-                  >
-                    বাংলা
-                  </button>
-                  <button
-                    className="languages"
-                    scale="md"
-                    style={{ minHeight: '32px', height: 'auto' }}
-                  >
-                    English
-                  </button>
-                  <button
-                    className="languages"
-                    scale="md"
-                    style={{ minHeight: '32px', height: 'auto' }}
-                  >
-                    Deutsch
-                  </button>
-                  <button
-                    className="languages"
-                    scale="md"
-                    style={{ minHeight: '32px', height: 'auto' }}
-                  >
-                    Ελληνικά
-                  </button>
-                  <button
-                    className="languages"
-                    scale="md"
-                    style={{ minHeight: '32px', height: 'auto' }}
-                  >
-                    Español
-                  </button>
-                  <button
-                    className="languages"
-                    scale="md"
-                    style={{ minHeight: '32px', height: 'auto' }}
-                  >
-                    Suomalainen
-                  </button>
-                  <button
-                    className="languages"
-                    scale="md"
-                    style={{ minHeight: '32px', height: 'auto' }}
-                  >
-                    Filipino
-                  </button>
-                  <button
-                    className="languages"
-                    scale="md"
-                    style={{ minHeight: '32px', height: 'auto' }}
-                  >
-                    Français
-                  </button>
-                  <button
-                    className="languages"
-                    scale="md"
-                    style={{ minHeight: '32px', height: 'auto' }}
-                  >
-                    हिंदी
-                  </button>
-                  <button
-                    className="languages"
-                    scale="md"
-                    style={{ minHeight: '32px', height: 'auto' }}
-                  >
-                    Magyar
-                  </button>
-                  <button
-                    className="languages"
-                    scale="md"
-                    style={{ minHeight: '32px', height: 'auto' }}
-                  >
-                    Bahasa Indonesia
-                  </button>
-                  <button
-                    className="languages"
-                    scale="md"
-                    style={{ minHeight: '32px', height: 'auto' }}
-                  >
-                    Italiano
-                  </button>
-                  <button
-                    className="languages"
-                    scale="md"
-                    style={{ minHeight: '32px', height: 'auto' }}
-                  >
-                    日本語
-                  </button>
-                  <button
-                    className="languages"
-                    scale="md"
-                    style={{ minHeight: '32px', height: 'auto' }}
-                  >
-                    한국어
-                  </button>
-                  <button
-                    className="languages"
-                    scale="md"
-                    style={{ minHeight: '32px', height: 'auto' }}
-                  >
-                    Nederlands
-                  </button>
-                  <button
-                    className="languages"
-                    scale="md"
-                    style={{ minHeight: '32px', height: 'auto' }}
-                  >
-                    Polski
-                  </button>
-                  <button
-                    className="languages"
-                    scale="md"
-                    style={{ minHeight: '32px', height: 'auto' }}
-                  >
-                    Português (Brazil)
-                  </button>
-                  <button
-                    className="languages"
-                    scale="md"
-                    style={{ minHeight: '32px', height: 'auto' }}
-                  >
-                    Português
-                  </button>
-                  <button
-                    className="languages"
-                    scale="md"
-                    style={{ minHeight: '32px', height: 'auto' }}
-                  >
-                    Română
-                  </button>
-                  <button
-                    className="languages"
-                    scale="md"
-                    style={{ minHeight: '32px', height: 'auto' }}
-                  >
-                    Русский
-                  </button>
-                  <button
-                    className="languages"
-                    scale="md"
-                    style={{ minHeight: '32px', height: 'auto' }}
-                  >
-                    Svenska
-                  </button>
-                  <button
-                    className="languages"
-                    scale="md"
-                    style={{ minHeight: '32px', height: 'auto' }}
-                  >
-                    தமிழ்
-                  </button>
-                  <button
-                    className="languages"
-                    scale="md"
-                    style={{ minHeight: '32px', height: 'auto' }}
-                  >
-                    Türkçe
-                  </button>
-                  <button
-                    className="languages"
-                    scale="md"
-                    style={{ minHeight: '32px', height: 'auto' }}
-                  >
-                    Українська
-                  </button>
-                  <button
-                    className="languages"
-                    scale="md"
-                    style={{ minHeight: '32px', height: 'auto' }}
-                  >
-                    Tiếng Việt
-                  </button>
-                  <button
-                    className="languages"
-                    scale="md"
-                    style={{ minHeight: '32px', height: 'auto' }}
-                  >
-                    简体中文
-                  </button>
-                  <button
-                    className="languages"
-                    scale="md"
-                    style={{ minHeight: '32px', height: 'auto' }}
-                  >
-                    繁體中文
-                  </button>
-                </div>
               </div>
             </div>
 
