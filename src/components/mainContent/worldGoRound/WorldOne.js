@@ -41,7 +41,7 @@ class WorldOne extends React.Component {
                 src="./images/home/cake/bottom-right@2x.webp"
                 loading="lazy"
                 decoding="async"
-                class="world-right-part-container-img-placeholder"
+                className="world-right-part-container-img-placeholder"
                 alt="cake"
               />
               <div className="world-right-part-container-img">

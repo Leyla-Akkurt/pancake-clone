@@ -14,7 +14,6 @@ function WorldTwo() {
       setBurnedContent(() => <CounterWorld number={730148902} />);
     }
   }, [inView]);
-  console.log(circleContent);
   return (
     <div className="container-world-down" ref={WorldRef}>
       <div className="stats-wrapper">

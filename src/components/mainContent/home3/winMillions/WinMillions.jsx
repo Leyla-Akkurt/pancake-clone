@@ -25,8 +25,6 @@ function WinMillions() {
       lotteryRef.current.style.color = lotteryColor;
     }
   }, [predictionValue, inView, lotteryColor, lotteryValue, predictionColor]);
-  console.log(inView);
-  console.log(predictionValue);
   return (
     <div className="win-millions-container">
       <div className="win-millions-wrapper">
